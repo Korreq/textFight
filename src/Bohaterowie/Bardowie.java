@@ -18,7 +18,7 @@ public class Bardowie implements Characters {
     public void b1(){
 
         klasa();
-        name("Robert");
+        name("Jan");
         runy.flint();
 
     }
