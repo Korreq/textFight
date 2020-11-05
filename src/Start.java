@@ -17,7 +17,7 @@ public class Start {
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
 
-        String[] adventures = {"Wojownik","Złodziej","Bard    ","Paladyn ","Mag     ","Kleryk  ","Bard    "};
+        String[] adventures = {"Wojownik","Rabuś","Bard    ","Paladyn ","Mag     ","Kleryk  ","Bard    "};
         String[] team = new String[6];
         boolean dosc = false;
         int number = 0;
