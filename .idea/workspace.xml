@@ -78,6 +78,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="798" y="219" key="FileChooserDialogImpl" timestamp="1604586909245">
