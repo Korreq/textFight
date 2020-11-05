@@ -1,16 +1,14 @@
 import Runy.Runy;
 
 public interface Monster {
-    int Hp();
     int ATK();
-    int Def();
     int Mdef();
+
 }
 
-class L1 implements Monster
-{
+abstract class L1 implements Monster, Heroes {
 
-    public int Hp() {
+    public int hp() {
         return 20;
     }
 
@@ -18,7 +16,7 @@ class L1 implements Monster
         return 31;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -27,10 +25,10 @@ class L1 implements Monster
     }
 }
 
-class S1 implements Monster
+abstract class S1 implements Monster,Heroes
 {
 
-    public int Hp() {
+    public int hp() {
         return 25;
     }
 
@@ -38,7 +36,7 @@ class S1 implements Monster
         return 21;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -47,11 +45,11 @@ class S1 implements Monster
     }
 }
 
-class M1 implements Monster
+abstract class M1 implements Monster,Heroes
 {
 
 
-    public int Hp() {
+    public int hp() {
         return 20;
     }
 
@@ -59,7 +57,7 @@ class M1 implements Monster
         return 21;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -68,10 +66,10 @@ class M1 implements Monster
     }
 }
 
-class L2 implements Monster
+abstract class L2 implements Monster,Heroes
 {
 
-    public int Hp() {
+    public int hp() {
         return 30;
     }
 
@@ -79,7 +77,7 @@ class L2 implements Monster
         return 37;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -88,10 +86,10 @@ class L2 implements Monster
     }
 }
 
-class S2 implements Monster
+abstract class S2 implements Monster,Heroes
 {
 
-    public int Hp() {
+    public int hp() {
         return 40;
     }
 
@@ -99,7 +97,7 @@ class S2 implements Monster
         return 27;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -108,11 +106,11 @@ class S2 implements Monster
     }
 }
 
-class M2 implements Monster
+abstract class M2 implements Monster,Heroes
 {
 
 
-    public int Hp() {
+    public int hp() {
         return 35;
     }
 
@@ -120,7 +118,7 @@ class M2 implements Monster
         return 27;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -129,10 +127,10 @@ class M2 implements Monster
     }
 }
 
-class L3 implements Monster
+abstract class L3 implements Monster,Heroes
 {
 
-    public int Hp() {
+    public int hp() {
         return 40;
     }
 
@@ -140,7 +138,7 @@ class L3 implements Monster
         return 43;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -149,10 +147,10 @@ class L3 implements Monster
     }
 }
 
-class S3 implements Monster
+abstract class S3 implements Monster,Heroes
 {
 
-    public int Hp() {
+    public int hp() {
         return 55;
     }
 
@@ -160,7 +158,7 @@ class S3 implements Monster
         return 34;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -169,11 +167,11 @@ class S3 implements Monster
     }
 }
 
-class M3 implements Monster
+abstract class M3 implements Monster,Heroes
 {
 
 
-    public int Hp() {
+    public int hp() {
         return 50;
     }
 
@@ -181,7 +179,7 @@ class M3 implements Monster
         return 34;
     }
 
-    public int Def() {
+    public int dex() {
         return 0;
     }
 
@@ -194,7 +192,7 @@ abstract class B1 extends Runy implements Monster,Heroes
 {
 
 
-    public int Hp() {
+    public int hp() {
         return 150;
     }
 
@@ -202,7 +200,7 @@ abstract class B1 extends Runy implements Monster,Heroes
         return 31;
     }
 
-    public int Def() {
+    public int dex() {
         return 5;
     }
 
@@ -222,7 +220,7 @@ abstract class B1 extends Runy implements Monster,Heroes
 abstract class B2 extends Runy implements Monster, Heroes {
 
 
-    public int Hp() {
+    public int hp() {
         return 250;
     }
 
@@ -230,7 +228,7 @@ abstract class B2 extends Runy implements Monster, Heroes {
         return 41;
     }
 
-    public int Def() {
+    public int dex() {
         return 10;
     }
 
