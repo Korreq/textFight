@@ -1,3 +1,5 @@
+import Runy.Runy;
+
 public interface Monster {
     int Hp();
     int ATK();
@@ -188,7 +190,7 @@ class M3 implements Monster
     }
 }
 
-abstract class B1 implements Monster,Heroes
+abstract class B1 extends Runy implements Monster,Heroes
 {
 
 
@@ -211,10 +213,13 @@ abstract class B1 implements Monster,Heroes
     public  boolean mage(){
         return true;
     }
+
+    public void thunder() {
+        super.thunder();
+    }
 }
 
-abstract class B2 implements Monster,Heroes
-{
+abstract class B2 extends Runy implements Monster, Heroes {
 
 
     public int Hp() {
@@ -235,5 +240,9 @@ abstract class B2 implements Monster,Heroes
 
     public boolean mage() {
         return true;
+    }
+
+    public void fire() {
+        super.fire();
     }
 }
