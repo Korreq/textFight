@@ -11,7 +11,9 @@ public class Runy {
     public void blood(){}
 
     public void steel(){}
-    public void flint(){}
+    public void flint(){
+        System.out.println("Krzemionczka");
+    }
     public void wolf(){
         System.out.println("Hau Hau");
     }
