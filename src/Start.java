@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Start {
-    public static void main() {
+    public static void start() {
 
 
 

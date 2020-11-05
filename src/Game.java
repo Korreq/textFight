@@ -7,11 +7,10 @@ public class Game {
 
     public static void main(String[] args) {
         Walka.Fight fight = new Fight();
-        Start start = new Start();
         Bardowie bardzi = new Bardowie();
         //Game textFight = new Game();
 
-        start.main();
+        Start.start();
         bardzi.b1();
         fight.walka();
     }
