@@ -2,19 +2,19 @@ import java.util.Random;
 
 public interface Heroes {
 
-    int hp;
-    int dex;
-    int armor;
+    void hp();
+    void dex();
+    void armor();
 
 
 }
 
 class Warrior implements Heroes{
 
+    public void hp(){};
+    public void dex(){};
+    public void armor(){};
 
-    hp = 20;
-    dex = 0;
-    armor = 10;
 
 
 }

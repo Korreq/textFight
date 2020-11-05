@@ -24,7 +24,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/Praktyki" />
   </component>
   <component name="RunManager">
     <configuration name="Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -52,10 +52,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="798" y="219" key="FileChooserDialogImpl" timestamp="1604586909245">
+    <state x="798" y="219" key="FileChooserDialogImpl" timestamp="1604589896902">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="798" y="219" key="FileChooserDialogImpl/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604586909245" />
+    <state x="798" y="219" key="FileChooserDialogImpl/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604589896902" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1604588591484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
