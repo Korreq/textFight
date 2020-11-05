@@ -14,13 +14,16 @@ Interfejs graficzny;
 Ekwipunek;
 Magia;
 Fabuła;
+Zamiana członków drużyny po śmierci na polu bitwy;
+
+
 
 Rzeczy jak wystarczy czasu:
 Dzwięki/Muzyka;
 Podróżowanie do Dungeonów;
 Zdarzenia;
 System zapisu/wczytania;
-zamiana członków drużyny po śmierci na polu bitwy;
+
 
 
 
