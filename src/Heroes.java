@@ -28,13 +28,13 @@ class Warrior implements Heroes{
 class Rouge implements Heroes{
 
     public int hp(){
-        return 0;
+        return 25;
     }
     public int dex(){
         return 10;
     }
     public int armor(){
-        
+        return 10;
     }
     public boolean mage(){
         return false;
@@ -46,10 +46,14 @@ class Rouge implements Heroes{
 class Bard implements Heroes{
 
     public int hp(){
-        return 0;
+        return 25;
     }
-    public int dex(){}
-    public int armor(){}
+    public int dex(){
+        return 5;
+    }
+    public int armor(){
+        return 5;
+    }
     public boolean mage(){
         return false;
     }
@@ -76,10 +80,14 @@ class Paladyn implements Heroes{
 class Mage implements Heroes{
 
     public int hp(){
+        return 15;
+    }
+    public int dex(){
+        return 5;
+    }
+    public int armor(){
         return 0;
     }
-    public int dex(){}
-    public int armor(){}
     public boolean mage(){
         return true;
     };
@@ -89,10 +97,14 @@ class Mage implements Heroes{
 class Cleric implements Heroes{
 
     public int hp(){
-        return 0;
+        return 15;
     }
-    public int dex(){}
-    public int armor(){}
+    public int dex(){
+        return 5;
+    }
+    public int armor(){
+        return 5;
+    }
     public boolean mage(){
         return true;
     };
