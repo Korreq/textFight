@@ -188,7 +188,7 @@ class M3 implements Monster
     }
 }
 
-class B1 implements Monster
+abstract class B1 implements Monster,Heroes
 {
 
 
@@ -207,9 +207,13 @@ class B1 implements Monster
     public int Mdef() {
         return 5;
     }
+    
+    public  boolean mage(){
+        return true;
+    }
 }
 
-class B2 implements Monster
+abstract class B2 implements Monster,Heroes
 {
 
 
@@ -227,5 +231,9 @@ class B2 implements Monster
 
     public int Mdef() {
         return 10;
+    }
+
+    public boolean mage() {
+        return true;
     }
 }
