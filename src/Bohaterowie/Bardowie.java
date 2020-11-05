@@ -1,6 +1,6 @@
 package Bohaterowie;
 
-public class Wojownicy implements Characters {
+public class Bardowie implements Characters {
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -8,25 +8,20 @@ public class Wojownicy implements Characters {
         return imie;
     }
     public String klasa(){
-        return "Wojownik";
+        return "Bard";
     }
 
 
 
 
 
-    public void w1(){
+    public void r1(){
 
-       klasa();
-       name("Albert");
-       runy.wolf();
+        klasa();
+        name("Robert");
+        runy.flint();
 
     }
-
-
-
-
-
 
 
 
