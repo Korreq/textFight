@@ -15,7 +15,7 @@ public class Bardowie implements Characters {
 
 
 
-    public void r1(){
+    public void b1(){
 
         klasa();
         name("Robert");
