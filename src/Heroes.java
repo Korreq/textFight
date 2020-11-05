@@ -34,7 +34,7 @@ class Rouge implements Heroes{
         return 10;
     }
     public int armor(){
-        
+
     }
     public boolean mage(){
         return false;
