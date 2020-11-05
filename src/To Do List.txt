@@ -20,6 +20,7 @@ Dzwięki/Muzyka;
 Podróżowanie do Dungeonów;
 Zdarzenia;
 System zapisu/wczytania;
+zamiana członków drużyny po śmierci na polu bitwy;
 
 
 
