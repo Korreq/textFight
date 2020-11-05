@@ -1,6 +1,8 @@
 package Bohaterowie;
 
-public class Klerycy implements Characters {
+import Klasy.Cleric;
+
+public class Klerycy extends Cleric implements Characters {
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -20,6 +22,14 @@ public class Klerycy implements Characters {
         klasa();
         name("Ezekiel");
         runy.steel();
+
+    }
+
+    public void c2(){
+
+        klasa();
+        name("Algird ");
+        runy.water();
 
     }
 

@@ -1,6 +1,8 @@
 package Bohaterowie;
 
-public class Magowie implements Characters {
+import Klasy.Mage;
+
+public class Magowie extends Mage implements Characters {
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -20,8 +22,15 @@ public class Magowie implements Characters {
         klasa();
         name("Darek");
         runy.fire();
-
     }
+
+    public void m2(){
+
+        klasa();
+        name("Darionha");
+        runy.wind();
+    }
+
 
 
 }

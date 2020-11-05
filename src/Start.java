@@ -1,3 +1,5 @@
+import Klasy.Heroes;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,7 +9,6 @@ public class Start {
 
 
 
-    //testowy komentarz
     Scanner myScanner = new Scanner(System.in);
     Scanner enterScanner = new Scanner(System.in);
     Random rand = new Random();
@@ -16,8 +17,7 @@ public class Start {
 
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
-
-        String[] adventures = {"Wojownik","Rabuś","Bard    ","Paladyn ","Mag     ","Kleryk  ","Bard    "};
+        String[] adventures = {"Wojownik","Rabuś   ","Bard    ","Paladyn ","Mag     ","Kleryk  ","Bard    "};
         String[] team = new String[6];
         boolean dosc = false;
         int number = 0;

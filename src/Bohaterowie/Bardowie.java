@@ -1,6 +1,10 @@
 package Bohaterowie;
 
-public class Bardowie implements Characters {
+import Klasy.Bard;
+
+public class Bardowie extends Bard implements Characters{
+
+    public
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -18,13 +22,16 @@ public class Bardowie implements Characters {
 
 
     public void b1(){
-
         klasa();
         name("Jan");
         runy.flint();
-
     }
 
+    public void b2(){
+        klasa();
+        name("Włodziu");
+        runy.earth();
+    }
 
 
 

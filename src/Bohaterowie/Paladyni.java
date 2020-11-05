@@ -1,6 +1,8 @@
 package Bohaterowie;
 
-public class Paladyni implements Characters{
+import Klasy.Paladyn;
+
+public class Paladyni extends Paladyn implements Characters{
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -20,9 +22,14 @@ public class Paladyni implements Characters{
         klasa();
         name("Robert");
         runy.steel();
-
     }
 
+    public void p2(){
+
+        klasa();
+        name("Kresul ");
+        runy.light();
+    }
 
 
 

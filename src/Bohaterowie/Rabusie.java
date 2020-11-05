@@ -1,6 +1,8 @@
 package Bohaterowie;
 
-public class Rabusie implements Characters {
+import Klasy.Rouge;
+
+public class Rabusie extends Rouge implements Characters {
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -22,6 +24,15 @@ public class Rabusie implements Characters {
         runy.flint();
 
     }
+
+    public void r2(){
+
+        klasa();
+        name("Twardo ");
+        runy.fire();
+
+    }
+
 
 
 

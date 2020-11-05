@@ -1,6 +1,8 @@
 package Bohaterowie;
 
-public class Wojownicy implements Characters {
+import Klasy.Warrior;
+
+public class Wojownicy extends Warrior implements Characters {
 
     Runy.Runy runy = new Runy.Runy();
 
@@ -20,9 +22,14 @@ public class Wojownicy implements Characters {
        klasa();
        name("Albert");
        runy.wolf();
-
     }
 
+    public void w2(){
+
+        klasa();
+        name("Zabiast");
+        runy.water();
+    }
 
 
 
