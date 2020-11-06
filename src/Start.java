@@ -55,7 +55,7 @@ public class Start {
                         }
                         wyb = myScanner.nextInt();
                     } while (wyb < 0);
-                    if (wyb >= 0 && wyb <= adventures.length-1) {
+                    if (wyb <= adventures.length-1) {
                         if (adventures[wyb] != "Postać została już wybrana")
                         {
                             team[number] = adventures[wyb];
