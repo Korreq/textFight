@@ -14,6 +14,22 @@ public class Magowie extends Mage implements Characters {
     }
 
 
+    public int hp(int h) {
+        return super.hp() + h;
+
+    }
+
+    public int dex(int d) {
+        return super.dex() + d;
+
+
+    }
+
+    public int armor(int a) {
+        return super.armor() + a;
+
+    }
+
 
 
 
@@ -22,6 +38,9 @@ public class Magowie extends Mage implements Characters {
         klasa();
         name("Darek");
         runy.fire();
+        System.out.println(hp(1));
+        System.out.println(dex(-2));
+        System.out.println(armor(2));
     }
 
     public void m2(){
@@ -29,6 +48,9 @@ public class Magowie extends Mage implements Characters {
         klasa();
         name("Darionha");
         runy.wind();
+        System.out.println(hp(1));
+        System.out.println(dex(-2));
+        System.out.println(armor(2));
     }
 
 

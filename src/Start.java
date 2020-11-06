@@ -8,7 +8,6 @@ public class Start {
 
 
 
-
     Scanner myScanner = new Scanner(System.in);
     Scanner enterScanner = new Scanner(System.in);
     Random rand = new Random();
