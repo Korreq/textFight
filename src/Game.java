@@ -1,4 +1,4 @@
-import Bohaterowie.Bardowie;
+import Bohaterowie.Team;
 import Walka.Fight;
 
 public class Game {
@@ -7,11 +7,11 @@ public class Game {
 
     public static void main(String[] args) {
         Walka.Fight fight = new Fight();
-        Bardowie bardzi = new Bardowie();
+        Team team = new Team();
         //Game textFight = new Game();
 
         Start.start();
-        bardzi.b1();
+        //team.team();
         fight.walka();
     }
 }
