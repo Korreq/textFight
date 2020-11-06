@@ -10,6 +10,17 @@ public class Team {
     Rabusie rouges = new Rabusie();
     Wojownicy warriors = new Wojownicy();
 
+    public void squad(){
 
+        bards.b1();
+        clerics.c1();
+        mages.m1();
+        paladins.p1();
+        rouges.r1();
+        warriors.w1();
+
+
+
+    }
 
 }

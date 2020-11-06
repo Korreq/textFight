@@ -38,6 +38,7 @@ public class Bardowie extends Bard implements Characters{
 
 
     public void b1(){
+        System.out.println();
         klasa();
         name("Jan");
         runy.flint();

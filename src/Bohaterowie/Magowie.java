@@ -7,9 +7,11 @@ public class Magowie extends Mage implements Characters {
     Runy.Runy runy = new Runy.Runy();
 
     public String name(String imie){
+        System.out.println(imie);
         return imie;
     }
     public String klasa(){
+        System.out.println("Mag");
         return "Mag";
     }
 
@@ -34,7 +36,7 @@ public class Magowie extends Mage implements Characters {
 
 
     public void m1(){
-
+        System.out.println();
         klasa();
         name("Darek");
         runy.fire();
