@@ -11,7 +11,7 @@ public class Game {
         //Game textFight = new Game();
 
         Start.start();
-        team.squad();
+        //team.squad();
         fight.walka();
     }
 }

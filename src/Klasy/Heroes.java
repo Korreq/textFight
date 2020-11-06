@@ -1,5 +1,7 @@
 package Klasy;
 
+import java.util.Random;
+
 public interface Heroes {
 
     int hp();
@@ -8,5 +10,4 @@ public interface Heroes {
     boolean mage();
 
 }
-
 
