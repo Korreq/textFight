@@ -1,6 +1,6 @@
 import Bohaterowie.Bohaterowie;
 import Potwory.TablicaPotworów;
-
+import Bohaterowie.TablicaBohaterów;
 import java.util.*;
 
 public class Start {
