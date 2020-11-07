@@ -2,12 +2,12 @@ Lista rzeczy do zrobienia :
 
 Rzeczy najważniejsze:
 Główne menu;
-Klasy bohaterów;
+/Klasy bohaterów;
 System walki;
-Przeciwnicy;
+/Przeciwnicy;
 Rodzaje broni;
 Czyszczenie ekranu;
-//Podpięcie bohaterów do karczmy;//
+//Podpięcie bohaterów do karczmy;
 
 Rzeczy ważne:
 Interfejs graficzny;
