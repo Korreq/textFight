@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 import Klasy.Bard;
 
@@ -59,3 +59,4 @@ public class Bardowie extends Bard implements Characters{
 
 
 }
+*/

@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 import Klasy.Paladyn;
 
@@ -59,3 +59,4 @@ public class Paladyni extends Paladyn implements Characters{
 
 
 }
+*/

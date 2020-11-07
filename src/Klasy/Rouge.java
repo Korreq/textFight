@@ -1,4 +1,4 @@
-package Klasy;
+/*package Klasy;
 
 public class Rouge implements Heroes {
 
@@ -19,4 +19,4 @@ public class Rouge implements Heroes {
     }
 
 
-}
+}*/

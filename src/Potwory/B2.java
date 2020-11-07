@@ -3,7 +3,7 @@ package Potwory;
 import Klasy.Heroes;
 import Runy.Runy;
 
-abstract class B2 extends Runy implements Monster, Heroes {
+abstract class B2 extends Runy implements Monster {
 
 
     public int hp() {
@@ -26,7 +26,4 @@ abstract class B2 extends Runy implements Monster, Heroes {
         return true;
     }
 
-    public void fire() {
-        super.fire();
-    }
 }

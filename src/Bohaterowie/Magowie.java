@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 import Klasy.Mage;
 
@@ -58,3 +58,4 @@ public class Magowie extends Mage implements Characters {
 
 
 }
+*/

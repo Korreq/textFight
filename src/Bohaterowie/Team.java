@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 
 public class Team {
@@ -23,4 +23,4 @@ public class Team {
 
     }
 
-}
+}*/

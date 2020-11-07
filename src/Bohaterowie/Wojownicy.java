@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 import Klasy.Warrior;
 
@@ -59,4 +59,4 @@ public class Wojownicy extends Warrior implements Characters {
 
 
 
-}
+}*/

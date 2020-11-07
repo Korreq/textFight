@@ -1,4 +1,4 @@
-package Klasy;
+/*package Klasy;
 
 public class Cleric implements Heroes {
 
@@ -19,4 +19,4 @@ public class Cleric implements Heroes {
     }
 
 
-}
+}*/

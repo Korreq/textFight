@@ -2,7 +2,7 @@ package Potwory;
 
 import Klasy.Heroes;
 
-abstract class M3 implements Monster, Heroes {
+abstract class M3 extends Heroes implements Monster {
 
 
     public int hp() {

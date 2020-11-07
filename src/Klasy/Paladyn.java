@@ -1,4 +1,4 @@
-package Klasy;
+/*package Klasy;
 
 public class Paladyn implements Heroes {
 
@@ -19,3 +19,4 @@ public class Paladyn implements Heroes {
     }
 
 }
+*/

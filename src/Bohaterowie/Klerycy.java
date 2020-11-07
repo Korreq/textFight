@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 import Klasy.Cleric;
 
@@ -57,3 +57,4 @@ public class Klerycy extends Cleric implements Characters {
 
 
 }
+*/

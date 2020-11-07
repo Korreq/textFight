@@ -1,4 +1,4 @@
-package Klasy;
+/*package Klasy;
 
 public class Mage implements Heroes {
 
@@ -21,3 +21,4 @@ public class Mage implements Heroes {
     ;
 
 }
+*/

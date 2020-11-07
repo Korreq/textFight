@@ -1,9 +1,11 @@
-import Klasy.Heroes;
+import Bohaterowie.Bohaterowie;
+import Potwory.TablicaPotworów;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Start {
+
     public static void start() {
 
 
@@ -13,14 +15,11 @@ public class Start {
     Random rand = new Random();
     Random num = new Random();
     Scanner sc = new Scanner(System.in);
-
-
+        TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
-        String[] adventures = {"Wojownik","Rabuś   ","Bard    ","Paladyn ","Mag     ","Kleryk  ","Bard    "};
-        String[] team = new String[6];
+        Bohaterowie[] team = new Bohaterowie[6];
         boolean dosc = false;
         int number = 0;
-
         do {
             System.out.println("╔═══════════════════════════════╗");
             System.out.println("║   Liczba osób w drużynie: "+number+"   ║");
@@ -32,15 +31,14 @@ public class Start {
 
             char choice = sc.next().charAt(0);
             char choice2 = Character.toLowerCase(choice);
-
             switch (choice2) {
                 case ('a') -> {
                     System.out.println("╔═════════════════════════════════╗");
                     System.out.println("║ Osoby znajdujące się w tawernie ║");
-                    for (int i = 0; i < adventures.length; i++) {
+                    for (int i = 0; i < tablicaBohaterów.boh.length; i++) {
                         System.out.println("╠═════════════════════════════════╣");
 
-                        if(adventures[i] !="") System.out.println("║ [" + i + "] " + adventures[i]+"                    ║");
+                        System.out.println("║ [" + i + "] " + tablicaBohaterów.boh[i]+"                    ║");
 
                     }
                     System.out.println("╚═════════════════════════════════╝");
@@ -55,11 +53,11 @@ public class Start {
                         }
                         wyb = myScanner.nextInt();
                     } while (wyb < 0);
-                    if (wyb <= adventures.length-1) {
-                        if (adventures[wyb] != "Postać została już wybrana")
+                    if (wyb <= tablicaBohaterów.boh.length-1) {
+                        if (tablicaBohaterów.boh[wyb] != null)
                         {
-                            team[number] = adventures[wyb];
-                            adventures[wyb] = "Postać została już wybrana";
+                            team[number] = tablicaBohaterów.boh[wyb];
+                            tablicaBohaterów.boh[wyb] = null;
                             number++;
                         }
                         else
@@ -103,6 +101,16 @@ public class Start {
                             System.out.println("║ [" + p1 + "] • " + team[i]+"   ║");
                         }
                         System.out.println("╚══════════════════╝");
+                        TablicaPotworów tablicaPotworów = new TablicaPotworów();
+                        System.out.println("╔═════════╦═════════╦═════════╗");
+                        System.out.println("║    "+tablicaPotworów.potwory[4]+"   ║    "+tablicaPotworów.potwory[7]+"   ║    "+tablicaPotworów.potwory[6]+"   ║");
+                        System.out.println("║    "+tablicaPotworów.potwory[1]+"   ║    "+tablicaPotworów.potwory[2]+"   ║    "+tablicaPotworów.potwory[8]+"   ║");
+                        System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
+                        System.out.println("║    "+team[0]+"    ║    "+team[1]+"    ║    "+team[2]+"    ║");
+                        System.out.println("║    "+team[3]+"    ║    "+team[4]+"    ║    "+team[5]+"    ║");
+                        System.out.println("╚═════════╩═════════╩═════════╝");
+                        System.out.println();
+
                     }
 
                 }
@@ -114,10 +122,7 @@ public class Start {
 
 
         }while (!dosc);
-
-
     }
-
 
 }
 

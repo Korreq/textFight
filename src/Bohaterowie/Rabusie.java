@@ -1,4 +1,4 @@
-package Bohaterowie;
+/*package Bohaterowie;
 
 import Klasy.Rouge;
 
@@ -61,3 +61,4 @@ public class Rabusie extends Rouge implements Characters {
 
 
 }
+*/
