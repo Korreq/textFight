@@ -1,7 +1,7 @@
 Lista rzeczy do zrobienia :
 
 Rzeczy najważniejsze:
-Główne menu;
+/Główne menu;
 /Klasy bohaterów;
 System walki;
 /Przeciwnicy;
