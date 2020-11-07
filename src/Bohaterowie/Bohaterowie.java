@@ -29,13 +29,15 @@ public class Bohaterowie extends Heroes {
     }
 
 
-    public Bohaterowie(String name,String klasa,String type,int maxhp,int hp,int dex,int armor,boolean mage){
+    public Bohaterowie(String name,String klasa,String type,int maxhp,int hp,int dex,int armor,int m_armor,int atk,boolean mage){
         this.name = name;
         this.klasa = klasa;
         this.maxhp = maxhp;
         this.hp = hp;
         this.dex = dex;
         this.armor= armor;
+        this.m_armor = m_armor;
+        this.atk = atk;
         this.mage = mage;
         runes(type);
     }
