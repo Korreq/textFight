@@ -36,10 +36,10 @@ public class Start {
                     System.out.println("╔═════════════════════════════════╗");
                     System.out.println("║ Osoby znajdujące się w tawernie ║");
                     for (int i = 0; i < tablicaBohaterów.boh.length; i++) {
-                        System.out.println("╠═════════════════════════════════╣");
-
-                        System.out.println("║ [" + i + "] " + tablicaBohaterów.boh[i]+"                    ║");
-
+                        if(tablicaBohaterów.boh[i] != null) {
+                            System.out.println("╠═════════════════════════════════╣");
+                            System.out.println("║ [" + i + "] " + tablicaBohaterów.boh[i] + "                    ║");
+                        }
                     }
                     System.out.println("╚═════════════════════════════════╝");
 

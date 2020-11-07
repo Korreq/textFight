@@ -3,6 +3,7 @@ import Bohaterowie.Bohaterowie;
 
 public class TablicaBohaterów {
 
+
         public Bohaterowie Maria = new Bohaterowie("Maria", "Wojownik", 154,154, 51, 534,false);
         public Bohaterowie Włodek = new Bohaterowie("Włodek", "Paladyn", 154,154, 51, 534,true);
         public Bohaterowie Andrzej = new Bohaterowie("Andrzej", "Kleryk", 154,154, 51, 534,false);
