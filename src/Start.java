@@ -5,28 +5,25 @@ import java.util.*;
 
 public class Start {
 
+
+
+
     public static void start() {
 
 
         Scanner myScanner = new Scanner(System.in);
-        Scanner enterScanner = new Scanner(System.in);
-        Random rand = new Random();
-        Random num = new Random();
-        Scanner sc = new Scanner(System.in);
+
         TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
         TablicaPotworów tablicaPotworów = new TablicaPotworów();
         Bohaterowie[] kopiaboh = tablicaBohaterów.boh;
         Collections.shuffle(Arrays.asList(kopiaboh));
         Bohaterowie[] karczma = new Bohaterowie[12];
-        for (int i = 0; i <= 11; i++)
-        {
-            karczma[i]=kopiaboh[i];
-        }
+        System.arraycopy(kopiaboh, 0, karczma, 0, 12);
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
+        int number = 0;
         Bohaterowie[] team = new Bohaterowie[6];
         boolean dosc = false;
-        int number = 0;
         do {
             System.out.println("╔═══════════════════════════════╗");
             System.out.println("║   Liczba osób w drużynie: "+number+"   ║");
@@ -36,7 +33,7 @@ public class Start {
             System.out.println("║ C • Zakończ i wyrusz w drogę  ║");
             System.out.println("╚═══════════════════════════════╝");
 
-            char choice = sc.next().charAt(0);
+            char choice = myScanner.next().charAt(0);
             char choice2 = Character.toLowerCase(choice);
             switch (choice2) {
                 case ('a') -> {
@@ -131,6 +128,8 @@ public class Start {
         System.out.println("╚═════════╩═════════╩═════════╝");
         System.out.println();
     }
+
+
 
 }
 
