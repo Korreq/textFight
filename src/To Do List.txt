@@ -25,8 +25,8 @@ Zdarzenia;
 System zapisu/wczytania;
 
 
-
-
+/ - zaczęte ale nie skończone
+// - skończone 
 
 
 
