@@ -112,7 +112,7 @@ public class Start {
                         System.out.println();
 
 
-                        tablicaBohaterów.Andrzej.runes("");
+                        tablicaBohaterów.Andrzej.runes("steel");
 
                     }
 

@@ -18,7 +18,7 @@ public class Bohaterowie extends Heroes {
             case "light"-> runy.light();
             case "blood"-> runy.blood();
 
-            case "steel"-> runy.steel();
+            case "steel"-> runy.steel(maxhp);
             case "flint"-> runy.flint();
             case "wolf"-> runy.wolf();
 

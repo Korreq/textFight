@@ -12,7 +12,12 @@ public class Runy {
     public void light(){}
     public void blood(){}
 
-    public void steel(){}
+    public void steel(int hp){
+
+       hp = hp * 2;
+
+        System.out.println(hp);
+    }
     public void flint(){}
     public void wolf(){}
 
