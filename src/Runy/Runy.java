@@ -1,7 +1,7 @@
 package Runy;
 
 public class Runy {
-    
+
     public void fire(){}
     public void water(){}
     public void wind(){}

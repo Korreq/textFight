@@ -10,6 +10,6 @@ public class Game {
         //Game textFight = new Game();
         Start.start();
         //team.squad();
-        fight.walka();
+        //fight.walka();
     }
 }
