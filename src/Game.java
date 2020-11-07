@@ -1,4 +1,3 @@
-import Bohaterowie.Bohaterowie;
 import Walka.Fight;
 
 public class Game {
