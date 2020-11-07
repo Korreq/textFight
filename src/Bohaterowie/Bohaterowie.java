@@ -24,6 +24,24 @@ public class Bohaterowie extends Heroes {
 
             default-> System.out.println("to nie runa");
         }
+    }
+
+    //przygotowane na utworzenie nowej klasy dla klas postaci
+    public void classes(String klasa)
+    {
+        switch (klasa)
+        {
+            case "Wojownik"-> System.out.println("ARRR");
+            case "Paladyn"-> System.out.println("AMEN towarzyszu");
+            case "Łotrzyk"-> System.out.println("To ja go atakuje");
+            case "Bard"-> System.out.println("Idę zauroczyć jakieś stwory");
+            case "Mag"-> System.out.println("hmmm");
+            case "Kapłan"-> System.out.println("szcześć bożki");
+            default-> System.out.println("to nie klasa");
+
+
+        }
+
 
 
     }
@@ -40,6 +58,7 @@ public class Bohaterowie extends Heroes {
         this.atk = atk;
         this.mage = mage;
         runes(type);
+        classes(klasa);
     }
 
       public String toString() { return name+" "+klasa;}

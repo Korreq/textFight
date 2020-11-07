@@ -51,6 +51,7 @@ public class TablicaBohaterów {
         public Bohaterowie w34 = new Bohaterowie("Darionha","Kapłan","blood",30,30,24,1,11,7,true);
         public Bohaterowie w35 = new Bohaterowie("w35","Kapłan","light",30,30,27,-1,7,10,true);
         public Bohaterowie w36 = new Bohaterowie("w36","Kapłan","blood",30,30,26,-2,11,10,true);
+
         public Bohaterowie[] boh = {w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,w14,w15,w16,w17,w18,w19,w20,w21,w22,w23,w24,w25,w26,w27,w28,w29,w30,w31,w32,w33,w34,w35,w36};
 
 }
