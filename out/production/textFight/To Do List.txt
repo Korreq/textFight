@@ -23,6 +23,7 @@ Dzwięki/Muzyka;
 Podróżowanie do Dungeonów;
 Zdarzenia;
 System zapisu/wczytania;
+System levelowania postaci;
 
 
 / - zaczęte ale nie skończone
