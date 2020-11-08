@@ -4,11 +4,11 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-Podpięcie bohaterów do karczmy   [v]    Główne menu         [*]           Rodzaje broni             [x]
-                                        Klasy bohaterów     [*]
-                                        System walki        [*]
-                                        Przeciwnicy         [*]
-                                        Czyszczenie ekranu  [*]
+Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
+                                        Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
+                                        Podstawy systemu walki    [*]
+                                        Przeciwnicy               [*]
+                                        Czyszczenie ekranu        [*]
 
 
                                             Rzeczy ważne:
