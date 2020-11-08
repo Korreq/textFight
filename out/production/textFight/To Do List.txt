@@ -1,33 +1,37 @@
 Lista rzeczy do zrobienia :
 
-Rzeczy najważniejsze:
-/Główne menu;
-/Klasy bohaterów;
-System walki;
-/Przeciwnicy;
-Rodzaje broni;
-Czyszczenie ekranu;
-//Podpięcie bohaterów do karczmy;
-
-Rzeczy ważne:
-Interfejs graficzny;
-Ekwipunek;
-Magia;
-Fabuła;
-Zamiana członków drużyny po śmierci na polu bitwy;
+                                        Rzeczy najważniejsze:
+-------------------------------------------------------------------------------------------------------------
+            Zrobione                    W trakcie robienia                Nie zrobione
+-------------------------------------------------------------------------------------------------------------
+Podpięcie bohaterów do karczmy   [v]    Główne menu         [*]           Rodzaje broni             [x]
+                                        Klasy bohaterów     [*]
+                                        System walki        [*]
+                                        Przeciwnicy         [*]
+                                        Czyszczenie ekranu  [*]
 
 
+                                            Rzeczy ważne:
+-------------------------------------------------------------------------------------------------------------
+            Zrobione                    W trakcie robienia                Nie zrobione
+-------------------------------------------------------------------------------------------------------------
+                                     Interfejs "graficzny"  [*]          Ekwipunek                  [x]
+                                                                         Magia                      [x]
+                                                                         Fabuła                     [x]
+                                                                         Zamiana członków drużyny
+                                                                         po śmierci na polu bitwy   [x]
 
-Rzeczy jak wystarczy czasu:
-Dzwięki/Muzyka;
-Podróżowanie do Dungeonów;
-Zdarzenia;
-System zapisu/wczytania;
-System levelowania postaci;
 
+                                        Rzeczy jak wystarczy czasu:
+-------------------------------------------------------------------------------------------------------------
+            Zrobione                    W trakcie robienia                Nie zrobione
+-------------------------------------------------------------------------------------------------------------
+                                                                        Dzwięki/Muzyka               [x]
+                                                                        Podróżowanie do Dungeonów    [x]
+                                                                        Zdarzenia                    [x]
+                                                                        System zapisu/wczytania      [x]
+                                                                        System levelowania postaci   [x]
 
-/ - zaczęte ale nie skończone
-// - skończone 
 
 
 

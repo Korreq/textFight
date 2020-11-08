@@ -1,14 +1,16 @@
-import Walka.Fight;
+
+import Walka.Walka;
 
 public class Game {
 
 
 
     public static void main(String[] args) {
-        Walka.Fight fight = new Fight();
+        Walka fight = new Walka();
         //Game textFight = new Game();
         Start.start();
         //team.squad();
         //fight.walka();
+        fight.walka();
     }
 }
