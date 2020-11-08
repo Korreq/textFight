@@ -20,7 +20,7 @@ public class Start {
         Scanner myScanner = new Scanner(System.in);
 
         TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
-        TablicaPotworów tablicaPotworów = new TablicaPotworów();
+        //TablicaPotworów tablicaPotworów = new TablicaPotworów();
         Bohaterowie[] kopiaboh = tablicaBohaterów.boh;
         Collections.shuffle(Arrays.asList(kopiaboh));
         Bohaterowie[] karczma = new Bohaterowie[12];
