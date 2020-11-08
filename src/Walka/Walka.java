@@ -11,9 +11,11 @@ public class Walka {
         WalkaE walkaE = new WalkaE();
         int min = 1;
         int max = 20;
+        int a = 50;
+        int b = 50;
+        boolean alive = true;
 
-        boolean a = true;
-        do {
+        while(alive ==true){
 
         System.out.println("╔═════════╗");
         System.out.println("║    E1   ║");
@@ -21,9 +23,9 @@ public class Walka {
         System.out.println("║    B1   ║");
         System.out.println("╚═════════╝");
         System.out.println("╔══════════╗");
-        System.out.println("║          ║");
+        System.out.println("║     "+walkaE.showhp()+"/"+walkaE.maxHP+"     ║");
         System.out.println("║ - - - -  ║");
-        System.out.println("║   "+walkaB.getHp1(50)+"/"+walkaB.maxHP+"      ║");
+        System.out.println("║   "+walkaB.showhp()+"/"+walkaB.maxHP+"      ║");
         System.out.println("╚══════════╝");
         System.out.println();
 
@@ -35,13 +37,21 @@ public class Walka {
         switch (choice) {
             case 1:
                 System.out.print("Zadałeś ");
-                System.out.print(walkaB.atak(min, max));
+                System.out.print(walkaE.atak(min, max));
                 System.out.println(" obrażeń!");
-                break;
+                if(walkaE.getHp1(a) <= 0){
+                    alive = false;
+                    break;
+                }
+                System.out.print("Przeciwnik zadał ci ");
+                System.out.print(walkaB.atak(1, 5)+"\n");
+                if(walkaB.getHp1(b) <= 0){
+                    alive = false;
+                    break;
 
-            case 2:
-                System.out.print("Twoje HP ");
-                System.out.println(walkaB.getHp1(50));
+                }
+
+                break;
 
             default:
 
@@ -49,7 +59,12 @@ public class Walka {
 
         }
 
-        }while(a==true);
+
+        }
+
+        System.out.println("Hurra Kurwa pisowska gryzie gruz!!!");
+
+
     }
 
 }

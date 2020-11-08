@@ -1,9 +1,32 @@
 package Walka;
 
-public class WalkaE {
+public class WalkaE extends Walka{
+
+    WalkaB bitewaka = new WalkaB();
+
+    int hp1 = 50;
+    int hp2;
+    int maxHP = 50;
+    int dmgTaken;
+
 
     public int atak(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
+        return dmgTaken = (int) ((Math.random() * (max - min)) + min);
+    }
+
+    public int showhp(){
+
+        return hp2 = hp1;
+
+    }
+
+
+    public int getHp1(int maxHP) {
+
+        showhp();
+        maxHP = hp1;
+        return hp1 = maxHP - dmgTaken;
+
     }
 
 }
