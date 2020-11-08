@@ -4,7 +4,7 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-//Podpięcie bohaterów do karczmy   [v]  Główne menu         [*]           Rodzaje broni         [x]
+Podpięcie bohaterów do karczmy   [v]    Główne menu         [*]           Rodzaje broni             [x]
                                         Klasy bohaterów     [*]
                                         System walki        [*]
                                         Przeciwnicy         [*]
@@ -15,7 +15,7 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                       Interfejs graficzny - [*]         Ekwipunek                  [x]
+                                       Interfejs graficzny  [*]          Ekwipunek                  [x]
                                                                          Magia                      [x]
                                                                          Fabuła                     [x]
                                                                          Zamiana członków drużyny
