@@ -15,7 +15,7 @@ Podpięcie bohaterów do karczmy   [v]    Główne menu         [*]           Ro
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                       Interfejs graficzny  [*]          Ekwipunek                  [x]
+                                     Interfejs "graficzny"  [*]          Ekwipunek                  [x]
                                                                          Magia                      [x]
                                                                          Fabuła                     [x]
                                                                          Zamiana członków drużyny
