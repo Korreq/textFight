@@ -8,8 +8,8 @@ public class WalkaB {
     int hp1 = maxHP;
     int dmgTaken;
 
-    public int atak(int min, int max) {
-        return dmgTaken = (int) ((Math.random() * (max - min)) + min);
+    public int atak(int max) {
+        return dmgTaken = (int) ((Math.random() * (max - 1)) + 1);
     }
 
     public int showhp(){

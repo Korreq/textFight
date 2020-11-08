@@ -11,7 +11,7 @@ public class Walka {
         WalkaE walkaE = new WalkaE();
 
 
-        int min = 1;
+        //int min = 1;
         int max = 20;
         int a = 50;
         int b = 50;
@@ -39,14 +39,14 @@ public class Walka {
         switch (choice) {
             case 1:
                 System.out.print("Zadałeś ");
-                System.out.print(walkaE.atak(min, max));
+                System.out.print(walkaE.atak(max));
                 System.out.println(" obrażeń!");
                 if(walkaE.getHp1(a) <= 0){
                     alive = false;
                     break;
                 }
                 System.out.print("Przeciwnik zadał ci ");
-                System.out.print(walkaB.atak(1, 5)+"\n");
+                System.out.print(walkaB.atak(5)+"\n");
                 if(walkaB.getHp1(b) <= 0){
                     alive = false;
                     break;

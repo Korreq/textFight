@@ -1,6 +1,8 @@
 
 import Walka.Walka;
 
+import java.io.IOException;
+
 public class Game {
 
 
@@ -9,8 +11,13 @@ public class Game {
         Walka fight = new Walka();
         //Game textFight = new Game();
         Start.start();
+
         //team.squad();
         //fight.walka();
         fight.walka();
     }
+
+
+
+
 }
