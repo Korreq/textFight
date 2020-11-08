@@ -14,13 +14,13 @@ public class TablicaBohaterów {
         public Bohaterowie w7 = new Bohaterowie("w7","Wojownik","wolf",44,44,18,4,7,19,false);
 
 
-        public Bohaterowie w8 = new Bohaterowie("Robert","Paladyn","earth",40,40,16,7,9,15,false);
-        public Bohaterowie w9 = new Bohaterowie("Kresul","Paladyn","steel",48,48,16,8,10,10,false);
-        public Bohaterowie w10 = new Bohaterowie("w10","Paladyn","water",40,40,16,6,9,17,false);
-        public Bohaterowie w11 = new Bohaterowie("w11","Paladyn","steel",48,48,18,4,10,13,false);
-        public Bohaterowie w12 = new Bohaterowie("w12","Paladyn","fire",40,40,14,8,9,10,false);
-        public Bohaterowie w13 = new Bohaterowie("w13","Paladyn","steel",48,48,19,5,10,10,false);
-        public Bohaterowie w14 = new Bohaterowie("w14","Paladyn","wind",40,40,16,4,9,17,false);
+        public Bohaterowie w8 = new Bohaterowie("Robert","Paladyn","earth",40,40,16,7,9,15,true);
+        public Bohaterowie w9 = new Bohaterowie("Kresul","Paladyn","steel",48,48,16,8,10,10,true);
+        public Bohaterowie w10 = new Bohaterowie("w10","Paladyn","water",40,40,16,6,9,17,true);
+        public Bohaterowie w11 = new Bohaterowie("w11","Paladyn","steel",48,48,18,4,10,13,true);
+        public Bohaterowie w12 = new Bohaterowie("w12","Paladyn","fire",40,40,14,8,9,10,true);
+        public Bohaterowie w13 = new Bohaterowie("w13","Paladyn","steel",48,48,19,5,10,10,true);
+        public Bohaterowie w14 = new Bohaterowie("w14","Paladyn","wind",40,40,16,4,9,17,true);
 
 
         public Bohaterowie w15 = new Bohaterowie("Robert","Łotrzyk","steel",43,43,26,5,6,13,false);
