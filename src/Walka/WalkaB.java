@@ -4,7 +4,7 @@ public class WalkaB {
 
     int hp1 = 50;
     int hp2;
-    //int maxHP = 50;
+    int maxHP = 50;
     int dmgTaken;
 
     public int atak(int min, int max) {

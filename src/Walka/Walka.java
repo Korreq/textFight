@@ -12,6 +12,9 @@ public class Walka {
         int min = 1;
         int max = 20;
 
+        boolean a = true;
+        do {
+
         System.out.println("╔═════════╗");
         System.out.println("║    E1   ║");
         System.out.println("║ - - - - ║");
@@ -20,13 +23,12 @@ public class Walka {
         System.out.println("╔══════════╗");
         System.out.println("║          ║");
         System.out.println("║ - - - -  ║");
-        System.out.println("║          ║");
+        System.out.println("║   "+walkaB.getHp1(50)+"/"+walkaB.maxHP+"      ║");
         System.out.println("╚══════════╝");
         System.out.println();
 
 
-        boolean a = true;
-        do {
+
         System.out.println("Wybierz swoją akcje: \n [1] Atak\n [2] Życie\n");
         int choice = scanner.nextInt();
 
