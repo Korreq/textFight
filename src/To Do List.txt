@@ -6,8 +6,8 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
 Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
                                         Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
-                                        Podstawy systemu walki    [*]
-                                        Przeciwnicy               [*]
+                                        Podstawy systemu walki    [*]    Skopiowanie array-u teamu
+                                        Przeciwnicy               [*]    do nowej klasy             [x]
                                         Czyszczenie ekranu        [*]
 
 
@@ -20,6 +20,7 @@ Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rod
                                                                          Fabuła                     [x]
                                                                          Zamiana członków drużyny
                                                                          po śmierci na polu bitwy   [x]
+
 
 
                                         Rzeczy jak wystarczy czasu:
