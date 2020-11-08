@@ -9,6 +9,8 @@ public class Walka {
         Scanner scanner = new Scanner(System.in);
         WalkaB walkaB = new WalkaB();
         WalkaE walkaE = new WalkaE();
+
+
         int min = 1;
         int max = 20;
         int a = 50;

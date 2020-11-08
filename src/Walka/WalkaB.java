@@ -2,9 +2,10 @@ package Walka;
 
 public class WalkaB {
 
-    int hp1 = 50;
+
     int hp2;
     int maxHP = 50;
+    int hp1 = maxHP;
     int dmgTaken;
 
     public int atak(int min, int max) {

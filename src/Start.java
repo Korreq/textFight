@@ -22,6 +22,7 @@ public class Start {
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
         int number = 0;
+
         Bohaterowie[] team = new Bohaterowie[6];
         boolean dosc = false;
         do {
@@ -118,7 +119,7 @@ public class Start {
             System.out.println("║ [" + p1 + "] • " + team[i]+"   ║");
         }
         System.out.println("╚══════════════════╝");
-
+        /*
         System.out.println("╔═════════╦═════════╦═════════╗");
         System.out.println("║    "+tablicaPotworów.potwory[4]+"   ║    "+tablicaPotworów.potwory[7]+"   ║    "+tablicaPotworów.potwory[6]+"   ║");
         System.out.println("║    "+tablicaPotworów.potwory[1]+"   ║    "+tablicaPotworów.potwory[2]+"   ║    "+tablicaPotworów.potwory[8]+"   ║");
@@ -127,6 +128,8 @@ public class Start {
         System.out.println("║    "+team[3]+"    ║    "+team[4]+"    ║    "+team[5]+"    ║");
         System.out.println("╚═════════╩═════════╩═════════╝");
         System.out.println();
+
+         */
     }
 
 

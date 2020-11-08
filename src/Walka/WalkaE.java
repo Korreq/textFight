@@ -4,9 +4,10 @@ public class WalkaE extends Walka{
 
     WalkaB bitewaka = new WalkaB();
 
-    int hp1 = 50;
+
     int hp2;
     int maxHP = 50;
+    int hp1 = maxHP;
     int dmgTaken;
 
 
@@ -23,9 +24,9 @@ public class WalkaE extends Walka{
 
     public int getHp1(int maxHP) {
 
-        showhp();
-        maxHP = hp1;
-        return hp1 = maxHP - dmgTaken;
+        maxHP = hp1;// hp1 = 50 = maxHP //
+        return hp1 = maxHP - dmgTaken;//hp1 = 50 -dmg
+
 
     }
 
