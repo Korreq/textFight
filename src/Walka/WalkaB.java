@@ -2,7 +2,7 @@ package Walka;
 
 public class WalkaB {
 
-    int hp1;
+    int hp1 = 50;
     int hp2;
     int maxHP = 50;
     int dmgTaken;
@@ -11,12 +11,18 @@ public class WalkaB {
         return dmgTaken = (int) ((Math.random() * (max - min)) + min);
     }
 
-    public int getHp1() {
-        return hp1 = maxHP - dmgTaken;
+    public int showhp(){
+
+        return hp2 = hp1;
+
     }
 
-    public int getHp2() {
-        return hp2 = hp1 - dmgTaken;
+    public int getHp1(int maxHP) {
+
+        maxHP = hp1;
+        return hp1 = maxHP - dmgTaken;
+
     }
+
 
 }
