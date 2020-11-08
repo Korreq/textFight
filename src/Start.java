@@ -8,6 +8,12 @@ public class Start {
 
 
 
+    static Bohaterowie[] team = new Bohaterowie[6];
+    //Bohaterowie[] drużyna = new Bohaterowie[number];
+    static int number = 0;
+
+
+
     public static void start() {
 
 
@@ -21,9 +27,9 @@ public class Start {
         System.arraycopy(kopiaboh, 0, karczma, 0, 12);
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
-        int number = 0;
+        //int number = 0;
 
-        Bohaterowie[] team = new Bohaterowie[6];
+        //Bohaterowie[] team = new Bohaterowie[6];
         boolean dosc = false;
         do {
             System.out.println("╔═══════════════════════════════╗");
