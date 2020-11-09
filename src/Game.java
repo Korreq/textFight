@@ -9,10 +9,6 @@ public class Game {
         Walka fight = new Walka();
         //Game textFight = new Game();
         Start.start();
-
-        team.dru();
-
-
         fight.walka();
 
     }

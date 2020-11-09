@@ -1,6 +1,5 @@
 package Walka;
 
-import Klasy.Rolls;
 import Potwory.TablicaPotworów;
 
 public class Fight {

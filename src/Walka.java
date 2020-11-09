@@ -1,5 +1,7 @@
+import Bohaterowie.Bohaterowie;
 import Potwory.TablicaPotworów;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Walka {
@@ -7,13 +9,16 @@ public class Walka {
     public static void walka() {
 
         Scanner scanner = new Scanner(System.in);
-     //   WalkaB walkaB = new WalkaB();
-      //  WalkaE walkaE = new WalkaE();
+
 
         TablicaPotworów tablicaPotworów = new TablicaPotworów();
         Team team = new Team();
-        System.out.println(Team.number);
-        //int min = 1;
+        Bohaterowie[] teamli = new Bohaterowie[Team.number];
+        System.arraycopy(Team.team,0,teamli,0,Team.number);
+        for(int i = 0; i<= teamli.length-1; i++)
+        {
+            System.out.println(teamli[i]);
+        }
         boolean alive = true;
 
     //    while(alive ==true){
@@ -68,9 +73,9 @@ public class Walka {
             System.out.println("╚═════════╩═════════╩═════════╝");
             System.out.println();
         int[] inicjatywa = new int[12];
-        for(int i = 0; i<= Team.team.length-1; i++)
+        for(int i = 0; i<= teamli.length; i++)
         {
-            inicjatywa[i]= Team.team[i].dex;
+            inicjatywa[i]= teamli[i].dex;
         }
         inicjatywa[6]=tablicaPotworów.potwory[1].dex;
         inicjatywa[7]=tablicaPotworów.potwory[2].dex;
