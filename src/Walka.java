@@ -77,13 +77,33 @@ public class Walka {
                         System.out.println("Wybierz cel");
                         int atak = scanner.nextInt(6);
                         if (potworybitwa[atak].hp > 0) {
-                            int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - potworybitwa[atak].armor;
+                            int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1)*100 - potworybitwa[atak].armor;//Mega obrażenia
                             if(obr <= 0){obr = 0;}
                             potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
                             System.out.println("zadałesz potworowi " + potworybitwa[atak] + " " + obr + " obrażen");
                             if (potworybitwa[atak].hp <= 0) {
                                 System.out.println("zabiłesz potwora " + potworybitwa[atak]);
                                 potworybitwa[atak].hp =0;
+
+                                int mori = 0;
+                                for(int x = 0;x < potworybitwa.length;x++){
+
+                                    if(potworybitwa[x].hp <= 0){
+                                        mori++;
+                                    }
+                                    if (mori == potworybitwa.length){
+                                        alive = false;
+                                        System.out.println("Wygrałesz bitwę");
+
+                                    }
+
+                                }
+
+
+
+
+
+                                /*
                                     if(potworybitwa[0].hp <= 0){
                                         if(potworybitwa[1].hp <= 0){
                                             if(potworybitwa[2].hp <= 0){
@@ -97,7 +117,7 @@ public class Walka {
                                                 }
                                             }
                                         }
-                                    }
+                                    }*/
 
                             }
                         } else {
@@ -142,13 +162,13 @@ public class Walka {
                 System.out.println("Czas na turę potworów");
             for(int i = 0;i<= potworybitwa.length-1;i++) {
                 if(!alive){break;}
-                if (potworybitwa[i].hp >= 0) {
+                if (potworybitwa[i].hp > 0) {
                     int wyb = random.nextInt(1);
                     switch (wyb) {
                         case (0) -> {
                             int atak = random.nextInt(Team.number);
                             if (teamini[atak].hp > 0) {
-                                int obr = (int) ((Math.random() * (potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
+                                int obr = (int) ((Math.random() * (potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor * 100; //pomnożone do 100 żeby bohaterowie nie umierali
                                 if(obr <= 0){obr = 0;}
                                 teamini[atak].hp = teamini[atak].hp - obr;
                                 System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
@@ -174,8 +194,8 @@ public class Walka {
                     }
                 }
 
-
-                Thread.sleep(2000);
+                //ty dobrze wiesz czemu jest to skomentowane
+               // Thread.sleep(2000);
 
             }
                if(zyc!=Team.number){ System.out.println("Koniec tury potworów czas na twoją");}
