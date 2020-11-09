@@ -29,65 +29,22 @@ public class Walka {
             System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
 
             System.out.print("║  " + Team.team[0].hp + "/" + Team.team[0].maxhp + "  ║  ");
-            for(int i = 1;i < 6;i++){
-                if(Team.team[i]==null){
 
-                    System.out.print("       ║");
-
-                }
-                else{
-                    if(i == 3){
-                        System.out.print("\n║  ");
-                    }
+            for(int i = 1;i < team.number;i++)
+            {
+                    if(i == 3) { System.out.print("\n║  "); }
                     System.out.print(Team.team[i].hp + "/" + Team.team[i].maxhp + "  ║  ");
-                }
+            }
+            if(3 > team.number)
+            {
+                for(int i = 3;i > team.number;i-- ) { System.out.print("       ║  ");}
+            }
+            if(6 > team.number && 3 < team.number)
+            {
+                for(int i = 6;i > team.number;i-- ) { System.out.print("       ║  "); }
+            }
 
-            }
-
-        System.out.println();
-
-           /*
-            if(Team.team[1]==null)
-            {
-                System.out.print("       ║");
-            }
-            else
-            {
-                System.out.print(Team.team[1].hp + "/" + Team.team[1].maxhp + "  ║  ");
-            }
-            if(Team.team[2]==null)
-            {
-                System.out.println("       ║");
-            }
-            else
-            {
-                System.out.println(Team.team[2].hp + "/" + Team.team[2].maxhp + "  ║  ");
-            }
-            if(Team.team[3]==null)
-            {
-                System.out.print("║         ║");
-            }
-            else
-            {
-                System.out.print("║  "+Team.team[3].hp + "/" + Team.team[3].maxhp + "  ║  ");
-            }
-            if(Team.team[4]==null)
-            {
-                System.out.print("      ║  ");
-            }
-            else
-            {
-                System.out.print(Team.team[4].hp + "/" + Team.team[4].maxhp + "  ║  ");
-            }
-            if(Team.team[5]==null)
-            {
-                System.out.println("       ║");
-            }
-            else
-            {
-                System.out.println(Team.team[5].hp + "/" + Team.team[5].maxhp + "  ║  ");
-            }
-*/
+            System.out.println();
             System.out.println("╚═════════╩═════════╩═════════╝");
             System.out.println();
         int[] inicjatywa = new int[12];
