@@ -14,7 +14,7 @@ public class Game {
 
         //team.squad();
         //fight.walka();
-        fight.walka();
+
     }
 
 
