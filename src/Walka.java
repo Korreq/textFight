@@ -7,6 +7,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Walka {
+    static Potwory[] potworybitwa = new Potwory[6];
+    public void aaa(){
+        this.potworybitwa = potworybitwa;
+    }
 
     public static void walka() throws InterruptedException {
 
@@ -25,13 +29,12 @@ public class Walka {
 
         Arrays.sort(teamini, sortowanie);
         boolean alive = true;
-        Potwory[] potworybitwa = new Potwory[6];
-        potworybitwa[0] = tablicaPotworów.potwory[4];
-        potworybitwa[1] = tablicaPotworów.potwory[2];
-        potworybitwa[2] = tablicaPotworów.potwory[1];
-        potworybitwa[3] = tablicaPotworów.potwory[7];
-        potworybitwa[4] = tablicaPotworów.potwory[3];
-        potworybitwa[5] = tablicaPotworów.potwory[8];
+
+        //losowanie przeciwników
+        for(int i=0;i<= potworybitwa.length-1;i++){
+            int go = random.nextInt(9);
+            potworybitwa[i] = tablicaPotworów.potwory[go];
+        }
         System.out.println("Pole bitwy");
         System.out.println();
 
@@ -39,30 +42,8 @@ public class Walka {
             //tu zaczyna się tura
         while(alive)
         {
+            PoleBitwy.main();
 
-            System.out.println("╔═════════╦═════════╦═════════╗");
-            System.out.println("║  " + tablicaPotworów.potwory[4].hp + "/" + tablicaPotworów.potwory[4].maxhp + "  ║  " + tablicaPotworów.potwory[2].hp + "/" + tablicaPotworów.potwory[2].maxhp + "  ║  " + tablicaPotworów.potwory[1].hp + "/" + tablicaPotworów.potwory[1].maxhp + "  ║");
-            System.out.println("║  " + tablicaPotworów.potwory[7].hp + "/" + tablicaPotworów.potwory[7].maxhp + "  ║  " + tablicaPotworów.potwory[3].hp + "/" + tablicaPotworów.potwory[3].maxhp + "  ║  " + tablicaPotworów.potwory[8].hp + "/" + tablicaPotworów.potwory[8].maxhp + "  ║");
-            System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
-
-            System.out.print("║  " + Team.team[0].hp + "/" + Team.team[0].maxhp + "  ║  ");
-
-            for (int i = 1; i < Team.number; i++)
-            {
-                if (i == 3) { System.out.print("\n║  "); }
-                System.out.print(Team.team[i].hp + "/" + Team.team[i].maxhp + "  ║  ");
-            }
-            if (3 > Team.number)
-            {
-                for (int i = 3; i > Team.number; i--) { System.out.print("       ║  "); }
-            }
-            if (6 > Team.number && 3 < Team.number)
-            {
-                for (int i = 6; i > Team.number; i--) { System.out.print("       ║  "); }
-            }
-
-            System.out.println();
-            System.out.println("╚═════════╩═════════╩═════════╝");
             System.out.println("Kolejność ataku :");
 
 
@@ -74,6 +55,7 @@ public class Walka {
                 System.out.println("co chcesz zrobić (jesteś teraz " + teamini[i] + ")");
                 System.out.println("1: Atak");
                 System.out.println("2: Zobacz Planszę");
+                System.out.println("3: Zobacz szczegóły");
                 int wyb = scanner.nextInt();
                 switch (wyb) {
                     case (1) -> {
@@ -105,32 +87,22 @@ public class Walka {
                             i--;
                         }
                     }
-                    case 2 ->{System.out.println("╔═════════╦═════════╦═════════╗");
-                        System.out.println("║  " + tablicaPotworów.potwory[4].hp + "/" + tablicaPotworów.potwory[4].maxhp + "  ║  " + tablicaPotworów.potwory[2].hp + "/" + tablicaPotworów.potwory[2].maxhp + "  ║  " + tablicaPotworów.potwory[1].hp + "/" + tablicaPotworów.potwory[1].maxhp + "  ║");
-                        System.out.println("║  " + tablicaPotworów.potwory[7].hp + "/" + tablicaPotworów.potwory[7].maxhp + "  ║  " + tablicaPotworów.potwory[3].hp + "/" + tablicaPotworów.potwory[3].maxhp + "  ║  " + tablicaPotworów.potwory[8].hp + "/" + tablicaPotworów.potwory[8].maxhp + "  ║");
-                        System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
-
-                        System.out.print("║  " + Team.team[0].hp + "/" + Team.team[0].maxhp + "  ║  ");
-
-                        for (int a = 1; a < Team.number; a++) {
-                            if (a == 3) {
-                                System.out.print("\n║  ");
-                            }
-                            System.out.print(Team.team[a].hp + "/" + Team.team[a].maxhp + "  ║  ");
-                        }
-                        if (3 > Team.number) {
-                            for (int a = 3; a > Team.number; a--) {
-                                System.out.print("       ║  ");
-                            }
-                        }
-                        if (6 > Team.number && 3 < Team.number) {
-                            for (int a = 6; a > Team.number; a--) {
-                                System.out.print("       ║  ");
-                            }
-                        }
-                        System.out.println();
-                        System.out.println("╚═════════╩═════════╩═════════╝");
+                    case 2 ->{PoleBitwy.main();
                         i--;}
+                        case(3)->{PoleBitwy.main();
+                            System.out.println("\ninformacje na temat bohaterów: \n");
+                            for(int a=0;a<= teamini.length-1;a++) {
+                                System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp);
+                                i--;
+                            }
+
+                            System.out.println("\ninformacje na temat potworów: \n");
+                            for(int a=0;a<= potworybitwa.length-1;a++) {
+                                System.out.println(potworybitwa[a] + " hp: " + potworybitwa[a].hp + "/" + potworybitwa[a].maxhp);
+
+                            }
+                            System.out.println();
+                        }
                     default -> {
                         System.out.println("nie ma takiej opcji");
                         i--;
@@ -197,51 +169,6 @@ public class Walka {
             }
               System.out.println("Koniec walki");
 
-
-        /*
-        System.out.println("╔══════════╗");
-        System.out.println("║     "+walkaE.showhp()+"/"+walkaE.maxHP+"     ║");
-        System.out.println("║ - - - -  ║");
-        System.out.println("║   "+walkaB.showhp()+"/"+walkaB.maxHP+"      ║");
-        System.out.println("╚══════════╝");
-        System.out.println();
-
-
-
-        System.out.println("Wybierz swoją akcje: \n [1] Atak\n [2] Życie\n");
-        int choice = scanner.nextInt();
-
-        switch (choice) {
-            case 1:
-                System.out.print("Zadałeś ");
-                System.out.print(walkaE.atak(max));
-                System.out.println(" obrażeń!");
-                if(walkaE.getHp1(a) <= 0){
-                    alive = false;
-                    break;
-                }
-                System.out.print("Przeciwnik zadał ci ");
-                System.out.print(walkaB.atak(5)+"\n");
-                if(walkaB.getHp1(b) <= 0){
-                    alive = false;
-                    break;
-
-                }
-
-                break;
-
-            default:
-
-                break;
-
-        }
-
-
-        }
-
-        System.out.println("Hurra Kurwa pisowska gryzie gruz!!!");
-
-*/
     }
 
 }

@@ -3,17 +3,8 @@ package Bohaterowie;
 import Klasy.Heroes;
 import Runy.Runy;
 
-public class Bohaterowie  {
+public class Bohaterowie extends Heroes {
     Runy runy = new Runy();
-    public String name;
-    public String klasa;
-    public int maxhp;
-    public int hp;
-    public int dex;
-    public int armor;
-    public int m_armor;
-    public int atk;
-    public boolean mage;
 
     public void runes(String type)
     {
@@ -56,7 +47,7 @@ public class Bohaterowie  {
     }
 
 
-    public Bohaterowie(String name,String klasa,String type,int maxhp,int hp,int dex,int armor,int m_armor,int atk,boolean mage){
+    public Bohaterowie(String name,String klasa,String type,int maxhp,int hp,int dex,int armor,int m_armor,int atk,boolean mage,String lit){
         this.name = name;
         this.klasa = klasa;
         this.maxhp = maxhp;
@@ -66,6 +57,7 @@ public class Bohaterowie  {
         this.m_armor = m_armor;
         this.atk = atk;
         this.mage = mage;
+        this.lit = lit;
         runes(type);
         classes(klasa);
     }
