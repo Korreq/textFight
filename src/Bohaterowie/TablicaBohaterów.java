@@ -14,7 +14,7 @@ public class TablicaBohaterów {
         public Bohaterowie w7 = new Bohaterowie("w7","Wojownik","wolf",44,44,18,4,7,19,false);
 
 
-        public Bohaterowie w8 = new Bohaterowie("Robert","Paladyn","earth",40,40,16,7,9,15,true);
+        public Bohaterowie w8 = new Bohaterowie("Robert","Paladyn","earth",4000,4000,16,7,9,150,true);
         public Bohaterowie w9 = new Bohaterowie("Kresul","Paladyn","steel",48,48,16,8,10,10,true);
         public Bohaterowie w10 = new Bohaterowie("w10","Paladyn","water",40,40,16,6,9,17,true);
         public Bohaterowie w11 = new Bohaterowie("w11","Paladyn","steel",48,48,18,4,10,13,true);
