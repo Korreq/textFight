@@ -1,9 +1,12 @@
-
+import Bohaterowie.Bohaterowie;
 import Walka.Walka;
 
 import java.io.IOException;
 
 public class Game {
+
+    Start start = new Start();
+    static Dru team = new Dru();
 
 
 
@@ -12,9 +15,15 @@ public class Game {
         //Game textFight = new Game();
         Start.start();
 
-        //team.squad();
+        team.dru();
+
+
         //fight.walka();
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     }
 
 
