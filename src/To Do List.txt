@@ -15,9 +15,8 @@ do nowej klasy                   [v]    Podstawy systemu walki    [*]
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                     Interfejs "graficzny"  [*]          Ekwipunek                  [x]
+                                     	Interfejs "graficzny"  [*]         
                                                                          Magia                      [x]
-                                                                         Fabuła                     [x]
                                                                          Zamiana członków drużyny
                                                                          po śmierci na polu bitwy   [x]
 									 Czyszczenie ekranu         [x]
@@ -27,11 +26,13 @@ do nowej klasy                   [v]    Podstawy systemu walki    [*]
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                                                        Dzwięki/Muzyka               [x]
-                                                                        Podróżowanie do Dungeonów    [x]
-                                                                        Zdarzenia                    [x]
-                                                                        System zapisu/wczytania      [x]
-                                                                        System levelowania postaci   [x]
+                                                                        Dzwięki/Muzyka              [x]
+                                                                        Podróżowanie do Dungeonów   [x]
+                                                                        Zdarzenia                   [x]
+                                                                        System zapisu/wczytania     [x]
+                                                                        System levelowania postaci  [x]
+									Ekwipunek                   [x]
+									Fabuła                      [x]
 
 
 
