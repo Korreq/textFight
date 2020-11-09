@@ -30,18 +30,18 @@ public class Walka {
 
             System.out.print("║  " + Team.team[0].hp + "/" + Team.team[0].maxhp + "  ║  ");
 
-            for(int i = 1;i < team.number;i++)
+            for(int i = 1;i < Team.number;i++)
             {
                     if(i == 3) { System.out.print("\n║  "); }
                     System.out.print(Team.team[i].hp + "/" + Team.team[i].maxhp + "  ║  ");
             }
-            if(3 > team.number)
+            if(3 > Team.number)
             {
-                for(int i = 3;i > team.number;i-- ) { System.out.print("       ║  ");}
+                for(int i = 3;i > Team.number;i-- ) { System.out.print("       ║  ");}
             }
-            if(6 > team.number && 3 < team.number)
+            if(6 > Team.number && 3 < Team.number)
             {
-                for(int i = 6;i > team.number;i-- ) { System.out.print("       ║  "); }
+                for(int i = 6;i > Team.number;i-- ) { System.out.print("       ║  "); }
             }
 
             System.out.println();
