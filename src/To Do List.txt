@@ -19,7 +19,8 @@ do nowej klasy                   [v]    Podstawy systemu walki    [*]
                                                                          Magia                      [x]
                                                                          Zamiana członków drużyny
                                                                          po śmierci na polu bitwy   [x]
-									 Czyszczenie ekranu         [x]
+									    Czyszczenie ekranu     [x]
+									    Losowanie przeciwników [x]
 
 
                                         Rzeczy jak wystarczy czasu:
@@ -31,8 +32,8 @@ do nowej klasy                   [v]    Podstawy systemu walki    [*]
                                                                         Zdarzenia                   [x]
                                                                         System zapisu/wczytania     [x]
                                                                         System levelowania postaci  [x]
-									Ekwipunek                   [x]
-									Fabuła                      [x]
+									    Ekwipunek                   [x]
+									    Fabuła                      [x]
 
 
 
