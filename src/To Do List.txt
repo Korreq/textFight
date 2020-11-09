@@ -5,10 +5,10 @@ Lista rzeczy do zrobienia :
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
 Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
-                                        Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
-                                        Podstawy systemu walki    [*]    Skopiowanie array-u teamu
-                                        Przeciwnicy               [*]    do nowej klasy             [x]
-                                        Czyszczenie ekranu        [*]
+Skopiowanie array-u teamu               Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
+do nowej klasy                   [v]    Podstawy systemu walki    [*]    
+                                        Przeciwnicy               [*]            
+                                        
 
 
                                             Rzeczy ważne:
@@ -20,7 +20,7 @@ Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rod
                                                                          Fabuła                     [x]
                                                                          Zamiana członków drużyny
                                                                          po śmierci na polu bitwy   [x]
-
+									 Czyszczenie ekranu         [x]
 
 
                                         Rzeczy jak wystarczy czasu:
