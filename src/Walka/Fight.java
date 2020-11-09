@@ -4,7 +4,7 @@ import Potwory.TablicaPotworów;
 
 public class Fight {
 
-    Rolls rolls = new Rolls();
+
     TablicaPotworów tablicaPotworów = new TablicaPotworów();
         public  void walka(){
         System.out.println("╔═════════╦═════════╦═════════╗");
@@ -15,7 +15,7 @@ public class Fight {
         System.out.println("║    a    ║    b    ║    c    ║");
         System.out.println("╚═════════╩═════════╩═════════╝");
         System.out.println();
-        rolls.roll(6);
+
 
 
 

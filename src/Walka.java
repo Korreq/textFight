@@ -29,6 +29,24 @@ public class Walka {
             System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
 
             System.out.print("║  " + Team.team[0].hp + "/" + Team.team[0].maxhp + "  ║  ");
+            for(int i = 1;i < 6;i++){
+                if(Team.team[i]==null){
+
+                    System.out.print("       ║");
+
+                }
+                else{
+                    if(i == 3){
+                        System.out.print("\n║  ");
+                    }
+                    System.out.print(Team.team[i].hp + "/" + Team.team[i].maxhp + "  ║  ");
+                }
+
+            }
+
+        System.out.println();
+
+           /*
             if(Team.team[1]==null)
             {
                 System.out.print("       ║");
@@ -69,11 +87,11 @@ public class Walka {
             {
                 System.out.println(Team.team[5].hp + "/" + Team.team[5].maxhp + "  ║  ");
             }
-
+*/
             System.out.println("╚═════════╩═════════╩═════════╝");
             System.out.println();
         int[] inicjatywa = new int[12];
-        for(int i = 0; i<= teamli.length; i++)
+        for(int i = 0; i<= teamli.length-1; i++)
         {
             inicjatywa[i]= teamli[i].dex;
         }
