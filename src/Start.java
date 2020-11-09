@@ -21,17 +21,14 @@ public class Start {
 
         Team  team = new Team();
         TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
-        TablicaPotworów tablicaPotworów = new TablicaPotworów();
         Bohaterowie[] kopiaboh = tablicaBohaterów.boh;
         Collections.shuffle(Arrays.asList(kopiaboh));
         Bohaterowie[] karczma = new Bohaterowie[12];
         System.arraycopy(kopiaboh, 0, karczma, 0, 12);
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
-        //int number = 0;
 
         Bohaterowie[] dru = team.team;
-        //Bohaterowie[] team = new Bohaterowie[6];
         boolean dosc = false;
         do {
             System.out.println("╔═══════════════════════════════╗");

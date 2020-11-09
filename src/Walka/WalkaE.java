@@ -1,6 +1,6 @@
 package Walka;
 
-public class WalkaE extends Walka{
+public class WalkaE extends Walka {
 
     WalkaB bitewaka = new WalkaB();
 

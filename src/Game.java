@@ -1,8 +1,3 @@
-import Bohaterowie.Bohaterowie;
-import Walka.Walka;
-
-import java.io.IOException;
-
 public class Game {
 
     Start start = new Start();
@@ -18,8 +13,8 @@ public class Game {
         team.dru();
 
 
-        //fight.walka();
-        
+        fight.walka();
+
     }
 
 
