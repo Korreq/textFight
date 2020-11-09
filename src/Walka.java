@@ -12,11 +12,8 @@ public class Walka {
 
         TablicaPotworów tablicaPotworów = new TablicaPotworów();
         Team team = new Team();
-
+        System.out.println(Team.number);
         //int min = 1;
-        int max = 20;
-        int a = 50;
-        int b = 50;
         boolean alive = true;
 
     //    while(alive ==true){
@@ -26,51 +23,64 @@ public class Walka {
             System.out.println("║  " + tablicaPotworów.potwory[7].hp + "/" + tablicaPotworów.potwory[7].maxhp + "  ║  " + tablicaPotworów.potwory[3].hp + "/" + tablicaPotworów.potwory[3].maxhp + "  ║  " + tablicaPotworów.potwory[8].hp + "/" + tablicaPotworów.potwory[8].maxhp + "  ║");
             System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
 
-            System.out.print("║  " + team.team[0].hp + "/" + team.team[0].maxhp + "  ║  ");
-            if(team.team[1]==null)
+            System.out.print("║  " + Team.team[0].hp + "/" + Team.team[0].maxhp + "  ║  ");
+            if(Team.team[1]==null)
             {
                 System.out.print("       ║");
             }
             else
             {
-                System.out.print(team.team[1].hp + "/" + team.team[1].maxhp + "  ║  ");
+                System.out.print(Team.team[1].hp + "/" + Team.team[1].maxhp + "  ║  ");
             }
-            if(team.team[2]==null)
+            if(Team.team[2]==null)
             {
                 System.out.println("       ║");
             }
             else
             {
-                System.out.println(team.team[2].hp + "/" + team.team[2].maxhp + "  ║  ");
+                System.out.println(Team.team[2].hp + "/" + Team.team[2].maxhp + "  ║  ");
             }
-            if(team.team[3]==null)
+            if(Team.team[3]==null)
             {
                 System.out.print("║         ║");
             }
             else
             {
-                System.out.print("║  "+team.team[3].hp + "/" + team.team[3].maxhp + "  ║  ");
+                System.out.print("║  "+Team.team[3].hp + "/" + Team.team[3].maxhp + "  ║  ");
             }
-            if(team.team[4]==null)
+            if(Team.team[4]==null)
             {
                 System.out.print("      ║  ");
             }
             else
             {
-                System.out.print(team.team[4].hp + "/" + team.team[4].maxhp + "  ║  ");
+                System.out.print(Team.team[4].hp + "/" + Team.team[4].maxhp + "  ║  ");
             }
-            if(team.team[5]==null)
+            if(Team.team[5]==null)
             {
                 System.out.println("       ║");
             }
             else
             {
-                System.out.println(team.team[5].hp + "/" + team.team[5].maxhp + "  ║  ");
+                System.out.println(Team.team[5].hp + "/" + Team.team[5].maxhp + "  ║  ");
             }
 
             System.out.println("╚═════════╩═════════╩═════════╝");
             System.out.println();
-      //  }
+        int[] inicjatywa = new int[12];
+        for(int i = 0; i<= Team.team.length-1; i++)
+        {
+            inicjatywa[i]= Team.team[i].dex;
+        }
+        inicjatywa[6]=tablicaPotworów.potwory[1].dex;
+        inicjatywa[7]=tablicaPotworów.potwory[2].dex;
+        inicjatywa[8]=tablicaPotworów.potwory[3].dex;
+        inicjatywa[9]=tablicaPotworów.potwory[4].dex;
+        inicjatywa[10]=tablicaPotworów.potwory[7].dex;
+        inicjatywa[11]=tablicaPotworów.potwory[8].dex;
+for(int i=0;i<= inicjatywa.length-1;i++){
+        System.out.println(inicjatywa[i]);
+        }
         /*
         System.out.println("╔══════════╗");
         System.out.println("║     "+walkaE.showhp()+"/"+walkaE.maxHP+"     ║");

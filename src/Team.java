@@ -4,11 +4,11 @@ import Bohaterowie.TablicaBohaterów;
 public class Team {
 
     static Bohaterowie[] team = new Bohaterowie[6];
-
+    static int number;
     public void aaaa(){
 
         this.team = team;
-
+        this.number = number;
 
     }
 

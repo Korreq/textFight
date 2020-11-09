@@ -10,7 +10,7 @@ public class Start {
 
     //static Bohaterowie[] team = new Bohaterowie[6];
     //Bohaterowie[] drużyna = new Bohaterowie[number];
-    static int number = 0;
+
 
 
 
@@ -32,7 +32,7 @@ public class Start {
         boolean dosc = false;
         do {
             System.out.println("╔═══════════════════════════════╗");
-            System.out.println("║   Liczba osób w drużynie: "+number+"   ║");
+            System.out.println("║   Liczba osób w drużynie: "+Team.number+"   ║");
             System.out.println("╠═══════════════════════════════╣");
             System.out.println("║ A • Dodaj członka drużyny     ║");
             System.out.println("║ B • Wyświetl aktualną drużynę ║");
@@ -66,9 +66,9 @@ public class Start {
                     if (wyb <= karczma.length-1) {
                         if (karczma[wyb] != null)
                         {
-                            dru[number] = karczma[wyb];
+                            dru[Team.number] = karczma[wyb];
                             karczma[wyb] = null;
-                            number++;
+                            Team.number++;
                         }
                         else
                         {
@@ -77,7 +77,7 @@ public class Start {
                             System.out.println("╚════════════════════════════════════════╝");
                         }
 
-                        if (number == 6) dosc = true;
+                        if (Team.number == 6) dosc = true;
 
                     }
                     else {
@@ -87,12 +87,12 @@ public class Start {
                     }
                 }
                 case ('b') -> {
-                    if (number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
+                    if (Team.number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
                     else {
                         System.out.println("╔══════════════════╗");
                         System.out.println("║ Twoja drużyna    ║");
                         System.out.println("╠══════════════════╣");
-                        for (int i = 0; i < number; i++) {
+                        for (int i = 0; i < Team.number; i++) {
                             int p1=i+1;
                             System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║");
                         }
@@ -100,7 +100,7 @@ public class Start {
                     }
                 }
                 case ('c') -> {
-                    if (number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
+                    if (Team.number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
                     else {
                         dosc = true;
 
@@ -119,12 +119,11 @@ public class Start {
         System.out.println("╔══════════════════╗");
         System.out.println("║ Twoja drużyna    ║");
         System.out.println("╠══════════════════╣");
-        for (int i = 0; i < number; i++) {
+        for (int i = 0; i < Team.number; i++) {
             int p1=i+1;
             System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║");
         }
         System.out.println("╚══════════════════╝");
-
 
 
     }}
