@@ -8,7 +8,7 @@ public class Start {
 
 
 
-    static Bohaterowie[] team = new Bohaterowie[6];
+    //static Bohaterowie[] team = new Bohaterowie[6];
     //Bohaterowie[] drużyna = new Bohaterowie[number];
     static int number = 0;
 
@@ -19,6 +19,7 @@ public class Start {
 
         Scanner myScanner = new Scanner(System.in);
 
+        Team  team = new Team();
         TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
         TablicaPotworów tablicaPotworów = new TablicaPotworów();
         Bohaterowie[] kopiaboh = tablicaBohaterów.boh;
@@ -29,6 +30,7 @@ public class Start {
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
         //int number = 0;
 
+        Bohaterowie[] dru = team.team;
         //Bohaterowie[] team = new Bohaterowie[6];
         boolean dosc = false;
         do {
@@ -95,7 +97,7 @@ public class Start {
                         System.out.println("╠══════════════════╣");
                         for (int i = 0; i < number; i++) {
                             int p1=i+1;
-                            System.out.println("║ [" + p1 + "] • " + team[i]+"   ║");
+                            System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║");
                         }
                         System.out.println("╚══════════════════╝");
                     }
@@ -122,7 +124,7 @@ public class Start {
         System.out.println("╠══════════════════╣");
         for (int i = 0; i < number; i++) {
             int p1=i+1;
-            System.out.println("║ [" + p1 + "] • " + team[i]+"   ║");
+            System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║");
         }
         System.out.println("╚══════════════════╝");
 /*
