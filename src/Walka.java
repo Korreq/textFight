@@ -18,9 +18,9 @@ public class Walka {
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
         int zyc=0;
-        Bohaterowie[] teamli = new Bohaterowie[Team.number];
+      //  Bohaterowie[] teamli = new Bohaterowie[Team.number];
         Bohaterowie[] teamini = new Bohaterowie[Team.number];
-        System.arraycopy(Team.team, 0, teamli, 0, Team.number);
+      //  System.arraycopy(Team.team, 0, teamli, 0, Team.number);
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
         Arrays.sort(teamini, sortowanie);
@@ -65,10 +65,10 @@ public class Walka {
         for (int i = 0; i <= teamini.length - 1; i++) {
             System.out.println(teamini[i]);
         }
-        for (int i = 0; i <= teamli.length - 1; i++) {
+        for (int i = 0; i <= teamini.length - 1; i++) {
             if(!alive){break;}
-            if (teamli[i].hp > 0) {
-                System.out.println("co chcesz zrobić (jesteś teraz " + teamli[i] + ")");
+            if (teamini[i].hp > 0) {
+                System.out.println("co chcesz zrobić (jesteś teraz " + teamini[i] + ")");
                 System.out.println("1: Atak");
                 System.out.println("2: Zobacz Planszę");
                 int wyb = scanner.nextInt();
@@ -77,7 +77,7 @@ public class Walka {
                         System.out.println("Wybierz cel");
                         int atak = scanner.nextInt(6);
                         if (potworybitwa[atak].hp > 0) {
-                            int obr = (int) ((Math.random() * (teamli[i].atk - 1)) + 1) - potworybitwa[atak].armor;
+                            int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - potworybitwa[atak].armor;
                             if(obr <= 0){obr = 0;}
                             potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
                             System.out.println("zadałesz potworowi " + potworybitwa[atak] + " " + obr + " obrażen");
@@ -147,16 +147,16 @@ public class Walka {
                     switch (wyb) {
                         case (0) -> {
                             int atak = random.nextInt(Team.number);
-                            if (teamli[atak].hp > 0) {
+                            if (teamini[atak].hp > 0) {
                                 int obr = (int) ((Math.random() * (potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
                                 if(obr <= 0){obr = 0;}
                                 teamini[atak].hp = teamini[atak].hp - obr;
                                 System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
-                                if (teamli[atak].hp <= 0) {
+                                if (teamini[atak].hp <= 0) {
                                     System.out.println("potwory zabiły bohatera " + teamini[atak]);
                                     teamini[atak].hp = 0;
                                     for (int a = 0; a <= Team.number - 1; a++) {
-                                        if (teamli[a].hp <= 0) {
+                                        if (teamini[a].hp <= 0) {
                                             zyc++;
                                         }
                                     }
