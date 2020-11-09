@@ -19,11 +19,7 @@ public class Game {
 
 
         //fight.walka();
-
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
+        
     }
 
 

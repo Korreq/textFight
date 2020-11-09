@@ -69,7 +69,7 @@ public class Start {
                     if (wyb <= karczma.length-1) {
                         if (karczma[wyb] != null)
                         {
-                            team[number] = karczma[wyb];
+                            dru[number] = karczma[wyb];
                             karczma[wyb] = null;
                             number++;
                         }
@@ -127,65 +127,8 @@ public class Start {
             System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║");
         }
         System.out.println("╚══════════════════╝");
-/*
-        System.out.println("╔══════════╗");
-        System.out.println("║     "+walkaE.showhp()+"/"+walkaE.maxHP+"     ║");
-        System.out.println("║ - - - -  ║");
-        System.out.println("║   "+walkaB.showhp()+"/"+walkaB.maxHP+"      ║");
-        System.out.println("╚══════════╝");
-        System.out.println();
 
-*/
 
-            System.out.println("╔═════════╦═════════╦═════════╗");
-            System.out.println("║  " + tablicaPotworów.potwory[4].hp + "/" + tablicaPotworów.potwory[4].maxhp + "  ║  " + tablicaPotworów.potwory[2].hp + "/" + tablicaPotworów.potwory[2].maxhp + "  ║  " + tablicaPotworów.potwory[1].hp + "/" + tablicaPotworów.potwory[1].maxhp + "  ║");
-            System.out.println("║  " + tablicaPotworów.potwory[7].hp + "/" + tablicaPotworów.potwory[7].maxhp + "  ║  " + tablicaPotworów.potwory[3].hp + "/" + tablicaPotworów.potwory[3].maxhp + "  ║  " + tablicaPotworów.potwory[8].hp + "/" + tablicaPotworów.potwory[8].maxhp + "  ║");
-            System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
 
-            System.out.print("║  " + team[0].hp + "/" + team[0].maxhp + "  ║  ");
-            if(team[1]==null)
-            {
-                System.out.print("       ║");
-            }
-            else
-            {
-                System.out.print(team[1].hp + "/" + team[1].maxhp + "  ║  ");
-            }
-        if(team[2]==null)
-        {
-            System.out.println("       ║");
-        }
-        else
-        {
-            System.out.println(team[2].hp + "/" + team[2].maxhp + "  ║  ");
-        }
-        if(team[3]==null)
-        {
-            System.out.print("║         ║");
-        }
-        else
-        {
-            System.out.print("║  "+team[3].hp + "/" + team[3].maxhp + "  ║  ");
-        }
-        if(team[4]==null)
-        {
-            System.out.print("      ║  ");
-        }
-        else
-        {
-            System.out.print(team[4].hp + "/" + team[4].maxhp + "  ║  ");
-        }
-        if(team[5]==null)
-        {
-            System.out.println("       ║");
-        }
-        else
-        {
-            System.out.println(team[5].hp + "/" + team[5].maxhp + "  ║  ");
-        }
-
-            System.out.println("╚═════════╩═════════╩═════════╝");
-            System.out.println();
-        }
-    }
+    }}
 
