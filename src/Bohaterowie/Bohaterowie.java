@@ -1,11 +1,12 @@
 package Bohaterowie;
 
 import Klasy.Heroes;
+import Klasy.KlasyBohaterów;
 import Runy.Runy;
 
 public class Bohaterowie extends Heroes {
     Runy runy = new Runy();
-
+    KlasyBohaterów heroClass = new KlasyBohaterów();
     public void runes(String type)
     {
         switch (type)
@@ -31,12 +32,12 @@ public class Bohaterowie extends Heroes {
     {
         switch (klasa)
         {
-            case "Wojownik"-> System.out.println("ARRR");
-            case "Paladyn"-> System.out.println("AMEN towarzyszu");
-            case "Łotrzyk"-> System.out.println("To ja go atakuje");
-            case "Bard"-> System.out.println("Idę zauroczyć jakieś stwory");
-            case "Mag"-> System.out.println("hmmm");
-            case "Kapłan"-> System.out.println("szcześć bożki");
+            case "Wojownik"-> heroClass.warrior();
+            case "Paladyn"-> heroClass.paladin();
+            case "Łotrzyk"-> heroClass.rouge();
+            case "Bard"-> heroClass.bard();
+            case "Mag"-> heroClass.mage();
+            case "Kapłan"->heroClass.cleric();
             default-> System.out.println("to nie klasa");
 
 
