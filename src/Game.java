@@ -7,7 +7,6 @@ public class Game {
 
     public static void main(String[] args) throws InterruptedException {
         Walka fight = new Walka();
-        //Game textFight = new Game();
         Start.start();
         fight.walka();
 
