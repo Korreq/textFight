@@ -134,7 +134,7 @@ public class Walka {
                                         teamini[atak].hp = teamini[atak].hp - obr;
 
                                         System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
-
+                                        Thread.sleep(2000);
 
                                         //sprawdzenie czy potówr nie zabił bohatera
                                         if (teamini[atak].hp <= 0)
@@ -161,7 +161,7 @@ public class Walka {
                 }
 
                 //ty dobrze wiesz czemu jest to skomentowane
-               // Thread.sleep(2000);
+               //
 
             }
                if(zyc!=Team.number){ System.out.println("Koniec tury potworów czas na twoją");}
