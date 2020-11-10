@@ -21,6 +21,7 @@ public class Menu {
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
             System.out.println("3 : Wyjdz");
+            System.out.println("\nv. 0.01(Selling Donkey)");
             int wybór = (scanner.nextInt());
             switch (wybór) {
                 case (1) -> {
