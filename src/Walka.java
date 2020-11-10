@@ -23,9 +23,8 @@ public class Walka {
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
         int zyc=0;
-      //  Bohaterowie[] teamli = new Bohaterowie[Team.number];
+     
         Bohaterowie[] teamini = new Bohaterowie[Team.number];
-      //  System.arraycopy(Team.team, 0, teamli, 0, Team.number);
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
         Arrays.sort(teamini, sortowanie);
