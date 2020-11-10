@@ -11,7 +11,7 @@ public class TablicaBohaterów {
         public Bohaterowie w4 = new Bohaterowie("w4","Wojownik","steel",53,53,20,4,8,14,false,"W");
         public Bohaterowie w5 = new Bohaterowie("w5","Wojownik","flint",44,44,16,8,7,11,false,"W");
         public Bohaterowie w6 = new Bohaterowie("w6","Wojownik","steel",53,53,21,5,8,11,false,"W");
-        public Bohaterowie w7 = new Bohaterowie("w7","Wojownik","wolf",44,44,18,4,7,19,false,"W");
+        public Bohaterowie w7 = new Bohaterowie("Bobert","Wojownik","wolf",44,44,18,4,7,19,false,"W");
 
 
         public Bohaterowie w8 = new Bohaterowie("Robert","Paladyn","earth",40,40,16,7,9,15,true,"R");
@@ -49,7 +49,7 @@ public class TablicaBohaterów {
 
         public Bohaterowie w33 = new Bohaterowie("Darek","Kapłan","light",30,30,25,2,7,7,true,"D");
         public Bohaterowie w34 = new Bohaterowie("Darionha","Kapłan","blood",30,30,24,1,11,7,true,"D");
-        public Bohaterowie w35 = new Bohaterowie("w35","Kapłan","light",30,30,27,-1,7,10,true,"W");
+        public Bohaterowie w35 = new Bohaterowie("Ezekiel","Kapłan","light",30,30,27,-1,7,10,true,"W");
         public Bohaterowie w36 = new Bohaterowie("w36","Kapłan","blood",30,30,26,-2,11,10,true,"W");
 
         public Bohaterowie[] boh = {w1,w2,w3,w4,w5,w6,w7,w8,w9,w10,w11,w12,w13,w14,w15,w16,w17,w18,w19,w20,w21,w22,w23,w24,w25,w26,w27,w28,w29,w30,w31,w32,w33,w34,w35,w36};
