@@ -8,9 +8,7 @@ import java.util.Scanner;
 
 public class Walka {
     static Potwory[] potworybitwa = new Potwory[6];
-    public void aaa(){
-        this.potworybitwa = potworybitwa;
-    }
+
 
     public static void walka() throws InterruptedException
     {
@@ -23,7 +21,7 @@ public class Walka {
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
         int zyc=0;
-     
+
         Bohaterowie[] teamini = new Bohaterowie[Team.number];
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
@@ -35,6 +33,12 @@ public class Walka {
             int go = random.nextInt(9);
             potworybitwa[i] = tablicaPotworów.potwory[go];
         }
+
+
+
+
+
+
         System.out.println("Pole bitwy");
         System.out.println();
 
