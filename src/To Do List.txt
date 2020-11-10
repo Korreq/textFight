@@ -6,8 +6,8 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
 Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
 Skopiowanie array-u teamu               Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
-do nowej klasy                   [v]        
-Przeciwnicy               	     [v]
+do nowej klasy                   [v]                                     Lektor                     [x]
+Przeciwnicy               	     [v]                                     Dzwięki/Muzyka             [x]
 Podstawy systemu walki    	     [v]
 
 
@@ -26,13 +26,11 @@ Podstawy systemu walki    	     [v]
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                                                        Dzwięki/Muzyka              [x]
                                                                         Podróżowanie do Dungeonów   [x]
                                                                         Zdarzenia                   [x]
                                                                         System zapisu/wczytania     [x]
                                                                         System levelowania postaci  [x]
 									                                    Ekwipunek                   [x]
-                                                                        Lektor                      [x]
                                                                         Dodatkowe scenariusze       [x]
 
 
