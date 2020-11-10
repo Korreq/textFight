@@ -1,13 +1,12 @@
 import Bohaterowie.Bohaterowie;
 import Potwory.Potwory;
-import Potwory.TablicaPotworów;
+import Potwory.TablicaPotworow;
 
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Walka {
-
 
     static Potwory[] potworybitwa = new Potwory[6];
 
@@ -18,9 +17,9 @@ public class Walka {
         Scanner scanner = new Scanner(System.in);
 
 
-        TablicaPotworów tablicaPotworów = new TablicaPotworów();
+        //TablicaPotworow tablicaPotworów = new TablicaPotworow();
+        //Team team = new Team();
 
-        Team team = new Team();
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
         int zyc=0;
@@ -35,22 +34,11 @@ public class Walka {
         //losowanie przeciwników
         for(int i=0;i<= potworybitwa.length-1;i++){
             int go = random.nextInt(9);
-            potworybitwa[i] = new TablicaPotworów().getPotwory()[go];
+            potworybitwa[i] = new TablicaPotworow().getPotwory()[go];
         }
-
-
-
-
-
-
-
-
-
-
 
         System.out.println("Pole bitwy");
         System.out.println();
-
 
             //tu zaczyna się tura
         while(alive)
@@ -74,7 +62,8 @@ public class Walka {
                     case (1) -> {
                         System.out.println("Wybierz cel");
                         int atak = scanner.nextInt(6);
-                        if (potworybitwa[atak].hp > 0) {
+                        if (potworybitwa[atak].hp > 0)
+                        {
                             int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1)*100 - potworybitwa[atak].armor;//Mega obrażenia
                             if(obr <= 0){obr = 0;}
                             potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
@@ -95,30 +84,35 @@ public class Walka {
                                     }
                                 }
                             }
-                        } else {
-                            System.out.println("ten potwór nie żyję wybierz jeszcze raz");
-                            i--;
                         }
+                        else
+                            {
+                                System.out.println("ten potwór nie żyję wybierz jeszcze raz");
+                                i--;
+                            }
                     }
-                    case 2 ->{PoleBitwy.main();
-                        i--;}
-                        case(3)->{PoleBitwy.main();
-                            System.out.println("\ninformacje na temat bohaterów: \n");
-                            for(int a=0;a<= teamini.length-1;a++) {
-                                System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp);
+                    case 2 ->
+                            {
+                                PoleBitwy.main();
+                                i--;
                             }
 
-                            System.out.println("\ninformacje na temat potworów: \n");
-                            for(int a=0;a<= potworybitwa.length-1;a++) {
-                                System.out.println(potworybitwa[a] + " hp: " + potworybitwa[a].hp + "/" + potworybitwa[a].maxhp);
+                    case(3)->
+                            {
+                                PoleBitwy.main();
+                                System.out.println("\ninformacje na temat bohaterów: \n");
+                                for(int a=0;a<= teamini.length-1;a++) { System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp); }
+
+                                System.out.println("\ninformacje na temat potworów: \n");
+                                for(int a=0;a<= potworybitwa.length-1;a++) { System.out.println(potworybitwa[a] + " hp: " + potworybitwa[a].hp + "/" + potworybitwa[a].maxhp); }
+                                System.out.println();
+                                i--;
                             }
-                            System.out.println();
-                            i--;
-                        }
-                    default -> {
-                        System.out.println("nie ma takiej opcji");
-                        i--;
-                    }
+                    default ->
+                            {
+                                System.out.println("nie ma takiej opcji");
+                                i--;
+                            }
                 }
             }
         }
@@ -146,7 +140,7 @@ public class Walka {
                                         teamini[atak].hp = teamini[atak].hp - obr;
 
                                         System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
-                                        Thread.sleep(2000);
+                                        Thread.sleep(1000);
 
                                         //sprawdzenie czy potówr nie zabił bohatera
                                         if (teamini[atak].hp <= 0)

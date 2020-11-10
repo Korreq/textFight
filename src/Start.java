@@ -1,5 +1,5 @@
 import Bohaterowie.Bohaterowie;
-import Potwory.TablicaPotworów;
+import Potwory.TablicaPotworow;
 import Bohaterowie.TablicaBohaterów;
 import java.util.*;
 

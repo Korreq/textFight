@@ -2,6 +2,10 @@ package Runy;
 
 public class Runy {
 
+
+
+
+
     public void fire(){}
     public void water(){}
     public void wind(){}
@@ -11,11 +15,15 @@ public class Runy {
     public void blood(){}
 
     public void steel(int maxhp){
-       maxhp = maxhp * 2;
+
 
     }
     public void flint(){}
-    public void wolf(){}
+    public void wolf(){
+
+
+
+    }
 
 
 

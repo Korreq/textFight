@@ -2,7 +2,11 @@ package Klasy;
 
 public class KlasyBohaterów {
 
-    public void warrior(){}
+    public void warrior(){
+
+
+
+    }
     public void bard(){}
     public void rouge(){}
 
