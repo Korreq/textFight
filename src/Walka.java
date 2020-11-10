@@ -94,15 +94,14 @@ public class Walka {
                             System.out.println("\ninformacje na temat bohaterów: \n");
                             for(int a=0;a<= teamini.length-1;a++) {
                                 System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp);
-                                i--;
                             }
 
                             System.out.println("\ninformacje na temat potworów: \n");
                             for(int a=0;a<= potworybitwa.length-1;a++) {
                                 System.out.println(potworybitwa[a] + " hp: " + potworybitwa[a].hp + "/" + potworybitwa[a].maxhp);
-
                             }
                             System.out.println();
+                            i--;
                         }
                     default -> {
                         System.out.println("nie ma takiej opcji");
