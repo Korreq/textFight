@@ -12,11 +12,9 @@ public class Runy {
     public void light(){}
     public void blood(){}
 
-    public void steel(int hp){
+    public void steel(int maxhp){
+       maxhp = maxhp * 2;
 
-       hp = hp * 2;
-
-        System.out.println(hp);
     }
     public void flint(){}
     public void wolf(){}
