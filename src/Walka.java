@@ -73,7 +73,7 @@ public class Walka {
                                 potworybitwa[atak].hp =0;
 
                                 int mori = 0;
-                                for(int x = 0;x <= potworybitwa.length;x++)
+                                for(int x = 0;x < potworybitwa.length;x++)
                                 {
                                     if(potworybitwa[x].hp <= 0){ mori++;}
                                     if (mori == potworybitwa.length)
