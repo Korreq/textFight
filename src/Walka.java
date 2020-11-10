@@ -64,7 +64,7 @@ public class Walka {
                         int atak = scanner.nextInt(6);
                         if (potworybitwa[atak].hp > 0)
                         {
-                            int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1)*100 - potworybitwa[atak].armor;//Mega obrażenia
+                            int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - potworybitwa[atak].armor;
                             if(obr <= 0){obr = 0;}
                             potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
                             System.out.println("zadałeś potworowi " + potworybitwa[atak] + " " + obr + " obrażeń");

@@ -27,7 +27,6 @@ public class Bohaterowie extends Heroes {
         }
     }
 
-    //przygotowane na utworzenie nowej klasy dla klas postaci
     public void classes(String klasa)
     {
         switch (klasa)
