@@ -31,6 +31,16 @@ public class Walka {
         Bohaterowie[] teamini = new Bohaterowie[Team.number];
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
+        boolean bard = false;
+        for(int i = 0;i < teamini.length;i++){
+            if(teamini[i].klasa == "Bard") {
+                bard = true;
+                System.out.println(teamini[i].name+" jest bardem. Chowajcie dzieci!");
+            }
+        }
+
+
+
         Arrays.sort(teamini, sortowanie);
         boolean alive = true;
 
@@ -62,39 +72,41 @@ public class Walka {
                 System.out.println("3: Zobacz szczegóły");
                 System.out.println("4: Użyj Runy");
                 int wyb = scanner.nextInt();
-                switch (wyb) {
-                    case (1) -> {
-                        System.out.println("Wybierz cel");
-                        int atak = scanner.nextInt(6);
-                        if (potworybitwa[atak].hp > 0)
-                        {
-                            int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - potworybitwa[atak].armor;
-                            if(obr <= 0){obr = 0;}
-                            potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
-                            System.out.println("zadałeś potworowi " + potworybitwa[atak] + " " + obr + " obrażeń");
-                            if (potworybitwa[atak].hp <= 0)
+                switch (wyb)
+                {
+                    case (1) ->
                             {
-                                System.out.println("zabiłeś potwora " + potworybitwa[atak]);
-                                potworybitwa[atak].hp =0;
-
-                                int mori = 0;
-                                for(int x = 0;x < potworybitwa.length;x++)
+                                System.out.println("Wybierz cel");
+                                int atak = scanner.nextInt(6);
+                                if (potworybitwa[atak].hp > 0)
                                 {
-                                    if(potworybitwa[x].hp <= 0){ mori++;}
-                                    if (mori == potworybitwa.length)
+                                    int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - potworybitwa[atak].armor;
+                                    if(obr <= 0){obr = 0;}
+                                    potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
+                                    System.out.println("zadałeś potworowi " + potworybitwa[atak] + " " + obr + " obrażeń");
+                                    if (potworybitwa[atak].hp <= 0)
                                     {
-                                        alive = false;
-                                        System.out.println("Wygrałeś bitwę");
+                                        System.out.println("zabiłeś potwora " + potworybitwa[atak]);
+                                        potworybitwa[atak].hp =0;
+
+                                        int mori = 0;
+                                        for(int x = 0;x < potworybitwa.length;x++)
+                                        {
+                                            if(potworybitwa[x].hp <= 0){ mori++;}
+                                            if (mori == potworybitwa.length)
+                                            {
+                                                alive = false;
+                                                System.out.println("Wygrałeś bitwę");
+                                            }
+                                        }
                                     }
                                 }
+                                else
+                                {
+                                    System.out.println("ten potwór nie żyję wybierz jeszcze raz");
+                                    i--;
+                                }
                             }
-                        }
-                        else
-                            {
-                                System.out.println("ten potwór nie żyję wybierz jeszcze raz");
-                                i--;
-                            }
-                    }
                     case (2) ->
                             {
                                 PoleBitwy.main();
@@ -138,7 +150,7 @@ public class Walka {
 
                 if (potworybitwa[i].hp > 0)
                 {
-                    int wyb = random.nextInt(1);
+                    int wyb = random.nextInt(2);
                     switch (wyb)
                     {
                         case (0) ->
@@ -176,16 +188,39 @@ public class Walka {
                                     }
                                     else { i--; }
                                 }
+                        case (1)->     //trzeba zwiększyć ilość licz dla case(0) żeby wszystkie potwory nie uciekały przed bardami + ten case może służyć jako miejsce na specjalne efekty potworów
+                                {
+                                    if (bard = true)
+                                    {
+                                        if (potworybitwa[i].hp < 10)
+                                        {
+                                            potworybitwa[i].hp = 0;
+                                            System.out.println("Bestia usłyszawsza katofonie wykonaną ze strony barda uciekła z pola bitwy");
+                                        }
+                                        else
+                                            {
+                                                System.out.println("Potwór usłyszawszy katofonie ze strony barda został oszołomiony");
+                                        }
+                                    }
+                                    else{
+                                        i--;
+                                    }
+
+
+
+
+
+
+
+                                }
                     }
                 }
 
-                //ty dobrze wiesz czemu jest to skomentowane
-               //
 
             }
                if(zyc!=Team.number){ System.out.println("Koniec tury potworów czas na twoją");}
 
-            }
+        }
               System.out.println("Koniec walki");
 
     }

@@ -21,7 +21,7 @@ public class Menu {
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
             System.out.println("3 : Wyjdz");
-            System.out.println("\nv. 0.02r(Fantasy Sale)");
+            System.out.println("\nv. 0.02b(Revenge of Bard)");
 
             int wybór = (scanner.nextInt());
 
