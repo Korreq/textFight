@@ -7,6 +7,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Walka {
+
+
     static Potwory[] potworybitwa = new Potwory[6];
 
 
@@ -17,6 +19,7 @@ public class Walka {
 
 
         TablicaPotworów tablicaPotworów = new TablicaPotworów();
+
         Team team = new Team();
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
@@ -28,11 +31,17 @@ public class Walka {
         Arrays.sort(teamini, sortowanie);
         boolean alive = true;
 
+
         //losowanie przeciwników
         for(int i=0;i<= potworybitwa.length-1;i++){
             int go = random.nextInt(9);
-            potworybitwa[i] = tablicaPotworów.potwory[go];
+            potworybitwa[i] = new TablicaPotworów().potwory[go];
         }
+
+
+
+
+
 
 
 

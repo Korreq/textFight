@@ -19,4 +19,5 @@ public class TablicaPotworów {
     public Potwory B2 = new Potwory("B2",250,250,45,10,10,true);
 
     public Potwory[] potwory = {L1,L2,L3,M1,M2,M3,S1,S2,S3,B1,B2};
+
 }
