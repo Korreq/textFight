@@ -7,13 +7,14 @@ public class Menu {
         boolean Menu = true;
         while (Menu) {
             System.out.println("                                                                                                 ");
-            System.out.println(Color.CYAN + " ######                       ##     " + Color.RESET + " #######    ##              ###        ##    ");
-            System.out.println(Color.CYAN + " # ## #                       ##     " + Color.RESET + "  ##   #                     ##        ##    ");
-            System.out.println(Color.CYAN + "   ##      ####    ##  ##    #####   " + Color.RESET + "  ## #     ###      ### ##   ##       #####  ");
-            System.out.println(Color.CYAN + "   ##     ##  ##    ####      ##     " + Color.RESET + "  ####      ##     ##  ##    #####     ##    ");
-            System.out.println(Color.CYAN + "   ##     ######     ##       ##     " + Color.RESET + "  ## #      ##     ##  ##    ##  ##    ##    ");
-            System.out.println(Color.CYAN + "   ##     ##        ####      ## ##  " + Color.RESET + "  ##        ##      #####    ##  ##    ## ## ");
-            System.out.println(Color.CYAN + "  ####     #####   ##  ##      ###   " + Color.RESET + " ####      ####        ##   ###  ##     ###  ");
+            System.out.println("                                                                                                 ");
+            System.out.println(Color.CYAN + "  ##                           ##     " + Color.RESET + " #######    ##              ###        ##    ");
+            System.out.println(Color.CYAN + "  ##                           ##     " + Color.RESET + "  ##   #                     ##        ##    ");
+            System.out.println(Color.CYAN + " #####      ####    ##  ##    #####   " + Color.RESET + "  ## #     ###      ### ##   ##       #####  ");
+            System.out.println(Color.CYAN + "  ##       ##  ##    ####      ##     " + Color.RESET + "  ####      ##     ##  ##    #####     ##    ");
+            System.out.println(Color.CYAN + "  ##       ######     ##       ##     " + Color.RESET + "  ## #      ##     ##  ##    ##  ##    ##    ");
+            System.out.println(Color.CYAN + "  ## ##    ##        ####      ## ##  " + Color.RESET + "  ##        ##      #####    ##  ##    ## ## ");
+            System.out.println(Color.CYAN + "   ###      #####   ##  ##      ###   " + Color.RESET + " ####      ####        ##   ###  ##     ###  ");
             System.out.println("                                                        #####                     ");
             System.out.println();
             System.out.println("Opcje:");
@@ -49,3 +50,5 @@ public class Menu {
 
     }
 }
+
+
