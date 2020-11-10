@@ -6,7 +6,7 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
 Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
 Skopiowanie array-u teamu               Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
-do nowej klasy                   [v]                                     Dzwięki/Muzyka             [x]
+do nowej klasy                   [v]
 Przeciwnicy               	     [v]
 Podstawy systemu walki    	     [v]
 
@@ -33,4 +33,4 @@ Podstawy systemu walki    	     [v]
 									                                    Ekwipunek                   [x]
                                                                         Dodatkowe scenariusze       [x]
                                                                         Lektor                      [x]
-
+                                                                        Dzwięki/Muzyka              [x]

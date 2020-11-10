@@ -6,35 +6,31 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
 Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
 Skopiowanie array-u teamu               Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
-do nowej klasy                   [v]    Podstawy systemu walki    [*]    
-                                        Przeciwnicy               [*]            
-                                        
+do nowej klasy                   [v]
+Przeciwnicy               	     [v]
+Podstawy systemu walki    	     [v]
 
 
-                                            Rzeczy ważne:
+                                        Rzeczy ważne:
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                     	Interfejs "graficzny"  [*]         
-                                                                         Magia                      [x]
-                                                                         Zamiana członków drużyny
-                                                                         po śmierci na polu bitwy   [x]
-									    Czyszczenie ekranu     [x]
-									    Losowanie przeciwników [x]
-
+                                     	Interfejs "graficzny"  	  [*]   Magia                       [x]     
+                                                                        Zamiana członków drużyny
+                                                                        po śmierci na polu bitwy    [x]
+									                                    Czyszczenie ekranu          [x]
+									                                    Losowanie przeciwników      [x]
+                                                                        Fabuła                      [x]
 
                                         Rzeczy jak wystarczy czasu:
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                                                        Dzwięki/Muzyka              [x]
                                                                         Podróżowanie do Dungeonów   [x]
                                                                         Zdarzenia                   [x]
                                                                         System zapisu/wczytania     [x]
                                                                         System levelowania postaci  [x]
-									    Ekwipunek                   [x]
-									    Fabuła                      [x]
-
-
-
-
+									                                    Ekwipunek                   [x]
+                                                                        Dodatkowe scenariusze       [x]
+                                                                        Lektor                      [x]
+                                                                        Dzwięki/Muzyka              [x]
