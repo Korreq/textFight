@@ -12,7 +12,7 @@ public class Heroes{
     public int atk;
     public boolean mage;
     public String lit;
-
+    public String type;
 
 }
 

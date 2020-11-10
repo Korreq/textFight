@@ -18,6 +18,7 @@ public class Runy {
 
     public void steel(){
 
+        System.out.println("Chuj");
 
     }
     public void flint(){

@@ -21,7 +21,7 @@ public class Menu {
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
             System.out.println("3 : Wyjdz");
-            System.out.println("\nv. 0.02(Fantasy Sale)");
+            System.out.println("\nv. 0.02r(Fantasy Sale)");
 
             int wybór = (scanner.nextInt());
 
@@ -47,6 +47,9 @@ public class Menu {
                 }
                 case (3) -> {
                     System.exit(0);
+                }
+                default -> {
+                    System.out.println("Nope");
                 }
             }
         }

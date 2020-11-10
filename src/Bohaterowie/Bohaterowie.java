@@ -58,6 +58,7 @@ public class Bohaterowie extends Heroes {
         this.atk = atk;
         this.mage = mage;
         this.lit = lit;
+        this.type = type;
         runes(type);
         classes(klasa);
     }

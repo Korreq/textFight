@@ -1,6 +1,8 @@
 import Bohaterowie.Bohaterowie;
 import Potwory.Potwory;
 import Potwory.TablicaPotworow;
+import Runy.Runy;
+
 
 import java.util.Arrays;
 import java.util.Random;
@@ -11,6 +13,7 @@ public class Walka {
     static Potwory[] potworybitwa = new Potwory[6];
 
 
+
     public static void walka() throws InterruptedException
     {
 
@@ -19,6 +22,7 @@ public class Walka {
 
         //TablicaPotworow tablicaPotworów = new TablicaPotworow();
         //Team team = new Team();
+        Runy runy = new Runy();
 
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
@@ -29,7 +33,6 @@ public class Walka {
 
         Arrays.sort(teamini, sortowanie);
         boolean alive = true;
-
 
         //losowanie przeciwników
         for(int i=0;i<= potworybitwa.length-1;i++){
@@ -57,6 +60,7 @@ public class Walka {
                 System.out.println("1: Atak");
                 System.out.println("2: Zobacz Planszę");
                 System.out.println("3: Zobacz szczegóły");
+                System.out.println("4: Użyj Runy");
                 int wyb = scanner.nextInt();
                 switch (wyb) {
                     case (1) -> {
@@ -91,7 +95,7 @@ public class Walka {
                                 i--;
                             }
                     }
-                    case 2 ->
+                    case (2) ->
                             {
                                 PoleBitwy.main();
                                 i--;
@@ -106,6 +110,15 @@ public class Walka {
                                 System.out.println("\ninformacje na temat potworów: \n");
                                 for(int a=0;a<= potworybitwa.length-1;a++) { System.out.println(potworybitwa[a] + " hp: " + potworybitwa[a].hp + "/" + potworybitwa[a].maxhp); }
                                 System.out.println();
+                                i--;
+                            }
+                    case(4)->
+                            {
+                                if (teamini[i].type == "steel"){
+
+                                        runy.steel();
+
+                                }
                                 i--;
                             }
                     default ->

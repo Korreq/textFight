@@ -1,10 +1,14 @@
 public class PoleBitwy {
+
+
     public static void main() {
+
         Walka walka = new Walka();
 
+
         System.out.println("╔═════════╦═════════╦═════════╗");
-        System.out.println("║    " + Walka.potworybitwa[3] + "   ║    " + Walka.potworybitwa[4] + "   ║    " + Walka.potworybitwa[5] + "   ║");
-        System.out.println("║    " + Walka.potworybitwa[0] + "   ║    " + Walka.potworybitwa[1] + "   ║    " + Walka.potworybitwa[2] + "   ║");
+        System.out.println("║    " + walka.potworybitwa[3] + "   ║    " + Walka.potworybitwa[4] + "   ║    " + Walka.potworybitwa[5] + "   ║");
+        System.out.println("║    " + walka.potworybitwa[0] + "   ║    " + Walka.potworybitwa[1] + "   ║    " + Walka.potworybitwa[2] + "   ║");
         System.out.println("║ -  -  - ║ -  -  - ║ -  -  - ║");
         System.out.print("║    " + Team.team[0].lit + "    ║    ");
 
