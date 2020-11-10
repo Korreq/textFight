@@ -12,7 +12,8 @@ public class Walka {
         this.potworybitwa = potworybitwa;
     }
 
-    public static void walka() throws InterruptedException {
+    public static void walka() throws InterruptedException
+    {
 
         Scanner scanner = new Scanner(System.in);
 
@@ -65,10 +66,10 @@ public class Walka {
                             int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1)*100 - potworybitwa[atak].armor;//Mega obrażenia
                             if(obr <= 0){obr = 0;}
                             potworybitwa[atak].hp = potworybitwa[atak].hp - obr;
-                            System.out.println("zadałesz potworowi " + potworybitwa[atak] + " " + obr + " obrażen");
+                            System.out.println("zadałeś potworowi " + potworybitwa[atak] + " " + obr + " obrażeń");
                             if (potworybitwa[atak].hp <= 0)
                             {
-                                System.out.println("zabiłesz potwora " + potworybitwa[atak]);
+                                System.out.println("zabiłeś potwora " + potworybitwa[atak]);
                                 potworybitwa[atak].hp =0;
 
                                 int mori = 0;
@@ -78,7 +79,7 @@ public class Walka {
                                     if (mori == potworybitwa.length)
                                     {
                                         alive = false;
-                                        System.out.println("Wygrałesz bitwę");
+                                        System.out.println("Wygrałeś bitwę");
                                     }
                                 }
                             }

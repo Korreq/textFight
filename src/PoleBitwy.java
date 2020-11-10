@@ -15,11 +15,11 @@ public class PoleBitwy {
         }
         if (3 > Team.number)
         {
-            for (int i = 3; i > Team.number; i--) { System.out.print("   ║  "); }
+            for (int i = 3; i > Team.number; i--) { System.out.print("     ║    "); }
         }
         if (6 > Team.number && 3 < Team.number)
         {
-            for (int i = 6; i > Team.number; i--) { System.out.print("   ║  "); }
+            for (int i = 6; i > Team.number; i--) { System.out.print("     ║    "); }
         }
         System.out.println();
         System.out.println("╚═════════╩═════════╩═════════╝");
