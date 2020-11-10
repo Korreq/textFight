@@ -20,7 +20,7 @@ Podstawy systemu walki    	     [v]
                                                                         po śmierci na polu bitwy    [x]
 									                                    Czyszczenie ekranu          [x]
 									                                    Losowanie przeciwników      [x]
-
+                                                                        Fabuła                      [x]
 
                                         Rzeczy jak wystarczy czasu:
 -------------------------------------------------------------------------------------------------------------
@@ -32,8 +32,7 @@ Podstawy systemu walki    	     [v]
                                                                         System zapisu/wczytania     [x]
                                                                         System levelowania postaci  [x]
 									                                    Ekwipunek                   [x]
-									                                    Fabuła                      [x]
-
-
+                                                                        Lektor                      [x]
+                                                                        Dodatkowe scenariusze       [x]
 
 
