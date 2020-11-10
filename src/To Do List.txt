@@ -7,8 +7,8 @@ Lista rzeczy do zrobienia :
 Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
 Skopiowanie array-u teamu               Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
 do nowej klasy                   [v]        
-Przeciwnicy               	 [v]                                                    
-Podstawy systemu walki    	 [v]
+Przeciwnicy               	     [v]
+Podstawy systemu walki    	     [v]
 
 
                                             Rzeczy ważne:
@@ -18,8 +18,8 @@ Podstawy systemu walki    	 [v]
                                      	Interfejs "graficzny"  	  [*]   Magia                       [x]     
                                                                         Zamiana członków drużyny
                                                                         po śmierci na polu bitwy    [x]
-									Czyszczenie ekranu          [x]
-									Losowanie przeciwników      [x]
+									                                    Czyszczenie ekranu          [x]
+									                                    Losowanie przeciwników      [x]
 
 
                                         Rzeczy jak wystarczy czasu:
@@ -31,8 +31,8 @@ Podstawy systemu walki    	 [v]
                                                                         Zdarzenia                   [x]
                                                                         System zapisu/wczytania     [x]
                                                                         System levelowania postaci  [x]
-									Ekwipunek                   [x]
-									Fabuła                      [x]
+									                                    Ekwipunek                   [x]
+									                                    Fabuła                      [x]
 
 
 
