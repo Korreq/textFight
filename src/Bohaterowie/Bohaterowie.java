@@ -19,7 +19,7 @@ public class Bohaterowie extends Heroes {
             case "light"-> runy.light();
             case "blood"-> runy.blood();
 
-            case "steel"-> runy.steel(maxhp);
+            case "steel"-> runy.steel();
             case "flint"-> runy.flint();
             case "wolf"-> runy.wolf();
 
@@ -48,11 +48,11 @@ public class Bohaterowie extends Heroes {
     }
 
 
-    public Bohaterowie(String name,String klasa,String type,int maxhp,int hp,int dex,int armor,int m_armor,int atk,boolean mage,String lit){
+    public Bohaterowie(String name,String klasa,String type,int maxhp,int dex,int armor,int m_armor,int atk,boolean mage,String lit){
         this.name = name;
         this.klasa = klasa;
         this.maxhp = maxhp;
-        this.hp = hp;
+        this.hp = maxhp;
         this.dex = dex;
         this.armor= armor;
         this.m_armor = m_armor;

@@ -135,7 +135,7 @@ public class Walka {
                                     {
 
                                         //zadawanie obrażeń przez potwory
-                                        int obr = (int) ((Math.random() * (potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor * 100; //pomnożone do 100 żeby bohaterowie nie umierali
+                                        int obr = (int) ((Math.random() * (potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
                                         if(obr <= 0){obr = 0;}
                                         teamini[atak].hp = teamini[atak].hp - obr;
 

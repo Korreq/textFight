@@ -7,12 +7,23 @@ public class KlasyBohaterów {
 
 
     }
-    public void bard(){}
-    public void rouge(){}
+    public void bard(){
 
-    public void paladin(){}
-    public void mage(){}
-    public void cleric(){}
+
+    }
+    public void rouge(){
+
+    }
+
+    public void paladin(){
+
+    }
+    public void mage(){
+
+    }
+    public void cleric(){
+
+    }
 
 
 
