@@ -35,7 +35,7 @@ public class Walka {
         //losowanie przeciwników
         for(int i=0;i<= potworybitwa.length-1;i++){
             int go = random.nextInt(9);
-            potworybitwa[i] = new TablicaPotworów().potwory[go];
+            potworybitwa[i] = new TablicaPotworów().getPotwory()[go];
         }
 
 
