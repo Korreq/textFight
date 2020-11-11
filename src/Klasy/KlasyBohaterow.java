@@ -1,6 +1,6 @@
 package Klasy;
 
-public class KlasyBohaterów {
+public class KlasyBohaterow {
 
     public void warrior(){
 

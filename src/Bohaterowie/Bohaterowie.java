@@ -1,12 +1,12 @@
 package Bohaterowie;
 
 import Klasy.Heroes;
-import Klasy.KlasyBohaterów;
+import Klasy.KlasyBohaterow;
 import Runy.Runy;
 
 public class Bohaterowie extends Heroes {
     Runy runy = new Runy();
-    KlasyBohaterów heroClass = new KlasyBohaterów();
+    KlasyBohaterow heroClass = new KlasyBohaterow();
 
 
     public void runes(String type)
