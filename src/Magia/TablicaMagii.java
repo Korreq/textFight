@@ -8,7 +8,7 @@ public class TablicaMagii {
 
     public Magia water1 = new Magia("Kropla życia","water",1,0);
     public Magia water2 = new Magia("Mgła","water",2,0);
-    public Magia water3 = new Magia("Fala życia","water",1,0);
+    public Magia water3 = new Magia("Fala życia","water",3,0);
 
     public Magia wind1 = new Magia("Świst wiatru","wind",1,25);
     public Magia wind2 = new Magia("Ciepła bryza","wind",2,0);
@@ -38,4 +38,5 @@ public class TablicaMagii {
     public Magia[] magiaswiatła ={light1,light2,light3};
     public Magia[] magiakrwi ={blood1,blood2,blood3};
     public Magia[] magiabłyskawica ={thunder1,thunder2,thunder3};
+
 }

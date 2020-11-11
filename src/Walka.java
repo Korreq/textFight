@@ -1,4 +1,5 @@
 import Bohaterowie.Bohaterowie;
+import Magia.TablicaMagii;
 import Potwory.Potwory;
 import Potwory.TablicaPotworow;
 import Runy.Runy;
@@ -18,7 +19,7 @@ public class Walka {
     {
 
         Scanner scanner = new Scanner(System.in);
-
+        TablicaMagii tablicaMagii = new TablicaMagii();
 
         //TablicaPotworow tablicaPotworów = new TablicaPotworow();
         //Team team = new Team();
@@ -138,6 +139,50 @@ public class Walka {
                     case(5)->
                             {
                                 if(teamini[i].mage){
+                                    switch(teamini[i].type){
+                                        case("fire")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiaognia.length;a++){
+                                            System.out.println(tablicaMagii.magiaognia[a]);
+                                        }
+                                        }
+                                        case("water")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiawody.length;a++){
+                                                System.out.println(tablicaMagii.magiawody[a]);
+                                            }
+                                        }
+                                        case("wind")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiawiatru.length;a++){
+                                                System.out.println(tablicaMagii.magiawiatru[a]);
+                                            }
+                                        }
+                                        case("earth")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiaziemi.length;a++){
+                                                System.out.println(tablicaMagii.magiaziemi[a]);
+                                            }
+                                        }
+                                        case("light")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiaswiatła.length;a++){
+                                                System.out.println(tablicaMagii.magiaswiatła[a]);
+                                            }
+                                        }
+                                        case("blood")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiakrwi.length;a++){
+                                                System.out.println(tablicaMagii.magiakrwi[a]);
+                                            }
+                                        }
+                                        case("thunder")->{
+                                            System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiabłyskawica.length;a++){
+                                                System.out.println(tablicaMagii.magiabłyskawica[a]);
+                                            }
+                                        }
+                                    }
                                     System.out.println("coś");
                                 }
                                 else{
