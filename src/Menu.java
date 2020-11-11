@@ -21,12 +21,12 @@ public class Menu {
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
             System.out.println("3 : Wyjdz");
-            System.out.println("\nv. 0.03(War of the Corrupted Code)");
+            System.out.println("\nv. 0.02b(Revenge of Bard)");
 
-            int wybor = (scanner.nextInt());
+            int wybór = (scanner.nextInt());
 
 
-            switch (wybor) {
+            switch (wybór) {
                 case (1) -> {
                     System.out.println("Nowa historia własnie się rozpoczęła");
                     Menu = false;
@@ -54,7 +54,7 @@ public class Menu {
             }
         }
 
-        scanner.close();
+
     }
 }
 

@@ -1,35 +1,48 @@
 import Bohaterowie.Bohaterowie;
-import Bohaterowie.TablicaBohaterow;
+import Potwory.TablicaPotworow;
+import Bohaterowie.TablicaBohaterów;
 import java.util.*;
 
 public class Start {
+
+
+
+
+    //static Bohaterowie[] team = new Bohaterowie[6];
+    //Bohaterowie[] drużyna = new Bohaterowie[number];
+
+
+
+
     public static void start() {
 
 
         Scanner myScanner = new Scanner(System.in);
-        TablicaBohaterow tablicaBohaterow = new TablicaBohaterow();
 
-        Bohaterowie[] kopiaboh = tablicaBohaterow.getBoh();
+        Team  team = new Team();
+        TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
+        Bohaterowie[] kopiaboh = tablicaBohaterów.boh;
         Collections.shuffle(Arrays.asList(kopiaboh));
         Bohaterowie[] karczma = new Bohaterowie[12];
         System.arraycopy(kopiaboh, 0, karczma, 0, 12);
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
 
-        Bohaterowie[] dru = Team.team;
+        Bohaterowie[] dru = team.team;
         boolean dosc = false;
         do {
             System.out.println("╔═══════════════════════════════╗");
             System.out.println("║   Liczba osób w drużynie: "+Team.number+"   ║");
             System.out.println("╠═══════════════════════════════╣");
-            System.out.println("║ 1 • Dodaj członka drużyny     ║");
-            System.out.println("║ 2 • Wyświetl aktualną drużynę ║");
-            System.out.println("║ 3 • Zakończ i wyrusz w drogę  ║");
+            System.out.println("║ A • Dodaj członka drużyny     ║");
+            System.out.println("║ B • Wyświetl aktualną drużynę ║");
+            System.out.println("║ C • Zakończ i wyrusz w drogę  ║");
             System.out.println("╚═══════════════════════════════╝");
-            String ch = myScanner.next();
-            char choice = Character.toLowerCase(ch.charAt(0));
-            switch (choice) {
-                case (1) -> {
+
+            char choice = myScanner.next().charAt(0);
+            char choice2 = Character.toLowerCase(choice);
+            switch (choice2) {
+                case ('a') -> {
                     System.out.println("╔═════════════════════════════════╗");
                     System.out.println("║ Osoby znajdujące się w tawernie ║");
                     for (int i = 0; i < karczma.length; i++) {
@@ -73,7 +86,7 @@ public class Start {
                         System.out.println("╚════════════════════════════════════════╝");
                     }
                 }
-                case (2) -> {
+                case ('b') -> {
                     if (Team.number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
                     else {
                         System.out.println("╔══════════════════╗");
@@ -86,7 +99,7 @@ public class Start {
                         System.out.println("╚══════════════════╝");
                     }
                 }
-                case (3) -> {
+                case ('c') -> {
                     if (Team.number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
                     else {
                         dosc = true;
@@ -112,6 +125,6 @@ public class Start {
         }
         System.out.println("╚══════════════════╝");
 
-        myScanner.close();
+
     }}
 

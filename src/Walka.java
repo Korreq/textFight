@@ -1,5 +1,4 @@
 import Bohaterowie.Bohaterowie;
-import Magia.TablicaMagii;
 import Potwory.Potwory;
 import Potwory.TablicaPotworow;
 import Runy.Runy;
@@ -23,12 +22,12 @@ public class Walka {
 
         //TablicaPotworow tablicaPotworów = new TablicaPotworow();
         //Team team = new Team();
-
         Runy runy = new Runy();
-        TablicaMagii tablicaMagii = new TablicaMagii();
+
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
         int zyc=0;
+
         Bohaterowie[] teamini = new Bohaterowie[Team.number];
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
@@ -61,6 +60,7 @@ public class Walka {
 
             System.out.println("Kolejność ataku :");
 
+
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
             for (int i = 0; i <= teamini.length - 1; i++) { if(!alive){break; }
 
@@ -71,7 +71,6 @@ public class Walka {
                 System.out.println("2: Zobacz Planszę");
                 System.out.println("3: Zobacz szczegóły");
                 System.out.println("4: Użyj Runy");
-                System.out.println("5: Użyj Magii");
                 int wyb = scanner.nextInt();
                 switch (wyb)
                 {
@@ -132,20 +131,6 @@ public class Walka {
                                         runy.steel();
 
                                 }
-                                i--;
-                            }
-                    case(5)->
-                            {
-                                if(teamini[i].mage){
-                                    if(teamini[i].type == tablicaMagii.magia[0].getTyp())
-                                    {
-                                        System.out.println("działą");
-                                        break;
-                                    }
-                                    System.out.println("coś");
-                                    break;
-                                }
-                                System.out.println("Nie jesteś magiem");
                                 i--;
                             }
                     default ->
@@ -236,8 +221,7 @@ public class Walka {
                if(zyc!=Team.number){ System.out.println("Koniec tury potworów czas na twoją");}
 
         }
-            System.out.println("Koniec walki");
-            scanner.close();
+              System.out.println("Koniec walki");
 
     }
 

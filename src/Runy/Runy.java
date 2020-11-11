@@ -1,10 +1,10 @@
 package Runy;
 
-import Bohaterowie.TablicaBohaterow;
+import Bohaterowie.TablicaBohaterów;
 
 public class Runy {
 
-    static TablicaBohaterow boh = new TablicaBohaterow();
+    static TablicaBohaterów boh = new TablicaBohaterów();
 
 
 
