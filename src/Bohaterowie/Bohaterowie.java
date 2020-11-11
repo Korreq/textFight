@@ -7,6 +7,7 @@ import Runy.Runy;
 public class Bohaterowie extends Heroes {
     Runy runy = new Runy();
     KlasyBohaterów heroClass = new KlasyBohaterów();
+    TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
     public void runes(String type)
     {
         switch (type)
