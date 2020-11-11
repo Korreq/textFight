@@ -8,7 +8,7 @@ public class Heroes{
     public int hp = maxhp;
     public int dex;
     public int armor;
-    public int m_armor;
+
     public int atk;
     public boolean mage;
     public String lit;
