@@ -1,16 +1,17 @@
 package Klasy;
 
 public class KlasyBohaterów {
+    Heroes heroes = new Heroes();
+
 
     public void warrior(){
 
-
-
     }
+
     public void bard(){
 
-
     }
+
     public void rouge(){
 
     }

@@ -20,36 +20,4 @@ public class Magia {
 
     public String toString() { return nazwa+" koszt:"+pktmagii;}
 
-    public String getNazwa() {
-        return nazwa;
-    }
-
-    public void setNazwa(String nazwa) {
-        this.nazwa = nazwa;
-    }
-
-    public String getTyp() {
-        return typ;
-    }
-
-    public void setTyp(String typ) {
-        this.typ = typ;
-    }
-
-    public int getPktmagii() {
-        return pktmagii;
-    }
-
-    public void setPktmagii(int pktmagii) {
-        this.pktmagii = pktmagii;
-    }
-
-    public int getObrażenia() {
-        return obrażenia;
-    }
-
-    public void setObrażenia(int obrażenia) {
-        this.obrażenia = obrażenia;
-    }
-
 }

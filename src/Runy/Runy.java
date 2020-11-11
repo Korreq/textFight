@@ -16,11 +16,7 @@ public class Runy {
     public void light(){}
     public void blood(){}
 
-    public void steel(){
-
-        System.out.println("Chuj");
-
-    }
+    public void steel(){}
     public void flint(){
 
 

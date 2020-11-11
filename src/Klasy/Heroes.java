@@ -13,6 +13,7 @@ public class Heroes{
     public boolean mage;
     public String lit;
     public String type;
+    public int pktmagii;
 
 }
 

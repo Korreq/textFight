@@ -65,13 +65,14 @@ public class Walka {
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
             for (int i = 0; i <= teamini.length - 1; i++) { if(!alive){break; }
 
-            if (teamini[i].hp > 0) 
+            if (teamini[i].hp > 0)
             {
                 System.out.println("co chcesz zrobić (jesteś teraz " + teamini[i] + ")");
                 System.out.println("1: Atak");
                 System.out.println("2: Zobacz Planszę");
                 System.out.println("3: Zobacz szczegóły");
                 System.out.println("4: Użyj Runy");
+                System.out.println("5: Użyj Magii");
                 int wyb = scanner.nextInt();
                 switch (wyb)
                 {
@@ -118,7 +119,7 @@ public class Walka {
                             {
                                 PoleBitwy.main();
                                 System.out.println("\ninformacje na temat bohaterów: \n");
-                                for(int a=0;a<= teamini.length-1;a++) { System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp); }
+                                for(int a=0;a<= teamini.length-1;a++) { System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp+" pkt magii: "+teamini[a].pktmagii); }
 
                                 System.out.println("\ninformacje na temat potworów: \n");
                                 for(int a=0;a<= potworybitwa.length-1;a++) { System.out.println(potworybitwa[a] + " hp: " + potworybitwa[a].hp + "/" + potworybitwa[a].maxhp); }
@@ -133,6 +134,16 @@ public class Walka {
 
                                 }
                                 i--;
+                            }
+                    case(5)->
+                            {
+                                if(teamini[i].mage){
+                                    System.out.println("coś");
+                                }
+                                else{
+                                    System.out.println("nie jesteś magiem");
+                                    i--;
+                                }
                             }
                     default ->
                             {
