@@ -22,6 +22,7 @@ public class Walka {
 
         //TablicaPotworow tablicaPotworów = new TablicaPotworow();
         //Team team = new Team();
+
         Runy runy = new Runy();
 
         Sortowanie sortowanie = new Sortowanie();

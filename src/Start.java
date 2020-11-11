@@ -6,14 +6,6 @@ import java.util.*;
 public class Start {
 
 
-
-
-    //static Bohaterowie[] team = new Bohaterowie[6];
-    //Bohaterowie[] drużyna = new Bohaterowie[number];
-
-
-
-
     public static void start() {
 
 
