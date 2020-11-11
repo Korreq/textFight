@@ -23,6 +23,7 @@ public class Walka {
 
         //TablicaPotworow tablicaPotworów = new TablicaPotworow();
         //Team team = new Team();
+
         Runy runy = new Runy();
         TablicaMagii tablicaMagii = new TablicaMagii();
         Sortowanie sortowanie = new Sortowanie();
@@ -136,7 +137,7 @@ public class Walka {
                     case(5)->
                             {
                                 if(teamini[i].mage){
-                                    if(teamini[i].type == tablicaMagii.magia[0].typ)
+                                    if(teamini[i].type == tablicaMagii.magia[0].getTyp())
                                     {
                                         System.out.println("działą");
                                         break;
@@ -235,7 +236,8 @@ public class Walka {
                if(zyc!=Team.number){ System.out.println("Koniec tury potworów czas na twoją");}
 
         }
-              System.out.println("Koniec walki");
+            System.out.println("Koniec walki");
+            scanner.close();
 
     }
 

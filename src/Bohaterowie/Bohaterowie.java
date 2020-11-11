@@ -7,7 +7,8 @@ import Runy.Runy;
 public class Bohaterowie extends Heroes {
     Runy runy = new Runy();
     KlasyBohaterów heroClass = new KlasyBohaterów();
-    TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
+
+
     public void runes(String type)
     {
         switch (type)
@@ -48,14 +49,13 @@ public class Bohaterowie extends Heroes {
     }
 
 
-    public Bohaterowie(String name,String klasa,String type,int maxhp,int dex,int armor,int m_armor,int atk,boolean mage,String lit){
+    public Bohaterowie(String name,String klasa,String type,int maxhp,int dex,int armor,int atk,boolean mage,String lit){
         this.name = name;
         this.klasa = klasa;
         this.maxhp = maxhp;
         this.hp = maxhp;
         this.dex = dex;
         this.armor= armor;
-        this.m_armor = m_armor;
         this.atk = atk;
         this.mage = mage;
         this.lit = lit;
