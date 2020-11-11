@@ -1,5 +1,5 @@
 import Bohaterowie.Bohaterowie;
-import Bohaterowie.TablicaBohaterów;
+import Bohaterowie.TablicaBohaterow;
 
 public class Team {
 
