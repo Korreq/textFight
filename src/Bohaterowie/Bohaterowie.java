@@ -50,9 +50,9 @@ public class Bohaterowie extends Heroes {
     public Bohaterowie(String name,String klasa,String type,int maxhp,int dex,int armor,int m_armor,int atk,boolean mage,String lit){
         this.name = name;
         this.klasa = klasa;
-        if(klasa == "Paladyn") {
-            this.maxhp = 2*maxhp;
-            this.hp = 2*maxhp;
+        if(klasa.equals("Paladyn")) {
+            this.maxhp = (int) (1.2*maxhp);
+            this.hp = (int) (1.2*maxhp);
         }
         else
         {
@@ -67,7 +67,14 @@ public class Bohaterowie extends Heroes {
         this.lit = lit;
         this.type = type;
         if(mage)
-        {this.pktmagii = 9;}
+        {if(klasa == "Paladyn")
+        {
+            this.pktmagii = 6;
+        }
+        else
+        {
+            this.pktmagii = 9;
+        }}
         else
         {this.pktmagii = 0;}
         runes(type);

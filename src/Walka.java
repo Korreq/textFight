@@ -53,7 +53,7 @@ public class Walka {
 
         System.out.println("Pole bitwy");
         System.out.println();
-
+        
             //tu zaczyna się tura
         while(alive)
         {
