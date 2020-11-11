@@ -32,10 +32,10 @@ public class Walka {
         Bohaterowie[] teamini = new Bohaterowie[Team.number];
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
-        boolean bard = false;
+        int bard = 0;
         for(int i = 0;i < teamini.length;i++){
             if(teamini[i].klasa == "Bard") {
-                bard = true;
+                bard++;
                 System.out.println(teamini[i].name+" jest bardem. Chowajcie dzieci!");
             }
         }
@@ -202,7 +202,7 @@ public class Walka {
                                 }
                         case (1)->     //trzeba zwiększyć ilość licz dla case(0) żeby wszystkie potwory nie uciekały przed bardami + ten case może służyć jako miejsce na specjalne efekty potworów
                                 {
-                                    if (bard = true)
+                                    if (bard > 0)
                                     {
                                         if (potworybitwa[i].hp < 10)
                                         {
