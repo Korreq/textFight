@@ -204,7 +204,7 @@ public class Walka {
                                 {
                                     if (bard > 0)
                                     {
-                                        if (potworybitwa[i].hp < 10)
+                                        if (potworybitwa[i].hp < 10 * bard)
                                         {
                                             potworybitwa[i].hp = 0;
                                             System.out.println("Bestia usłyszawsza katofonie wykonaną ze strony barda uciekła z pola bitwy");
