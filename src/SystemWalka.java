@@ -27,10 +27,10 @@ public class SystemWalka {
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
         int bard = 0;
-        for(int i = 0;i < teamini.length;i++){
-            if(teamini[i].klasa == "Bard") {
+        for (Bohaterowie bohaterowie : teamini) {
+            if (bohaterowie.klasa == "Bard") {
                 bard++;
-                System.out.println(teamini[i].name+" jest bardem. Chowajcie dzieci!");
+                System.out.println(bohaterowie.name + " jest bardem. Chowajcie dzieci!");
             }
         }
 
@@ -247,9 +247,9 @@ public class SystemWalka {
 
             }
             if(zyc!=Team.number){
-                for(int i = 0;i < teamini.length;i++){
-                    teamini[i].status = "";
-                    }
+                for (Bohaterowie bohaterowie : teamini) {
+                    bohaterowie.status = "";
+                }
                 System.out.println("Koniec tury potworów czas na twoją");}
 
         }
