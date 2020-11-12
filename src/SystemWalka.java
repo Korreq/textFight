@@ -1,50 +1,41 @@
 import Bohaterowie.Bohaterowie;
-import Magia.Magia;
-import Magia.TablicaMagii;
 import Runy.Runy;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class SystemWalka {
-
-
+public class SystemWalka
+{
     static Bohaterowie[] teamini = new Bohaterowie[Team.number];
     int mori = 0;
     boolean alive = true;
 
     public void walka() throws InterruptedException
     {
+        int zyc=0;
+        int bard = 0;
         mori = 0;
         alive = true;
         Scanner scanner = new Scanner(System.in);
-        TablicaMagii tablicaMagii = new TablicaMagii();
-        //Team team = new Team();
         Runy runy = new Runy();
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
-        int zyc=0;
 
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
-        int bard = 0;
-        for (Bohaterowie bohaterowie : teamini) {
-            if (bohaterowie.klasa.equals("Bard")) {
+        for (Bohaterowie bohaterowie : teamini)
+        {
+            if (bohaterowie.klasa.equals("Bard"))
+            {
                 bard++;
                 System.out.println(bohaterowie.name + " jest bardem. Chowajcie dzieci!");
             }
         }
 
-
-
         Arrays.sort(teamini, sortowanie);
-
-
-
 
         System.out.println("Pole bitwy");
         System.out.println();
-
         //tu zaczyna się tura
         while(alive)
         {
@@ -58,15 +49,13 @@ public class SystemWalka {
                     break;
                 }
             }
-
             PoleBitwy.main();
-
             System.out.println("Kolejność ataku :");
 
-
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
-            for (int i = 0; i <= teamini.length - 1; i++) { if(!alive){break; }
-
+            for (int i = 0; i <= teamini.length - 1; i++)
+            {
+                if(!alive){break;}
                 if (teamini[i].hp > 0)
                 {
                     System.out.println("co chcesz zrobić (jesteś teraz " + teamini[i] + ")");
@@ -238,15 +227,11 @@ public class SystemWalka {
                                         {
                                             System.out.println("Potwór usłyszawszy katofonie ze strony barda został oszołomiony");
                                         }
+                                        Thread.sleep(1000);
                                     }
                                     else{
                                         i--;
                                     }
-
-
-
-
-
 
 
                                 }

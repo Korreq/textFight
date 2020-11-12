@@ -256,7 +256,7 @@ public class MagiaWWalce {
                 System.out.println("Nie ma takiego członka");
             }
             else{
-                        if(SystemWalka.teamini[wyb].status != ""){
+                        if(!SystemWalka.teamini[wyb].status.equals("")){
                             System.out.println("Ten członek ma juz nałożony status");
                         }
                         if(SystemWalka.teamini[wyb].hp == wyb){

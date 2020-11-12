@@ -1,13 +1,7 @@
 package Runy;
 
-import Bohaterowie.TablicaBohaterów;
-
-public class Runy {
-
-    static TablicaBohaterów boh = new TablicaBohaterów();
-
-
-
+public class Runy
+{
     public void fire(){}
     public void water(){}
     public void wind(){}
@@ -17,19 +11,6 @@ public class Runy {
     public void blood(){}
 
     public void steel(){}
-    public void flint(){
-
-
-
-
-    }
-    public void wolf(){
-
-        
-
-    }
-
-
-
-
+    public void flint(){}
+    public void wolf(){}
 }
