@@ -15,6 +15,7 @@ public class SystemWalka {
 
     public void walka() throws InterruptedException
     {
+        mori = 0;
         alive = true;
         Scanner scanner = new Scanner(System.in);
         TablicaMagii tablicaMagii = new TablicaMagii();
@@ -47,6 +48,17 @@ public class SystemWalka {
         //tu zaczyna się tura
         while(alive)
         {
+            for(int x = 0;x < Walka.potworybitwa.length;x++)
+            {
+                if(Walka.potworybitwa[x].hp <= 0){ mori++;}
+                if (Walka.potworybitwa.length == mori)
+                {
+                    alive = false;
+                    System.out.println("Wygrałeś bitwę");
+                    break;
+                }
+            }
+
             PoleBitwy.main();
 
             System.out.println("Kolejność ataku :");
@@ -82,7 +94,7 @@ public class SystemWalka {
                                             Walka.potworybitwa[atak].hp =0;
 
 
-                                            for(int x = 0;x < Walka.potworybitwa.length;x++)
+                                           /* for(int x = 0;x < Walka.potworybitwa.length;x++)
                                             {
                                                 if(Walka.potworybitwa[x].hp <= 0){ mori++;}
                                                 if (Walka.potworybitwa.length == mori)
@@ -91,7 +103,7 @@ public class SystemWalka {
                                                     System.out.println("Wygrałeś bitwę");
                                                     break;
                                                 }
-                                            }
+                                            }*/
                                         }
                                     }
                                     else
@@ -100,12 +112,7 @@ public class SystemWalka {
                                         i--;
                                     }
                                 }
-                        case (2) ->
-                                {
-                                    PoleBitwy.main();
-                                    i--;
-                                }
-
+                        case (2) -> { PoleBitwy.main();i--; }
                         case(3)->
                                 {
                                     PoleBitwy.main();
@@ -141,16 +148,18 @@ public class SystemWalka {
                                         if(!MagiaWWalce.magia){ i--; }
                                         else{MagiaWWalce.magia = false;
                                         teamini[i].pktmagii = teamini[i].pktmagii - MagiaWWalce.pkt;
-                                            for(int x = 0;x < Walka.potworybitwa.length;x++)
+                                           /* for(int x = 0;x < Walka.potworybitwa.length;x++)
                                             {
-                                                if(Walka.potworybitwa[x].hp <= 0){ mori++;}
+                                                if(Walka.potworybitwa[x].hp <= 0){ mori++; }
                                                 if (mori == Walka.potworybitwa.length)
                                                 {
                                                     alive = false;
                                                     System.out.println("Wygrałeś bitwę");
                                                     break;
                                                 }
-                                            }}
+                                            }*/
+                                            }
+
                                     }
                                     else{
                                         System.out.println("nie jesteś magiem");
