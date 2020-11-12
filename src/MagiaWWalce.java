@@ -288,6 +288,7 @@ public class MagiaWWalce {
             default -> System.out.println("Nie masz takiego spella");
             }
     }
+    
     public static void MagiaWiatru(){System.out.println("Lista spelli");
         for(int a=0;a < tablicaMagii.magiawiatru.length;a++){
             System.out.println(a+" - "+tablicaMagii.magiawiatru[a]);
