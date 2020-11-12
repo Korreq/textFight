@@ -1,23 +1,17 @@
-import Bohaterowie.Bohaterowie;
-import Magia.TablicaMagii;
 import Potwory.Potwory;
 import Potwory.TablicaPotworow;
-import Runy.Runy;
 
-
-import java.sql.SQLOutput;
-import java.util.Arrays;
 import java.util.Random;
-import java.util.Scanner;
 
-public class Walka{
-
+public class Walka
+{
     static Potwory[] potworybitwa = new Potwory[6];
 
-    public static void fight() throws InterruptedException {
+    public static void fight() throws InterruptedException
+    {
         Random random = new Random();
         SystemWalka systemWalka = new SystemWalka();
-        TablicaPotworow tablicaPotworow = new TablicaPotworow();
+        //TablicaPotworow tablicaPotworow = new TablicaPotworow();
 
         //losowanie przeciwników
         for (int i = 0; i <= potworybitwa.length - 1; i++) {
@@ -50,6 +44,4 @@ public class Walka{
         systemWalka.walka();
         System.out.println("Gratuluję ukonczenia gry");
     }
-
-
 }

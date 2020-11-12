@@ -24,7 +24,7 @@ public class MagiaWWalce {
                 int rzad = scanner.nextInt();
                 switch (rzad){
                     case(1)->{
-                        if(Walka.potworybitwa[0].hp >0 && Walka.potworybitwa[3].hp > 0)
+                        if(Walka.potworybitwa[0].hp <= 0 && Walka.potworybitwa[3].hp <= 0)
                         {
                             System.out.println("W tym rzędzie nikogo nie ma");
                         }
@@ -56,7 +56,7 @@ public class MagiaWWalce {
                         }
 
                     }
-                    case(2)->{if(Walka.potworybitwa[1].hp >0 && Walka.potworybitwa[4].hp > 0)
+                    case(2)->{if(Walka.potworybitwa[1].hp <= 0 && Walka.potworybitwa[4].hp <= 0)
                     {
                         System.out.println("W tym rzędzie nikogo nie ma");
                     }
@@ -84,7 +84,7 @@ public class MagiaWWalce {
                         magia = true;
 
                         }}
-                    case(3)->{if(Walka.potworybitwa[2].hp >0 && Walka.potworybitwa[5].hp > 0)
+                    case(3)->{if(Walka.potworybitwa[2].hp  <= 0 && Walka.potworybitwa[5].hp <= 0)
                     {
                         System.out.println("W tym rzędzie nikogo nie ma");
                     }
@@ -120,7 +120,7 @@ public class MagiaWWalce {
                 System.out.println("która kolumna");
                 int kolumna = scanner.nextInt();
                 switch (kolumna){
-                    case(1)->{if(Walka.potworybitwa[0].hp >0 && Walka.potworybitwa[1].hp > 0 && Walka.potworybitwa[2].hp > 0)
+                    case(1)->{if(Walka.potworybitwa[0].hp >0 && Walka.potworybitwa[1].hp <= 0 && Walka.potworybitwa[2].hp <= 0)
                     {
                         System.out.println("W tej kolumnie nikogo nie ma");
                     }
@@ -161,7 +161,7 @@ public class MagiaWWalce {
                     }magia = true;
                     }
                     case(2)->{
-                        if(Walka.potworybitwa[3].hp >0 && Walka.potworybitwa[4].hp > 0 && Walka.potworybitwa[5].hp > 0)
+                        if(Walka.potworybitwa[3].hp <= 0 && Walka.potworybitwa[4].hp <= 0 && Walka.potworybitwa[5].hp <= 0)
                         {
                             System.out.println("W tej kolumnie nikogo nie ma");
                         }
@@ -257,7 +257,7 @@ public class MagiaWWalce {
             }
             else{
                         if(SystemWalka.teamini[wyb].status != ""){
-                            System.out.println("Ten członek ma juz nałozony status");
+                            System.out.println("Ten członek ma juz nałożony status");
                         }
                         if(SystemWalka.teamini[wyb].hp == wyb){
                             System.out.println("Ten członek nie żyje");

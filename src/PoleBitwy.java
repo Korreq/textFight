@@ -3,8 +3,6 @@ public class PoleBitwy {
 
     public static void main() {
 
-        //Walka walka = new Walka();
-
         //Nie przejmuj się jak walka.potworybitwa[] nie będzie rozpoznawalny.
         System.out.println("╔═════════╦═════════╦═════════╗");
         System.out.println("║    " + Walka.potworybitwa[3] + "   ║    " + Walka.potworybitwa[4] + "   ║    " + Walka.potworybitwa[5] + "   ║");
