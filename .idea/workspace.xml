@@ -24,17 +24,17 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/textFight/Bohaterowie/Bohaterowie.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Bohaterowie/Bohaterowie.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/textFight/Bohaterowie/TablicaBohaterów.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Bohaterowie/TablicaBohaterów.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textFight/Dru.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Dru.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/textFight/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/textFight/Klasy/Heroes.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Klasy/Heroes.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textFight/Magia/Magia.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Magia/Magia.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textFight/Magia/TablicaMagii.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Magia/TablicaMagii.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/textFight/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Menu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textFight/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Team.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bohaterowie/Bohaterowie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bohaterowie/Bohaterowie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bohaterowie/TablicaBohaterów.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bohaterowie/TablicaBohaterów.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textFight/Potwory/Potwory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Potwory/Potwory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textFight/Potwory/TablicaPotworow.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Potwory/TablicaPotworow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textFight/To Do List.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/To Do List.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/textFight/Walka.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/Walka.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Klasy/Heroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Klasy/Heroes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Team.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,26 +122,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="798" y="219" key="FileChooserDialogImpl/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604698320130" />
-    <state width="1877" height="743" key="GridCell.Tab.0.bottom" timestamp="1605116865131">
+    <state width="1877" height="565" key="GridCell.Tab.0.bottom" timestamp="1605183962299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604710916037" />
-    <state width="1877" height="743" key="GridCell.Tab.0.bottom/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605116865131" />
-    <state width="1877" height="743" key="GridCell.Tab.0.center" timestamp="1605116865131">
+    <state width="1877" height="565" key="GridCell.Tab.0.bottom/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605183962299" />
+    <state width="1877" height="565" key="GridCell.Tab.0.center" timestamp="1605183962298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604710916036" />
-    <state width="1877" height="743" key="GridCell.Tab.0.center/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605116865131" />
-    <state width="1877" height="743" key="GridCell.Tab.0.left" timestamp="1605116865131">
+    <state width="1877" height="565" key="GridCell.Tab.0.center/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605183962298" />
+    <state width="1877" height="565" key="GridCell.Tab.0.left" timestamp="1605183962298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604710916036" />
-    <state width="1877" height="743" key="GridCell.Tab.0.left/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605116865131" />
-    <state width="1877" height="743" key="GridCell.Tab.0.right" timestamp="1605116865131">
+    <state width="1877" height="565" key="GridCell.Tab.0.left/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605183962298" />
+    <state width="1877" height="565" key="GridCell.Tab.0.right" timestamp="1605183962298">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604710916037" />
-    <state width="1877" height="743" key="GridCell.Tab.0.right/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605116865131" />
+    <state width="1877" height="565" key="GridCell.Tab.0.right/1920.35.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605183962298" />
     <state x="769" y="418" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604589957321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
