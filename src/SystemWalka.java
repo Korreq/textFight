@@ -28,7 +28,7 @@ public class SystemWalka {
 
         int bard = 0;
         for (Bohaterowie bohaterowie : teamini) {
-            if (bohaterowie.klasa == "Bard") {
+            if (bohaterowie.klasa.equals("Bard")) {
                 bard++;
                 System.out.println(bohaterowie.name + " jest bardem. Chowajcie dzieci!");
             }
@@ -85,7 +85,7 @@ public class SystemWalka {
                                             for(int x = 0;x < Walka.potworybitwa.length;x++)
                                             {
                                                 if(Walka.potworybitwa[x].hp <= 0){ mori++;}
-                                                if (mori == Walka.potworybitwa.length)
+                                                if (Walka.potworybitwa.length == mori)
                                                 {
                                                     alive = false;
                                                     System.out.println("Wygrałeś bitwę");
@@ -119,7 +119,7 @@ public class SystemWalka {
                                 }
                         case(4)->
                                 {
-                                    if (teamini[i].type == "steel"){
+                                    if (teamini[i].type.equals("steel")){
 
                                         runy.steel();
 
@@ -182,7 +182,7 @@ public class SystemWalka {
                                     int atak = random.nextInt(Team.number);
                                     if (teamini[atak].hp > 0)
                                     {
-                                        if(teamini[atak].status == "Mgła"){
+                                        if(teamini[atak].status.equals("Mgła")){
                                             {if(teamini.length ==1){break;} i--; }}
                                         else{
                                         //zadawanie obrażeń przez potwory
