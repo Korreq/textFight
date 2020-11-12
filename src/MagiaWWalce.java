@@ -236,89 +236,18 @@ public class MagiaWWalce {
                 {
                     System.out.println("Nie ma takiego członka");
                 }
-                else{
-                switch (wyb){
-                    case(1)->{
-                        if(SystemWalka.teamini[0].hp == SystemWalka.teamini[0].maxhp){
-                            System.out.println("Ten członek ma maks hp");
-                        }
-                        if(SystemWalka.teamini[0].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {
-                        SystemWalka.teamini[0].hp = SystemWalka.teamini[0].maxhp;
-                        System.out.println("Członek "+SystemWalka.teamini[0]+" został uleczony");
-                        magia=true;
-                    }}
-                    case(2)->{
-                        if(SystemWalka.teamini[1].hp == SystemWalka.teamini[1].maxhp){
-                            System.out.println("Ten członek ma maks hp");
-                        }
-                        if(SystemWalka.teamini[1].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {
-                        SystemWalka.teamini[1].hp = SystemWalka.teamini[1].maxhp;
-                        System.out.println("Członek "+SystemWalka.teamini[1]+" został uleczony");
-                        magia=true;
-                    }}
-                    case(3)->{
-                        if(SystemWalka.teamini[2].hp == SystemWalka.teamini[2].maxhp){
-                            System.out.println("Ten członek ma maks hp");
-                        }
-                        if(SystemWalka.teamini[2].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {
-                        SystemWalka.teamini[2].hp = SystemWalka.teamini[2].maxhp;
-                        System.out.println("Członek "+SystemWalka.teamini[2]+" został uleczony");
-                        magia=true;
-                    }}
-                    case(4)->{
-                        if(SystemWalka.teamini[3].hp == SystemWalka.teamini[3].maxhp){
-                            System.out.println("Ten członek ma maks hp");
-                        }
-                        if(SystemWalka.teamini[3].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {
-                        SystemWalka.teamini[3].hp = SystemWalka.teamini[3].maxhp;
-                        System.out.println("Członek "+SystemWalka.teamini[3]+" został uleczony");
-                        magia=true;
-                    }}
-                    case(5)->{
-                        if(SystemWalka.teamini[4].hp == SystemWalka.teamini[4].maxhp){
-                            System.out.println("Ten członek ma maks hp");
-                        }
-                        if(SystemWalka.teamini[4].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {
-                        SystemWalka.teamini[4].hp = SystemWalka.teamini[4].maxhp;
-                        System.out.println("Członek "+SystemWalka.teamini[4]+" został uleczony");
-                        magia=true;
-                    }}
-                    case(6)->{
-                        if(SystemWalka.teamini[5].hp == SystemWalka.teamini[5].maxhp){
-                            System.out.println("Ten członek ma maks hp");
-                        }
-                        if(SystemWalka.teamini[5].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {
-                        SystemWalka.teamini[5].hp = SystemWalka.teamini[5].maxhp;
-                        System.out.println("Członek "+SystemWalka.teamini[5]+" został uleczony");
-                        magia=true;
-                    }}
-                    default -> System.out.println("Nie ma takiego członka");
+                if(SystemWalka.teamini[wyb].hp == SystemWalka.teamini[wyb].maxhp){
+                    System.out.println("Ten członek ma maks hp");
                 }
-            }}
+                if(SystemWalka.teamini[wyb].hp == 0){
+                    System.out.println("Ten członek nie żyje");
+                }
+                else
+                {
+                    SystemWalka.teamini[wyb].hp = SystemWalka.teamini[wyb].maxhp;
+                    System.out.println("Członek "+SystemWalka.teamini[wyb]+" został uleczony");
+                    magia=true;
+                }}
             case(2)->{ pkt = 2;
             System.out.println("Kogo chcesz ochronić?");
             int wyb = scanner.nextInt();
@@ -327,71 +256,19 @@ public class MagiaWWalce {
                 System.out.println("Nie ma takiego członka");
             }
             else{
-                switch (wyb){
-                    case(1)->{
-                        if(SystemWalka.teamini[0].status != ""){
+                        if(SystemWalka.teamini[wyb].status != ""){
                             System.out.println("Ten członek ma juz nałozony status");
                         }
-                        if(SystemWalka.teamini[0].hp == 0){
+                        if(SystemWalka.teamini[wyb].hp == wyb){
                             System.out.println("Ten członek nie żyje");
                         }
                         else
-                        {SystemWalka.teamini[0].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[0]+" ma status mgła");
-                        magia=true;}
+                        {SystemWalka.teamini[wyb].status = "Mgła";
+                            System.out.println("Członek "+SystemWalka.teamini[wyb]+" ma status mgła");
+                            magia=true;}
                     }
-                    case(2)->{if(SystemWalka.teamini[1].status != ""){
-                        System.out.println("Ten członek ma juz nałozony status");
-                    }
-                        if(SystemWalka.teamini[1].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {SystemWalka.teamini[1].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[1]+" ma status mgła");
-                            magia=true;}}
-                    case(3)->{if(SystemWalka.teamini[2].status != ""){
-                        System.out.println("Ten członek ma juz nałozony status");
-                    }
-                        if(SystemWalka.teamini[2].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {SystemWalka.teamini[2].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[2]+" ma status mgła");
-                            magia=true;}}
-                    case(4)->{if(SystemWalka.teamini[3].status != ""){
-                        System.out.println("Ten członek ma juz nałozony status");
-                    }
-                        if(SystemWalka.teamini[3].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {SystemWalka.teamini[3].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[3]+" ma status mgła");
-                            magia=true;}}
-                    case(5)->{if(SystemWalka.teamini[4].status != ""){
-                        System.out.println("Ten członek ma juz nałozony status");
-                    }
-                        if(SystemWalka.teamini[4].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {SystemWalka.teamini[4].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[4]+" ma status mgła");
-                            magia=true;}}
-                    case(6)->{if(SystemWalka.teamini[5].status != ""){
-                        System.out.println("Ten członek ma juz nałozony status");
-                    }
-                        if(SystemWalka.teamini[5].hp == 0){
-                            System.out.println("Ten członek nie żyje");
-                        }
-                        else
-                        {SystemWalka.teamini[5].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[5]+" ma status mgła");
-                            magia=true;}}
-                    default -> System.out.println("Nie ma takiego członka");
-                }}}
+
+                }
             case(3)->{pkt = 3;
                 for(int x=0;x<SystemWalka.teamini.length;x++){
                     if(SystemWalka.teamini[x].hp == SystemWalka.teamini[x].maxhp){
