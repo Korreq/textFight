@@ -15,7 +15,7 @@ public class SystemWalka {
 
     public void walka() throws InterruptedException
     {
-
+        alive = true;
         Scanner scanner = new Scanner(System.in);
         TablicaMagii tablicaMagii = new TablicaMagii();
         //Team team = new Team();
