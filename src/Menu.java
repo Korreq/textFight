@@ -21,7 +21,7 @@ public class Menu {
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
             System.out.println("3 : Wyjdz");
-            System.out.println("\nv. 0.04(Magic Errors)");
+            System.out.println("\nv. 0.04b(Magic Errors)");
 
             int wybór = (scanner.nextInt());
 

@@ -15,8 +15,8 @@ Podstawy systemu walki    	     [v]
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                     	Interfejs "graficzny"  	  [*]   Magia                       [x]     
-                                                                        Zamiana członków drużyny
+                                     	Interfejs "graficzny"  	  [*]
+                                        Magia                     [*]   Zamiana członków drużyny
                                                                         po śmierci na polu bitwy    [x]
 									                                    Czyszczenie ekranu          [x]
 									                                    Losowanie przeciwników      [x]

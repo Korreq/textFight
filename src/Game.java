@@ -6,7 +6,7 @@ public class Game
         Walka fight = new Walka();
         Menu.Menu();
         Start.start();
-        fight.walka();
+        fight.fight();
 
     }
 
