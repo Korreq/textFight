@@ -13,6 +13,7 @@ public class Potwory extends Heroes {
         this.armor= armor;
         this.mage = mage;
         this.status = status;
+        this.NRMaga = NRMaga;
 
     }
     public String toString() { return name;}

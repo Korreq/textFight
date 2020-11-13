@@ -80,6 +80,7 @@ public class Bohaterowie extends Heroes {
         runes(type);
         classes(klasa);
         this.status = status;
+        this.NRMaga = NRMaga;
     }
 
     public int getDex() {

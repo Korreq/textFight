@@ -1,4 +1,5 @@
 import Bohaterowie.Bohaterowie;
+import Magia.TablicaMagii;
 import Runy.Runy;
 import java.util.Arrays;
 import java.util.Random;
@@ -20,7 +21,8 @@ public class SystemWalka
         Runy runy = new Runy();
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
-
+        TablicaMagii tablicaMagii = new TablicaMagii();
+        int b =0;
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
         for (Bohaterowie bohaterowie : teamini)
@@ -33,6 +35,8 @@ public class SystemWalka
         }
 
         Arrays.sort(teamini, sortowanie);
+
+        for(int i = 0;i < teamini.length;i++){if(teamini[i].klasa =="Kapłan"){teamini[i].NRMaga=b;b++;}}
 
         System.out.println("Pole bitwy");
         System.out.println();
@@ -81,18 +85,31 @@ public class SystemWalka
                                         {
                                             System.out.println("zabiłeś potwora " + Walka.potworybitwa[atak]);
                                             Walka.potworybitwa[atak].hp =0;
-
-
-                                           /* for(int x = 0;x < Walka.potworybitwa.length;x++)
-                                            {
-                                                if(Walka.potworybitwa[x].hp <= 0){ mori++;}
-                                                if (Walka.potworybitwa.length == mori)
-                                                {
-                                                    alive = false;
-                                                    System.out.println("Wygrałeś bitwę");
-                                                    break;
+                                        }
+                                        for(int x = 0;x < Walka.potworybitwa.length;x++) {
+                                            if (Walka.potworybitwa[x].hp <= 0) {
+                                                if (Walka.potworybitwa[x].status == "Krew") {
+                                                    Walka.potworybitwa[x].status = "";
+                                                    for (int a = 0; a < teamini.length; a++) {
+                                                        if (Walka.potworybitwa[x].NRMaga == teamini[a].NRMaga) {
+                                                            teamini[a].hp = (int) (teamini[a].hp + teamini[a].hp * 0.1);
+                                                            System.out.println("Przez to ze potwór"+Walka.potworybitwa[x]+" miał status Krew to bohater"+teamini[i]+" odzyskuje cześć zdrowia");
+                                                        }
+                                                    }
                                                 }
-                                            }*/
+                                                if (Walka.potworybitwa[x].status == "Więz krwi") {
+                                                    for (int a = 0; a < Walka.potworybitwa.length; a++) {
+                                                        if (Walka.potworybitwa[x].status == Walka.potworybitwa[a].status) {
+                                                            Walka.potworybitwa[a].hp = 0;
+                                                            Walka.potworybitwa[i].status = "";
+                                                            Walka.potworybitwa[a].status = "";
+                                                            System.out.println("Przez to że potwór " + Walka.potworybitwa[i] + " i " + Walka.potworybitwa[a] + " są powiązanie więzłami krwi" + Walka.potworybitwa[a] + " też umiera");
+                                                        }
+                                                    }
+                                                }
+
+
+                                            }
                                         }
                                     }
                                     else
@@ -109,7 +126,7 @@ public class SystemWalka
                                     for(int a=0;a<= teamini.length-1;a++) { System.out.println(teamini[a].lit +" nazwa: "+teamini[a].name+" klasa: "+teamini[a].klasa+" hp: " + teamini[a].hp + "/" + teamini[a].maxhp+" pkt magii: "+teamini[a].pktmagii); }
 
                                     System.out.println("\ninformacje na temat potworów: \n");
-                                    for(int a=0;a<= Walka.potworybitwa.length-1;a++) { System.out.println(Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp); }
+                                    for(int a=0;a<= Walka.potworybitwa.length-1;a++) { System.out.println(Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp+" status: "+Walka.potworybitwa[a].status); }
                                     System.out.println();
                                     i--;
                                 }
@@ -131,25 +148,108 @@ public class SystemWalka
                                             case("wind")-> MagiaWWalce.MagiaWiatru();
                                             case("earth")-> MagiaWWalce.MagiaZiemi();
                                             case("light")-> MagiaWWalce.MagiaSwiatła();
-                                            case("blood")-> MagiaWWalce.MagiaKrwi();
+                                            case("blood")-> {System.out.println("Lista spelli");
+                                            for(int a=0;a < tablicaMagii.magiakrwi.length;a++){
+                                                System.out.println(a+1+" - "+tablicaMagii.magiakrwi[a]);
+                                            }
+                                            System.out.println("Którego spella chcesz użyć");
+                                            int go = scanner.nextInt();
+                                            switch (go){
+                                                case(1)->{if(teamini[i].hp < teamini[i].hp*0.1){
+                                                    System.out.println("Nie masz życia by rzucić spell");
+                                                }
+                                                else
+                                                {System.out.println("Kogo chcesz zaatakować");
+                                                    wyb = scanner.nextInt();
+                                                    if(wyb > Walka.potworybitwa.length){
+                                                        System.out.println("Nie ma takiego potwora");
+                                                    }
+                                                    teamini[i].hp = (int) (teamini[i].hp -teamini[i].hp*0.1);
+                                                    Walka.potworybitwa[wyb].status="Krew";
+                                                    Walka.potworybitwa[wyb].NRMaga = teamini[i].NRMaga;
+                                                    int obr = (int) ((Math.random() * (teamini[i].hp*0.1 - 1)) + 1) - Walka.potworybitwa[wyb].armor;
+
+                                                    if(obr <= 0){obr = 0;}
+                                                    Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
+                                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
+                                                    if (Walka.potworybitwa[wyb].hp <= 0)
+                                                    {
+                                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
+                                                        Walka.potworybitwa[wyb].hp =0;}
+                                                    MagiaWWalce.magia=true;}
+
+                                                }
+                                                case(2)->{
+                                                    System.out.println("wybierz pierwszego potwora");
+                                                    wyb = scanner.nextInt();
+                                                    if(wyb > Walka.potworybitwa.length){
+                                                        System.out.println("nie ma takiego potwora");
+                                                    }
+                                                    System.out.println("wybierz drugiego potwora");
+                                                    int wyb2 = scanner.nextInt();
+                                                    if(wyb2 > Walka.potworybitwa.length){
+                                                        System.out.println("nie ma takiego potwora");
+                                                    }
+                                                    Walka.potworybitwa[wyb].status = "Więz krwi";
+                                                    Walka.potworybitwa[wyb2].status = "Więz krwi";
+                                                    System.out.println("Potwór "+Walka.potworybitwa[wyb]+" i "+Walka.potworybitwa[wyb2]+" są powiązanie więzłami krwi");
+                                                }
+                                                case(3)->{if(teamini[i].hp < teamini[i].hp/2){
+                                                    System.out.println("Nie masz życia by rzucić spell");
+                                                }
+                                                else
+                                                {
+                                                    teamini[i].hp = teamini[i].hp -teamini[i].hp/2;
+                                                    for(int x = 0;x < Walka.potworybitwa.length;x++)
+                                                {
+                                                    int obr = (int) ((Math.random() * (teamini[i].maxhp/2 - 1)) + 1) - Walka.potworybitwa[x].armor;
+                                                    if(obr <= 0){obr = 0;}
+                                                    Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                                                    if (Walka.potworybitwa[x].hp <= 0)
+                                                    {
+                                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                                                        Walka.potworybitwa[x].hp =0;
+                                                        teamini[i].hp = (int) (teamini[i].hp + teamini[i].hp*0.1);
+                                                        if(teamini[i].hp > teamini[i].maxhp){teamini[i].hp=teamini[i].maxhp;}
+                                                    }
+                                                }
+                                                    MagiaWWalce.magia = true;}
+                                                }
+                                                default -> System.out.println("Nie ma takiego spella");}}
                                             case("thunder")-> MagiaWWalce.MagiaBłyskawic();
                                         }
                                         if(!MagiaWWalce.magia){ i--; }
                                         else{MagiaWWalce.magia = false;
                                         teamini[i].pktmagii = teamini[i].pktmagii - MagiaWWalce.pkt;
-                                           /* for(int x = 0;x < Walka.potworybitwa.length;x++)
-                                            {
-                                                if(Walka.potworybitwa[x].hp <= 0){ mori++; }
-                                                if (mori == Walka.potworybitwa.length)
-                                                {
-                                                    alive = false;
-                                                    System.out.println("Wygrałeś bitwę");
-                                                    break;
+                                            for(int x = 0;x < Walka.potworybitwa.length;x++) {
+                                                if (Walka.potworybitwa[x].hp <= 0) {
+                                                    if (Walka.potworybitwa[x].status == "Krew") {
+                                                        Walka.potworybitwa[x].status = "";
+                                                        for (int a = 0; a < teamini.length; a++) {
+                                                            if (Walka.potworybitwa[x].NRMaga == teamini[a].NRMaga) {
+                                                                teamini[a].hp = (int) (teamini[a].hp + teamini[a].hp * 0.1);
+                                                                System.out.println("Przez to ze potwór"+Walka.potworybitwa[x]+" miał status Krew to bohater"+teamini[i]+" odzyskuje cześć zdrowia");
+                                                            }
+                                                        }
+                                                    }
+                                                    if (Walka.potworybitwa[x].status == "Więz krwi"){
+                                                        for (int a = 0; a < Walka.potworybitwa.length; a++) {
+                                                            if (Walka.potworybitwa[a].status == "Więz krwi") {
+                                                            if (Walka.potworybitwa[x].status == Walka.potworybitwa[a].status) {
+                                                                Walka.potworybitwa[a].hp = 0;
+                                                                Walka.potworybitwa[i].status = "";
+                                                                Walka.potworybitwa[a].status = "";
+                                                                System.out.println("Przez to że potwór " + Walka.potworybitwa[i] + " i " + Walka.potworybitwa[a] + " są powiązanie więzłami krwi " + Walka.potworybitwa[a] + " też umiera");
+                                                            }
+                                                        }}
+                                                    }
+
+
                                                 }
-                                            }*/
                                             }
 
-                                    }
+                                    }}
                                     else{
                                         System.out.println("nie jesteś magiem");
                                         i--;
@@ -167,6 +267,7 @@ public class SystemWalka
             System.out.println("Czas na turę potworów");
             for(int i = 0;i<= Walka.potworybitwa.length-1;i++)
             {
+                if(Walka.potworybitwa[i].status == "Oplątanie"){break;}
                 if(!alive){break;}
 
 
@@ -183,11 +284,14 @@ public class SystemWalka
                                         if(teamini[atak].status.equals("Mgła")){
                                             {if(teamini.length ==1){break;} i--; }}
                                         else{
+
                                         //zadawanie obrażeń przez potwory
                                         int obr = (int) ((Math.random() * (Walka.potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
                                         if(obr <= 0){obr = 0;}
-                                        teamini[atak].hp = teamini[atak].hp - obr;
-
+                                            if(teamini[atak].status =="Kokon"){teamini[atak].hp = teamini[atak].hp - obr/2;}
+                                            else {
+                                                teamini[atak].hp = teamini[atak].hp - obr;
+                                            }
                                         System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
                                         Thread.sleep(1000);
 

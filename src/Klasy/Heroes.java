@@ -15,6 +15,7 @@ public class Heroes{
     public String type;
     public int pktmagii;
     public String status;
+    public int NRMaga;
 
 }
 

@@ -34,3 +34,9 @@ Podstawy systemu walki    	     [v]
                                                                         Dodatkowe scenariusze       [x]
                                                                         Lektor                      [x]
                                                                         Dzwięki/Muzyka              [x]
+
+
+//jak coś to moje dopiski łukasz
+-system zarządzania drużyną
+-magia
+-zrobienie zeby magia nie była nieskonczona
