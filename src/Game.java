@@ -6,6 +6,7 @@ public class Game
         Walka fight = new Walka();
         Menu.menu();
         Start.start();
+        ZarzadzanieDruzyna.zarzadzanie();
         fight.fight();
 
     }
