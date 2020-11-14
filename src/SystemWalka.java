@@ -1,6 +1,5 @@
 import Bohaterowie.Bohaterowie;
 import Magia.TablicaMagii;
-import Runy.Runy;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -18,7 +17,6 @@ public class SystemWalka
         mori = 0;
         alive = true;
         Scanner scanner = new Scanner(System.in);
-        Runy runy = new Runy();
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
         TablicaMagii tablicaMagii = new TablicaMagii();
@@ -139,7 +137,7 @@ public class SystemWalka
                                 {
                                     if (teamini[i].type.equals("steel")){
 
-                                        runy.steel();
+
 
                                     }
                                     i--;
