@@ -24,12 +24,12 @@ public class Menu
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
             System.out.println("3 : Wyjdz");
-            System.out.println("\nv. 0.05(Blood Magic)");
+            System.out.println("\nv. 0.05a(Bloody Stream)");
 
-            int wybór = (scanner.nextInt());
+            int choice = (scanner.nextInt());
 
 
-            switch (wybór)
+            switch (choice)
             {
                 case (1) ->
                         {

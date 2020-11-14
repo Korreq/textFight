@@ -18,9 +18,9 @@ public class TablicaMagii {
     public Magia earth2 = new Magia("Pnącza","earth",2,0,"jeden przeciwnik");
     public Magia earth3 = new Magia("Całun flory","earth",3,0,"wszyscy sojusznicy");
 
-    public Magia light1 = new Magia("Fortuna","light",1,0,"");
-    public Magia light2 = new Magia("Egida","light",2,0,"");
-    public Magia light3 = new Magia("Chwała","light",3,0,"");
+    public Magia light1 = new Magia("Boska Pomoc","light",1,0,"jeden sojusznik");
+    public Magia light2 = new Magia("Boski Promień","light",2,0,"jeden przeciwnik");
+    public Magia light3 = new Magia("Oświecenie","light",3,0,"wszyscy wrogowie");
 
     public Magia blood1 = new Magia("Krwawy akt","blood",1,0,"jeden przeciwnik");
     public Magia blood2 = new Magia("Krwawa więź","blood",2,0,"dwóch przeciwników");

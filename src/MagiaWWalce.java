@@ -362,7 +362,7 @@ public class MagiaWWalce {
                     System.out.println("Nie ma takiego członka");
                 }
                 else{
-                    if(SystemWalka.teamini[wyb].status != ""){
+                    if(!SystemWalka.teamini[wyb].status.equals("")){
                         System.out.println("Ten członek ma juz nałozony status");
                     }
                     if(SystemWalka.teamini[wyb].hp == wyb){
@@ -381,7 +381,7 @@ public class MagiaWWalce {
                     System.out.println("Nie ma takiego potwora");
                 }
                 else{
-                    if(Walka.potworybitwa[wyb].status != ""){
+                    if(!Walka.potworybitwa[wyb].status.equals("")){
                         System.out.println("Ten potwór ma juz nałozony status");
                     }
                     if(Walka.potworybitwa[wyb].hp == wyb){
@@ -411,9 +411,9 @@ public class MagiaWWalce {
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
         switch (go){
-            case(1)->{pkt = 1;}
-            case(2)->{pkt = 2;}
-            case(3)->{pkt = 3;}
+            case(1)->pkt = 1;
+            case(2)->pkt = 2;
+            case(3)->pkt = 3;
             default -> System.out.println("Nie ma takiego spella");}
     }
 

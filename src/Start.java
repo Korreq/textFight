@@ -1,17 +1,12 @@
 import Bohaterowie.Bohaterowie;
-import Potwory.TablicaPotworow;
 import Bohaterowie.TablicaBohaterów;
 import java.util.*;
 
 public class Start {
-
-
     public static void start() {
-
 
         Scanner myScanner = new Scanner(System.in);
 
-        Team  team = new Team();
         TablicaBohaterów tablicaBohaterów = new TablicaBohaterów();
         Bohaterowie[] kopiaboh = tablicaBohaterów.boh;
         Collections.shuffle(Arrays.asList(kopiaboh));
@@ -20,7 +15,7 @@ public class Start {
 
         System.out.println("Jesteś w karczmie wybierz bohaterów aby utworzyć drużynę.\n");
 
-        Bohaterowie[] dru = team.team;
+        Bohaterowie[] dru = Team.team;
         boolean dosc = false;
         do {
             System.out.println("╔═══════════════════════════════╗");
