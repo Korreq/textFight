@@ -36,7 +36,12 @@ public class SystemWalka
 
         Arrays.sort(teamini, sortowanie);
 
-        for(int i = 0;i < teamini.length;i++){if(teamini[i].klasa =="Kapłan"){teamini[i].NRMaga=b;b++;}}
+        for (Bohaterowie value : teamini) {
+            if (value.klasa.equals("Kapłan")) {
+                value.NRMaga = b;
+                b++;
+            }
+        }
 
         System.out.println("Pole bitwy");
         System.out.println();
@@ -88,18 +93,18 @@ public class SystemWalka
                                         }
                                         for(int x = 0;x < Walka.potworybitwa.length;x++) {
                                             if (Walka.potworybitwa[x].hp <= 0) {
-                                                if (Walka.potworybitwa[x].status == "Krew") {
+                                                if (Walka.potworybitwa[x].status.equals("Krew")) {
                                                     Walka.potworybitwa[x].status = "";
-                                                    for (int a = 0; a < teamini.length; a++) {
-                                                        if (Walka.potworybitwa[x].NRMaga == teamini[a].NRMaga) {
-                                                            teamini[a].hp = (int) (teamini[a].hp + teamini[a].hp * 0.1);
-                                                            System.out.println("Przez to ze potwór"+Walka.potworybitwa[x]+" miał status Krew to bohater"+teamini[i]+" odzyskuje cześć zdrowia");
+                                                    for (Bohaterowie bohaterowie : teamini) {
+                                                        if (Walka.potworybitwa[x].NRMaga == bohaterowie.NRMaga) {
+                                                            bohaterowie.hp = (int) (bohaterowie.hp + bohaterowie.hp * 0.1);
+                                                            System.out.println("Przez to ze potwór" + Walka.potworybitwa[x] + " miał status Krew to bohater" + teamini[i] + " odzyskuje cześć zdrowia");
                                                         }
                                                     }
                                                 }
-                                                if (Walka.potworybitwa[x].status == "Więz krwi") {
+                                                if (Walka.potworybitwa[x].status.equals("Więz krwi")) {
                                                     for (int a = 0; a < Walka.potworybitwa.length; a++) {
-                                                        if (Walka.potworybitwa[x].status == Walka.potworybitwa[a].status) {
+                                                        if (Walka.potworybitwa[x].status.equals(Walka.potworybitwa[a].status)) {
                                                             Walka.potworybitwa[a].hp = 0;
                                                             Walka.potworybitwa[i].status = "";
                                                             Walka.potworybitwa[a].status = "";
@@ -224,19 +229,19 @@ public class SystemWalka
                                         teamini[i].pktmagii = teamini[i].pktmagii - MagiaWWalce.pkt;
                                             for(int x = 0;x < Walka.potworybitwa.length;x++) {
                                                 if (Walka.potworybitwa[x].hp <= 0) {
-                                                    if (Walka.potworybitwa[x].status == "Krew") {
+                                                    if (Walka.potworybitwa[x].status.equals("Krew")) {
                                                         Walka.potworybitwa[x].status = "";
-                                                        for (int a = 0; a < teamini.length; a++) {
-                                                            if (Walka.potworybitwa[x].NRMaga == teamini[a].NRMaga) {
-                                                                teamini[a].hp = (int) (teamini[a].hp + teamini[a].hp * 0.1);
-                                                                System.out.println("Przez to ze potwór"+Walka.potworybitwa[x]+" miał status Krew to bohater"+teamini[i]+" odzyskuje cześć zdrowia");
+                                                        for (Bohaterowie bohaterowie : teamini) {
+                                                            if (Walka.potworybitwa[x].NRMaga == bohaterowie.NRMaga) {
+                                                                bohaterowie.hp = (int) (bohaterowie.hp + bohaterowie.hp * 0.1);
+                                                                System.out.println("Przez to ze potwór" + Walka.potworybitwa[x] + " miał status Krew to bohater" + teamini[i] + " odzyskuje cześć zdrowia");
                                                             }
                                                         }
                                                     }
-                                                    if (Walka.potworybitwa[x].status == "Więz krwi"){
+                                                    if (Walka.potworybitwa[x].status.equals("Więz krwi")){
                                                         for (int a = 0; a < Walka.potworybitwa.length; a++) {
-                                                            if (Walka.potworybitwa[a].status == "Więz krwi") {
-                                                            if (Walka.potworybitwa[x].status == Walka.potworybitwa[a].status) {
+                                                            if (Walka.potworybitwa[a].status.equals("Więz krwi")) {
+                                                            if (Walka.potworybitwa[x].status.equals(Walka.potworybitwa[a].status)) {
                                                                 Walka.potworybitwa[a].hp = 0;
                                                                 Walka.potworybitwa[i].status = "";
                                                                 Walka.potworybitwa[a].status = "";
@@ -267,7 +272,7 @@ public class SystemWalka
             System.out.println("Czas na turę potworów");
             for(int i = 0;i<= Walka.potworybitwa.length-1;i++)
             {
-                if(Walka.potworybitwa[i].status == "Oplątanie"){break;}
+                if(Walka.potworybitwa[i].status.equals("Oplątanie")){break;}
                 if(!alive){break;}
 
 
@@ -288,7 +293,7 @@ public class SystemWalka
                                         //zadawanie obrażeń przez potwory
                                         int obr = (int) ((Math.random() * (Walka.potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
                                         if(obr <= 0){obr = 0;}
-                                            if(teamini[atak].status =="Kokon"){teamini[atak].hp = teamini[atak].hp - obr/2;}
+                                            if(teamini[atak].status.equals("Kokon")){teamini[atak].hp = teamini[atak].hp - obr/2;}
                                             else {
                                                 teamini[atak].hp = teamini[atak].hp - obr;
                                             }
