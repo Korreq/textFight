@@ -8,402 +8,241 @@ public class MagiaWWalce {
     static boolean magia = false;
     static int pkt;
     static int hp =0;
-    static int magiakrwi;
-    public static void MagiaOgnia() {
 
+    public static void MagiaOgnia()
+    {
         System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiaognia.length;a++){
-            System.out.println(a+1+" - "+tablicaMagii.magiaognia[a]);
-        }
+        for(int a=0;a < tablicaMagii.magiaognia.length;a++){System.out.println(a+1+" - "+tablicaMagii.magiaognia[a]);}
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
-        switch (go){
-            case(1)->{
-                pkt=1;
-                System.out.println("która kolumna");
-                int rzad = scanner.nextInt();
-                switch (rzad){
-                    case(1)->{
-                        if(Walka.potworybitwa[0].hp <= 0 && Walka.potworybitwa[3].hp <= 0)
+        switch (go)
+        {
+            case(1) -> {
+                        pkt=1;
+                        System.out.println("która kolumna");
+                        int kolumna = scanner.nextInt();
+                        if(kolumna < 1 || kolumna > 3) { System.out.println("To nie kolumna"); break; }
+                        for (int i = kolumna-1;i<=kolumna+2;i = i+3)
                         {
-                            System.out.println("W tej kolumnie nikogo nie ma");
+                            if (Walka.potworybitwa[i].hp <= 0) { System.out.println("W komórce "+ i +" nikogo nie ma"); }
+                            else {
+                                if (Walka.potworybitwa[i].hp > 0)
+                                {
+                                    int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[i].armor;
+                                    if (obr <= 0) { obr = 0; }
+                                    Walka.potworybitwa[i].hp = Walka.potworybitwa[i].hp - obr;
+                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[i] + " " + obr + " obrażeń");
+                                    if (Walka.potworybitwa[i].hp <= 0)
+                                    {
+                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[i]);
+                                        Walka.potworybitwa[i].hp = 0;
+                                    }
+                                }
+                            }
                         }
-                        else{
-                        if(Walka.potworybitwa[0].hp > 0){
-                        int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[0].armor;
-                        if(obr <= 0){obr = 0;}
-                        Walka.potworybitwa[0].hp = Walka.potworybitwa[0].hp - obr;
-                        System.out.println("zadałeś potworowi " + Walka.potworybitwa[0] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[0].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[0]);
-                                Walka.potworybitwa[0].hp =0;
-                            }}
-                        if(Walka.potworybitwa[3].hp > 0){
-                        int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[3].armor;
-                        if(obr2 <= 0){obr2 = 0;}
-                        Walka.potworybitwa[3].hp = Walka.potworybitwa[3].hp - obr2;
-                        System.out.println("i zadałeś potworowi " + Walka.potworybitwa[3] + " " + obr2 + " obrażeń");
-                            if (Walka.potworybitwa[3].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[3]);
-                                Walka.potworybitwa[3].hp =0;
-                            }}
-
                         magia = true;
-
-
-                        }
-
                     }
-                    case(2)->{if(Walka.potworybitwa[1].hp <= 0 && Walka.potworybitwa[4].hp <= 0)
-                    {
-                        System.out.println("W tej kolumnie nikogo nie ma");
-                    }
-                    else{
-                        if(Walka.potworybitwa[1].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[1].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[1].hp = Walka.potworybitwa[1].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[1] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[1].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[1]);
-                                Walka.potworybitwa[1].hp =0;
-                            }}
-                        if(Walka.potworybitwa[4].hp > 0){
-                            int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[4].armor;
-                            if(obr2 <= 0){obr2 = 0;}
-                            Walka.potworybitwa[4].hp = Walka.potworybitwa[4].hp - obr2;
-                            System.out.println("i zadałeś potworowi " + Walka.potworybitwa[4] + " " + obr2 + " obrażeń");
-                            if (Walka.potworybitwa[4].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[4]);
-                                Walka.potworybitwa[4].hp =0;
-                            }}
-                        magia = true;
-
-                        }}
-                    case(3)->{if(Walka.potworybitwa[2].hp  <= 0 && Walka.potworybitwa[5].hp <= 0)
-                    {
-                        System.out.println("W tej kolumnie nikogo nie ma");
-                    }
-                    else{
-                        if(Walka.potworybitwa[2].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[2].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[2].hp = Walka.potworybitwa[2].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[2] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[2].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[2]);
-                                Walka.potworybitwa[2].hp =0;
-                            }}
-                        if(Walka.potworybitwa[5].hp > 0){
-                            int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[5].armor;
-                            if(obr2 <= 0){obr2 = 0;}
-                            Walka.potworybitwa[5].hp = Walka.potworybitwa[5].hp - obr2;
-                            System.out.println("i zadałeś potworowi " + Walka.potworybitwa[5] + " " + obr2 + " obrażeń");
-                            if (Walka.potworybitwa[5].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[5]);
-                                Walka.potworybitwa[5].hp =0;
-                            }}
-                        magia = true;
-
-                        }}
-                    default -> System.out.println("Nie ma takiej kolumny");
-                }
-            }
-            case(2)->{
-                pkt=2;
-                System.out.println("który rząd");
-                int kolumna = scanner.nextInt();
-                switch (kolumna){
-                    case(1)->{if(Walka.potworybitwa[0].hp >0 && Walka.potworybitwa[1].hp <= 0 && Walka.potworybitwa[2].hp <= 0)
-                    {
-                        System.out.println("W tym rzędzie nikogo nie ma");
-                    }
-                    else{
-                        if(Walka.potworybitwa[0].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire2.getObrażenia() - 1)) + 1) - Walka.potworybitwa[0].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[0].hp = Walka.potworybitwa[0].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[0] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[0].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[0]);
-                                Walka.potworybitwa[0].hp =0;
-                            }}
-
-                        if(Walka.potworybitwa[1].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire2.getObrażenia() - 1)) + 1) - Walka.potworybitwa[1].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[1].hp = Walka.potworybitwa[1].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[1] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[1].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[1]);
-                                Walka.potworybitwa[1].hp =0;
-                            }}
-
-                        if(Walka.potworybitwa[2].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire2.getObrażenia() - 1)) + 1) - Walka.potworybitwa[2].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[2].hp = Walka.potworybitwa[2].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[2] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[2].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[2]);
-                                Walka.potworybitwa[2].hp =0;
-                            }}
-
-                    }magia = true;
-                    }
-                    case(2)->{
-                        if(Walka.potworybitwa[3].hp <= 0 && Walka.potworybitwa[4].hp <= 0 && Walka.potworybitwa[5].hp <= 0)
+            case(2) -> {
+                        pkt = 2;
+                        System.out.println("który rząd");
+                        int rzad = scanner.nextInt();
+                        if (rzad < 1 || rzad > 2) { System.out.println("To nie rząd"); break; }
+                        if (rzad == 2) { rzad = 4; }
+                        for (int i = rzad-1; i <= rzad + 1; i++)
                         {
-                            System.out.println("W tym rzędzie nikogo nie ma");
+                            if (Walka.potworybitwa[rzad].hp <= 0) { System.out.println("W tym rzędzie nikogo nie ma"); }
+                            else {
+                                if (Walka.potworybitwa[rzad].hp > 0)
+                                {
+                                    int obr = (int) ((Math.random() * (tablicaMagii.fire2.getObrażenia() - 1)) + 1) - Walka.potworybitwa[i].armor;
+                                    if (obr <= 0) { obr = 0; }
+                                    Walka.potworybitwa[i].hp = Walka.potworybitwa[i].hp - obr;
+                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[i] + " " + obr + " obrażeń");
+                                    if (Walka.potworybitwa[i].hp <= 0)
+                                    {
+                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[i]);
+                                        Walka.potworybitwa[i].hp = 0;
+                                    }
+                                }
+                            }
                         }
-                        else{
-                            if(Walka.potworybitwa[3].hp > 0){
-                                int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[3].armor;
-                                if(obr2 <= 0){obr2 = 0;}
-                                Walka.potworybitwa[3].hp = Walka.potworybitwa[3].hp - obr2;
-                                System.out.println("i zadałeś potworowi " + Walka.potworybitwa[3] + " " + obr2 + " obrażeń");
-                                if (Walka.potworybitwa[3].hp <= 0)
-                                {
-                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[3]);
-                                    Walka.potworybitwa[3].hp =0;
-                                }}
-                            if(Walka.potworybitwa[4].hp > 0){
-                                int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[4].armor;
-                                if(obr2 <= 0){obr2 = 0;}
-                                Walka.potworybitwa[4].hp = Walka.potworybitwa[4].hp - obr2;
-                                System.out.println("i zadałeś potworowi " + Walka.potworybitwa[4] + " " + obr2 + " obrażeń");
-                                if (Walka.potworybitwa[4].hp <= 0)
-                                {
-                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[4]);
-                                    Walka.potworybitwa[4].hp =0;
-                                }}
-                            if(Walka.potworybitwa[5].hp > 0){
-                                int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[5].armor;
-                                if(obr2 <= 0){obr2 = 0;}
-                                Walka.potworybitwa[5].hp = Walka.potworybitwa[5].hp - obr2;
-                                System.out.println("i zadałeś potworowi " + Walka.potworybitwa[5] + " " + obr2 + " obrażeń");
-                                if (Walka.potworybitwa[5].hp <= 0)
-                                {
-                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[5]);
-                                    Walka.potworybitwa[5].hp =0;
-                                }}
-                            magia = true;
-                    }}
-                    default -> System.out.println("Nie ma takiego rzędu");
-                }
-            }
-            case(3)->{
-                pkt=3;
-                for(int x = 0;x < Walka.potworybitwa.length;x++)
-                {
-                    int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
-                    if(obr <= 0){obr = 0;}
-                    Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
-                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
-                    if (Walka.potworybitwa[x].hp <= 0)
-                    {
-                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
-                        Walka.potworybitwa[x].hp =0;
+                        magia = true;
                     }
-                }
-                magia = true;
-            }
-            default -> System.out.println("Nie masz takiego spella");
+            case(3) -> {
+                        pkt=3;
+                        for(int x = 0;x < Walka.potworybitwa.length;x++)
+                        {
+                            int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
+                            if(obr <= 0){obr = 0;}
+                            Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                            if (Walka.potworybitwa[x].hp <= 0)
+                            {
+                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                                Walka.potworybitwa[x].hp = 0;
+                            }
+                        }
+                        magia = true;
+                    }
+            default -> System.out.println("Nie masz takiego zaklęcia");
         }
     }
 
-    public static void MagiaWody(){System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiawody.length;a++){
-            System.out.println(a+1+" - "+tablicaMagii.magiawody[a]);
-        }
+    public static void MagiaWody()
+    {
+        System.out.println("Lista spelli");
+        for(int a=0;a < tablicaMagii.magiawody.length;a++){ System.out.println(a+1+" - "+tablicaMagii.magiawody[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
-        switch (go){
-            case(1)->{pkt = 1;
-                System.out.println("Kogo chcesz uleczyć?");
-                int wyb = scanner.nextInt();
-                if(wyb > Team.number)
-                {
-                    System.out.println("Nie ma takiego członka");
-                }
-                if(SystemWalka.teamini[wyb].hp == SystemWalka.teamini[wyb].maxhp){
-                    System.out.println("Ten członek ma maks hp");
-                }
-                if(SystemWalka.teamini[wyb].hp == 0){
-                    System.out.println("Ten członek nie żyje");
-                }
-                else
-                {
-                    SystemWalka.teamini[wyb].hp = SystemWalka.teamini[wyb].maxhp;
-                    System.out.println("Członek "+SystemWalka.teamini[wyb]+" został uleczony");
-                    magia=true;
-                }}
-            case(2)->{ pkt = 2;
-            System.out.println("Kogo chcesz ochronić?");
-            int wyb = scanner.nextInt();
-            if(wyb > Team.number)
-            {
-                System.out.println("Nie ma takiego członka");
-            }
-            else{
-                        if(!SystemWalka.teamini[wyb].status.equals("")){
-                            System.out.println("Ten członek ma juz nałożony status");
-                        }
-                        if(SystemWalka.teamini[wyb].hp == wyb){
-                            System.out.println("Ten członek nie żyje");
-                        }
+        switch (go)
+        {
+            case(1) -> {
+                        pkt = 1;
+                        System.out.println("Kogo chcesz uleczyć?");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
+                        if(SystemWalka.teamini[wyb].hp == SystemWalka.teamini[wyb].maxhp){ System.out.println("Ten członek ma maks hp"); }
+                        if(SystemWalka.teamini[wyb].hp == 0){ System.out.println("Ten członek nie żyje"); }
                         else
-                        {SystemWalka.teamini[wyb].status = "Mgła";
-                            System.out.println("Członek "+SystemWalka.teamini[wyb]+" ma status mgła");
-                            magia=true;}
+                        {
+                            SystemWalka.teamini[wyb].hp = SystemWalka.teamini[wyb].maxhp;
+                            System.out.println("Członek "+SystemWalka.teamini[wyb]+" został uleczony");
+                            magia=true;
+                        }
                     }
-
-                }
-            case(3)->{pkt = 3;
-                for(int x=0;x<SystemWalka.teamini.length;x++){
-                    if(SystemWalka.teamini[x].hp == SystemWalka.teamini[x].maxhp){
-
-                        hp++;
-                    }}
-                    if(hp == SystemWalka.teamini.length){
-                    System.out.println("cała drużyna ma maxhp");
-                    break;}
-
-                for(int x=0;x<SystemWalka.teamini.length;x++){
-                SystemWalka.teamini[x].hp = SystemWalka.teamini[x].maxhp;
-                System.out.println("cała drużyna została uleczona");
-                    magia=true;
-            }
-            }
+            case(2) -> {
+                        pkt = 2;
+                        System.out.println("Kogo chcesz ochronić?");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
+                        else {
+                            if(!SystemWalka.teamini[wyb].status.equals("")){ System.out.println("Ten członek ma juz nałożony status"); }
+                            if(SystemWalka.teamini[wyb].hp == wyb){ System.out.println("Ten członek nie żyje"); }
+                            else {
+                                SystemWalka.teamini[wyb].status = "Mgła";
+                                System.out.println("Członek "+SystemWalka.teamini[wyb]+" ma status mgła");
+                                magia=true;
+                            }
+                        }
+                    }
+            case(3) -> {
+                        pkt = 3;
+                        for(int x=0;x<SystemWalka.teamini.length;x++) { if(SystemWalka.teamini[x].hp == SystemWalka.teamini[x].maxhp){ hp++; } }
+                        if(hp == SystemWalka.teamini.length){ System.out.println("cała drużyna ma maxhp"); break;}
+                        for(int x=0;x<SystemWalka.teamini.length;x++)
+                        {
+                            SystemWalka.teamini[x].hp = SystemWalka.teamini[x].maxhp;
+                            System.out.println("cała drużyna została uleczona");
+                            magia=true;
+                        }
+                    }
             default -> System.out.println("Nie masz takiego spella");
-            }
+        }
     }
     
-    public static void MagiaWiatru(){System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiawiatru.length;a++){
-            System.out.println(a+" - "+tablicaMagii.magiawiatru[a]);
-        }
+    public static void MagiaWiatru()
+    {
+        System.out.println("Lista spelli");
+        for(int a=0;a < tablicaMagii.magiawiatru.length;a++){ System.out.println(a+" - "+tablicaMagii.magiawiatru[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
-        switch (go){
-            case(1)->{pkt = 1;
-                System.out.println("Kogo chcesz zaatakować");
-                int wyb = scanner.nextInt();
-                if(wyb > Walka.potworybitwa.length){
-                    System.out.println("Nie ma takiego potwora");
-                }
-                int obr = (int) ((Math.random() * (tablicaMagii.wind1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
-                if(obr <= 0){obr = 0;}
-                Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
-                System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
-                if (Walka.potworybitwa[wyb].hp <= 0)
-                {
-                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
-                    Walka.potworybitwa[wyb].hp =0;}
-            }
-            case(2)->{pkt = 2;
-                System.out.println("Kogo chcesz uleczyć?");
-                int wyb = scanner.nextInt();
-                if(wyb > Team.number)
-                {
-                    System.out.println("Nie ma takiego członka");
-                }
-                if(SystemWalka.teamini[wyb].hp == SystemWalka.teamini[wyb].maxhp){
-                    System.out.println("Ten członek ma maks hp");
-                }
-                if(SystemWalka.teamini[wyb].hp == 0){
-                    System.out.println("Ten członek nie żyje");
-                }
-                else
-                {
-                    SystemWalka.teamini[wyb].hp = SystemWalka.teamini[wyb].maxhp;
-                    System.out.println("Członek "+SystemWalka.teamini[wyb]+" został uleczony");
-                    magia=true;
-                }
-            }
-            case(3)->{pkt = 3;
-                for(int x = 0;x < Walka.potworybitwa.length;x++)
-                {
-                    int obr = (int) ((Math.random() * (tablicaMagii.wind3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
-                    if(obr <= 0){obr = 0;}
-                    Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
-                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
-                    if (Walka.potworybitwa[x].hp <= 0)
-                    {
-                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
-                        Walka.potworybitwa[x].hp =0;
+        switch (go)
+        {
+            case(1) -> {
+                        pkt = 1;
+                        System.out.println("Kogo chcesz zaatakować");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Walka.potworybitwa.length) { System.out.println("Nie ma takiego potwora"); }
+                        int obr = (int) ((Math.random() * (tablicaMagii.wind1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
+                        if(obr <= 0){obr = 0;}
+                        Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
+                        System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
+                        if (Walka.potworybitwa[wyb].hp <= 0)
+                        {
+                            System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
+                            Walka.potworybitwa[wyb].hp =0;
+                        }
                     }
-                }
-                magia = true;}
+            case(2) -> {
+                        pkt = 2;
+                        System.out.println("Kogo chcesz uleczyć?");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
+                        if(SystemWalka.teamini[wyb].hp == SystemWalka.teamini[wyb].maxhp){ System.out.println("Ten członek ma maks hp"); }
+                        if(SystemWalka.teamini[wyb].hp == 0){ System.out.println("Ten członek nie żyje"); }
+                        else
+                        {
+                            SystemWalka.teamini[wyb].hp = SystemWalka.teamini[wyb].maxhp;
+                            System.out.println("Członek "+SystemWalka.teamini[wyb]+" został uleczony");
+                            magia=true;
+                        }
+                    }
+            case(3) -> {
+                        pkt = 3;
+                        for(int x = 0;x < Walka.potworybitwa.length;x++)
+                        {
+                            int obr = (int) ((Math.random() * (tablicaMagii.wind3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
+                            if(obr <= 0){obr = 0;}
+                            Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                            if (Walka.potworybitwa[x].hp <= 0)
+                            {
+                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                                Walka.potworybitwa[x].hp =0;
+                            }
+                        }
+                        magia = true;
+                    }
             default -> System.out.println("Nie ma takiego spella");}
     }
 
-    public static void MagiaZiemi(){System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiaziemi.length;a++){
-            System.out.println(a+" - "+tablicaMagii.magiaziemi[a]);
-        }
+    public static void MagiaZiemi()
+    {
+        System.out.println("Lista spelli");
+        for(int a=0;a < tablicaMagii.magiaziemi.length;a++){ System.out.println(a+" - "+tablicaMagii.magiaziemi[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
-        switch (go){
-            case(1)->{pkt = 1;
-                System.out.println("Kogo chcesz ochronić?");
-                int wyb = scanner.nextInt();
-                if(wyb > Team.number)
-                {
-                    System.out.println("Nie ma takiego członka");
-                }
-                else{
-                    if(!SystemWalka.teamini[wyb].status.equals("")){
-                        System.out.println("Ten członek ma juz nałozony status");
+        switch (go)
+        {
+            case(1) -> {
+                        pkt = 1;
+                        System.out.println("Kogo chcesz ochronić?");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
+                        else {
+                            if(!SystemWalka.teamini[wyb].status.equals("")){ System.out.println("Ten członek ma juz nałozony status"); }
+                            if(SystemWalka.teamini[wyb].hp == wyb){ System.out.println("Ten członek nie żyje"); }
+                            else {
+                                SystemWalka.teamini[wyb].status = "Kokon";
+                                System.out.println("Członek "+SystemWalka.teamini[wyb]+" ma status kokon");
+                                magia=true;
+                            }
+                        }
                     }
-                    if(SystemWalka.teamini[wyb].hp == wyb){
-                        System.out.println("Ten członek nie żyje");
+            case(2) -> {
+                        pkt = 2;
+                        System.out.println("Na jakiego przeciwnika chcesz oplątać?");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Walka.potworybitwa.length) { System.out.println("Nie ma takiego potwora"); }
+                        else{
+                            if(!Walka.potworybitwa[wyb].status.equals("")){ System.out.println("Ten potwór ma juz nałozony status"); }
+                            if(Walka.potworybitwa[wyb].hp == wyb){ System.out.println("Ten potwór nie żyje"); }
+                            else {
+                                Walka.potworybitwa[wyb].status = "Oplątanie";
+                                System.out.println("Członek "+Walka.potworybitwa[wyb]+" ma status oplątanie");
+                                magia=true;
+                            }
+                        }
                     }
-                    else
-                    {SystemWalka.teamini[wyb].status = "Kokon";
-                        System.out.println("Członek "+SystemWalka.teamini[wyb]+" ma status kokon");
-                        magia=true;}
-                }}
-            case(2)->{pkt = 2;
-                System.out.println("Na jakiego przeciwnika chcesz oplątać?");
-                int wyb = scanner.nextInt();
-                if(wyb > Walka.potworybitwa.length)
-                {
-                    System.out.println("Nie ma takiego potwora");
-                }
-                else{
-                    if(!Walka.potworybitwa[wyb].status.equals("")){
-                        System.out.println("Ten potwór ma juz nałozony status");
+            case(3) -> {
+                        pkt = 3;
+                        for(int x = 0;x < SystemWalka.teamini.length;x++) { SystemWalka.teamini[x].status = "Kokon"; }
+                        System.out.println("cała drużyna na status kokon");
+                        magia = true;
                     }
-                    if(Walka.potworybitwa[wyb].hp == wyb){
-                        System.out.println("Ten potwór nie żyje");
-                    }
-                    else
-                    {Walka.potworybitwa[wyb].status = "Oplątanie";
-                        System.out.println("Członek "+Walka.potworybitwa[wyb]+" ma status oplątanie");
-                        magia=true;}
-                }
-               }
-            case(3)->{pkt = 3;
-                for(int x = 0;x < SystemWalka.teamini.length;x++)
-                {
-                    SystemWalka.teamini[x].status = "Kokon";
-                }
-                System.out.println("cała drużyna na status kokon");
-                magia = true;
-            }
             default -> System.out.println("Nie ma takiego spella");}
     }
-
+    //Trzeba to jeszcze dokończyć
     public static void MagiaSwiatła(){System.out.println("Lista spelli");
         for(int a=0;a < tablicaMagii.magiaswiatła.length;a++){
             System.out.println(a+" - "+tablicaMagii.magiaswiatła[a]);
@@ -416,141 +255,72 @@ public class MagiaWWalce {
             case(3)->pkt = 3;
             default -> System.out.println("Nie ma takiego spella");}
     }
-
-    public static void MagiaKrwi(){
-    }
-
-    public static void MagiaBłyskawic(){System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiabłyskawica.length;a++){
-            System.out.println(a+" - "+tablicaMagii.magiabłyskawica[a]);
-        }
+    //A to trzeba komuś zaaplikować
+    public static void MagiaBłyskawic()
+    {
+        System.out.println("Lista spelli");
+        for(int a=0;a < tablicaMagii.magiabłyskawica.length;a++){ System.out.println(a+" - "+tablicaMagii.magiabłyskawica[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
-        switch (go){
-            case(1)->{pkt = 1;
-                System.out.println("Kogo chcesz zaatakować");
-                int wyb = scanner.nextInt();
-                if(wyb > Walka.potworybitwa.length){
-                    System.out.println("Nie ma takiego potwora");
-                }
-                int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
-                if(obr <= 0){obr = 0;}
-                Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
-                System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
-                if (Walka.potworybitwa[wyb].hp <= 0)
-                {
-                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
-                    Walka.potworybitwa[wyb].hp =0;}}
-            case(2)->{pkt = 2;
-                System.out.println("która kolumna");
-                int rzad = scanner.nextInt();
-                switch (rzad){
-                    case(1)->{
-                        if(Walka.potworybitwa[0].hp >0 && Walka.potworybitwa[3].hp > 0)
+        switch (go)
+        {
+            case(1) -> {
+                        pkt = 1;
+                        System.out.println("Kogo chcesz zaatakować");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Walka.potworybitwa.length){ System.out.println("Nie ma takiego potwora"); }
+                        int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
+                        if(obr <= 0){obr = 0;}
+                        Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
+                        System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
+                        if (Walka.potworybitwa[wyb].hp <= 0)
                         {
-                            System.out.println("W tej kolumnie nikogo nie ma");
+                            System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
+                            Walka.potworybitwa[wyb].hp =0;
                         }
-                        else{
-                            if(Walka.potworybitwa[0].hp > 0){
-                                int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[0].armor;
-                                if(obr <= 0){obr = 0;}
-                                Walka.potworybitwa[0].hp = Walka.potworybitwa[0].hp - obr;
-                                System.out.println("zadałeś potworowi " + Walka.potworybitwa[0] + " " + obr + " obrażeń");
-                                if (Walka.potworybitwa[0].hp <= 0)
+                        magia = true;
+                    }
+            case(2) -> {
+                        pkt = 2;
+                        System.out.println("która kolumna");
+                        int kolumna = scanner.nextInt();
+                        if (kolumna < 1 || kolumna > 3) { System.out.println("To nie kolumna"); break; }
+                        for (int i = kolumna - 1; i <= kolumna + 2; i = i + 3)
+                        {
+                            if (Walka.potworybitwa[i].hp <= 0) { System.out.println("W komórce " + i + " nikogo nie ma"); }
+                            else {
+                                if (Walka.potworybitwa[i].hp > 0)
                                 {
-                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[0]);
-                                    Walka.potworybitwa[0].hp =0;
-                                }}
-                            if(Walka.potworybitwa[3].hp > 0){
-                                int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[3].armor;
-                                if(obr2 <= 0){obr2 = 0;}
-                                Walka.potworybitwa[3].hp = Walka.potworybitwa[3].hp - obr2;
-                                System.out.println("i zadałeś potworowi " + Walka.potworybitwa[3] + " " + obr2 + " obrażeń");
-                                if (Walka.potworybitwa[3].hp <= 0)
-                                {
-                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[3]);
-                                    Walka.potworybitwa[3].hp =0;
-                                }}
-
-                            magia = true;
-
-
+                                    int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[i].armor;
+                                    if (obr <= 0) { obr = 0; }
+                                    Walka.potworybitwa[i].hp = Walka.potworybitwa[i].hp - obr;
+                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[i] + " " + obr + " obrażeń");
+                                    if (Walka.potworybitwa[i].hp <= 0)
+                                    {
+                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[i]);
+                                        Walka.potworybitwa[i].hp = 0;
+                                    }
+                                }
+                            }
                         }
-
-                    }
-                    case(2)->{if(Walka.potworybitwa[1].hp >0 && Walka.potworybitwa[4].hp > 0)
-                    {
-                        System.out.println("W tej kolumnie nikogo nie ma");
-                    }
-                    else{
-                        if(Walka.potworybitwa[1].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[1].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[1].hp = Walka.potworybitwa[1].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[1] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[1].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[1]);
-                                Walka.potworybitwa[1].hp =0;
-                            }}
-                        if(Walka.potworybitwa[4].hp > 0){
-                            int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[4].armor;
-                            if(obr2 <= 0){obr2 = 0;}
-                            Walka.potworybitwa[4].hp = Walka.potworybitwa[4].hp - obr2;
-                            System.out.println("i zadałeś potworowi " + Walka.potworybitwa[4] + " " + obr2 + " obrażeń");
-                            if (Walka.potworybitwa[4].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[4]);
-                                Walka.potworybitwa[4].hp =0;
-                            }}
                         magia = true;
-
-                    }}
-                    case(3)->{if(Walka.potworybitwa[2].hp >0 && Walka.potworybitwa[5].hp > 0)
-                    {
-                        System.out.println("W tej kolumnie nikogo nie ma");
                     }
-                    else{
-                        if(Walka.potworybitwa[2].hp > 0){
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[2].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[2].hp = Walka.potworybitwa[2].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[2] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[2].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[2]);
-                                Walka.potworybitwa[2].hp =0;
-                            }}
-                        if(Walka.potworybitwa[5].hp > 0){
-                            int obr2 = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[5].armor;
-                            if(obr2 <= 0){obr2 = 0;}
-                            Walka.potworybitwa[5].hp = Walka.potworybitwa[5].hp - obr2;
-                            System.out.println("i zadałeś potworowi " + Walka.potworybitwa[5] + " " + obr2 + " obrażeń");
-                            if (Walka.potworybitwa[5].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[5]);
-                                Walka.potworybitwa[5].hp =0;
-                            }}
+            case(3) -> {
+                        pkt = 3;
+                        System.out.println("Kogo chcesz zaatakować");
+                        int wyb = scanner.nextInt();
+                        if(wyb > Walka.potworybitwa.length){ System.out.println("Nie ma takiego potwora"); }
+                        int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
+                        if(obr <= 0){obr = 0;}
+                        Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
+                        System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
+                        if (Walka.potworybitwa[wyb].hp <= 0)
+                        {
+                            System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
+                            Walka.potworybitwa[wyb].hp =0;
+                        }
                         magia = true;
-
-                    }}
-                    default -> System.out.println("Nie ma takiej kolumny");
-                }}
-            case(3)->{pkt = 3;
-                System.out.println("Kogo chcesz zaatakować");
-                int wyb = scanner.nextInt();
-                if(wyb > Walka.potworybitwa.length){
-                    System.out.println("Nie ma takiego potwora");
-                }
-                int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
-                if(obr <= 0){obr = 0;}
-                Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
-                System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
-                if (Walka.potworybitwa[wyb].hp <= 0)
-                {
-                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
-                    Walka.potworybitwa[wyb].hp =0;}}
+                    }
             default -> System.out.println("Nie ma takiego spella");}
     }
-
 }
