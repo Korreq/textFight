@@ -122,7 +122,7 @@ public class SystemWalka
                                     }
                                 }
                         case (2) -> { PoleBitwy.main();i--; }
-                        case(3)->
+                        case (3)->
                                 {
                                     PoleBitwy.main();
                                     System.out.println("\ninformacje na temat bohaterów: \n");
@@ -133,7 +133,7 @@ public class SystemWalka
                                     System.out.println();
                                     i--;
                                 }
-                        case(4)->
+                        case (4)->
                                 {
                                     if (teamini[i].type.equals("steel")){
 
@@ -142,7 +142,7 @@ public class SystemWalka
                                     }
                                     i--;
                                 }
-                        case(5)->
+                        case (5)->
                                 {
                                     if(teamini[i].mage){
                                         switch(teamini[i].type){
