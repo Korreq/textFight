@@ -36,7 +36,7 @@ Podstawy systemu walki    	     [v]
                                                                         Lektor                      [x]
                                                                         Dzwięki/Muzyka              [x]
 
-
+y
 //jak coś to moje dopiski łukasz
 -system zarządzania drużyną
 -magia
@@ -46,5 +46,5 @@ Podstawy systemu walki    	     [v]
 
 Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
 - dodanie magii swiatła [x]
-- zrobienie coś z runami [x]
+- zrobienie coś z klasami [x]
 - zabezpieczenie walki przed wypierdalaniem się [x]
