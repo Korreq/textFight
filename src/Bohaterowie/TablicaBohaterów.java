@@ -22,8 +22,8 @@ public class TablicaBohaterów {
 
         public Bohaterowie w15 = new Bohaterowie("Jacob","Łotrzyk","steel",43,20,5,12,false,"J","");
         public Bohaterowie w16 = new Bohaterowie("Twardo","Łotrzyk","flint",35,20,3,12,false,"T","");
-        public Bohaterowie w17 = new Bohaterowie("","Łotrzyk","wolf",35,20,4,12,false,"?","");
-        public Bohaterowie w18 = new Bohaterowie("w18","Łotrzyk","steel",43,20,2,12,false,"W","");
+        public Bohaterowie w17 = new Bohaterowie("???","Łotrzyk","wolf",35,20,4,12,false,"?","");
+        public Bohaterowie w18 = new Bohaterowie("Serkad","Łotrzyk","steel",43,20,2,12,false,"S","");
         public Bohaterowie w19 = new Bohaterowie("w19","Łotrzyk","flint",35,20,2,12,false,"W","");
         public Bohaterowie w20 = new Bohaterowie("Goldlion","Łotrzyk","steel",43,20,0,12,false,"G","");
 
@@ -38,7 +38,7 @@ public class TablicaBohaterów {
         public Bohaterowie w26 = new Bohaterowie("Algird","Mag","water",29,10,0,6,true,"A","");
         public Bohaterowie w27 = new Bohaterowie("w27","Mag","wind",29,10,0,6,true,"W","");
         public Bohaterowie w28 = new Bohaterowie("w28","Mag","earth",29,10,0,6,true,"W","");
-        public Bohaterowie w29 = new Bohaterowie("w29","Mag","fire",29,10,0,6,true,"W","");
+        public Bohaterowie w29 = new Bohaterowie("Madeline","Mag","fire",29,10,0,6,true,"M","");
         public Bohaterowie w30 = new Bohaterowie("w30","Mag","water",29,10,0,6,true,"W","");
         public Bohaterowie w31 = new Bohaterowie("w31","Mag","wind",29,10,0,6,true,"W","");
         public Bohaterowie w32 = new Bohaterowie("w32","Mag","earth",29,10,0,6,true,"W","");
