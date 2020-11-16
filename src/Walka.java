@@ -33,14 +33,15 @@ public class Walka
             potworybitwa[i] = new TablicaPotworow().getPotwory()[go+6];
         }
         systemWalka.walka();
-
+        Potwory[] boss = new Potwory[3];
+        potworybitwa = boss;
         System.out.println("Czas na Bossa");
         for (int i = 0; i <= potworybitwa.length - 1; i++) {
             int go = random.nextInt(9);
             potworybitwa[i] = new TablicaPotworow().getPotwory()[go];
         }
         int go = random.nextInt(2);
-        potworybitwa[1] = new TablicaPotworow().getPotwory()[go+10];
+        potworybitwa[1] = new TablicaPotworow().getPotwory()[go+9];
         systemWalka.walka();
         System.out.println("Gratuluję ukonczenia gry");
     }
