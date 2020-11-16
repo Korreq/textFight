@@ -51,7 +51,7 @@ public class SystemWalka
         {
             for(int x = 0;x < Walka.potworybitwa.length;x++)
             {
-                if(Walka.potworybitwa[x].hp <= 0){ mori++;}
+                if(Walka.potworybitwa[x].hp <= 0){ mori++;System.out.println("mori: "+mori);}
                 if (Walka.potworybitwa.length == mori)
                 {
                     alive = false;
@@ -62,9 +62,17 @@ public class SystemWalka
             PoleBitwy.main();
             System.out.println("Kolejność ataku :");
 
+            for(int x = 0;x < Walka.potworybitwa.length;x++) {
+                if (Walka.potworybitwa[x].hp == 0){
+                    if(mori != Walka.potworybitwa.length){
+                        mori++;
+                    }
+                }
+            }
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
             for (; i <= teamini.length - 1; i++)
             {
+
                 if(!alive){break;}
                 if (teamini[i].hp > 0)
                 {
