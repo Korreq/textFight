@@ -1,5 +1,4 @@
 import Bohaterowie.Bohaterowie;
-import Magia.TablicaMagii;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
@@ -24,7 +23,6 @@ public class SystemWalka
         Scanner scanner = new Scanner(System.in);
         Sortowanie sortowanie = new Sortowanie();
         Random random = new Random();
-        TablicaMagii tablicaMagii = new TablicaMagii();
         int b =0;
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
 
@@ -76,7 +74,6 @@ public class SystemWalka
                     System.out.println("║ 2 ║ Zobacz planszę                     ║");
                     System.out.println("║ 3 ║ Zobacz szczegóły                   ║");
                     System.out.println("║ 4 ║ Użyj runy                          ║");
-                    System.out.println("║ 5 ║ Użyj magii                         ║");
                     System.out.println("╚═══╩════════════════════════════════════╝");
 
                     int wyb;
@@ -160,15 +157,6 @@ public class SystemWalka
                                     i--;
                                 }
                         case (4)->
-                                {
-                                    if (teamini[i].type.equals("steel")){
-
-
-
-                                    }
-                                    i--;
-                                }
-                        case (5)->
                                 {
                                     if(teamini[i].mage){
                                         switch(teamini[i].type){
@@ -323,7 +311,7 @@ public class SystemWalka
                 System.out.println("Koniec tury potworów czas na twoją");}
 
         }
-        System.out.println("Koniec walki");
+
 
     }
 }

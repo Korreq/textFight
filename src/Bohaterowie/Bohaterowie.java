@@ -11,8 +11,8 @@ public class Bohaterowie extends Heroes
         this.maxhp = maxhp;
         this.hp = maxhp;
         this.dex = dex;
-        this.armor= armor;
-
+        if(type.equals("steel")){ this.armor =(int)(1.5 * armor); }
+        else{this.armor = armor;}
         if(type.equals("flint")) { this.atk = (int)(1.5 * atk); }
         else{ this.atk = atk; }
         this.mage = mage;
