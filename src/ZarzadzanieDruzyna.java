@@ -13,8 +13,7 @@ public class ZarzadzanieDruzyna {
             System.out.println("╠═══════════════════════════════╣");
             System.out.println("║ A • Pokaż drużyne             ║");
             System.out.println("║ B • Zmien ustawienia drużyny  ║");
-            System.out.println("║ C • Indeks                    ║");// pewnie potem tu damy żeby ludzie wiedzieli co robia spelle
-            System.out.println("║ D • Zakończ i wyrusz w podróż ║");
+            System.out.println("║ C • Zakończ i wyrusz w podróż ║");
             System.out.println("╚═══════════════════════════════╝");
             char choice = scanner.next().charAt(0);
             char choice2 = Character.toLowerCase(choice);
@@ -68,8 +67,7 @@ public class ZarzadzanieDruzyna {
                 Team.team[wyb-1] = Team.team[wyb2-1];
                 Team.team[wyb2-1] = Team.bufor[0];
             }
-            case('c')-> System.out.println("coś");
-            case('d')-> oboz = true;
+            case('c')-> oboz = true;
             default -> {
                 System.out.println("╔════════════════════════════════════════╗");
                 System.out.println("║ Nie ma takiej opcji! Spróbuj ponownie. ║");
