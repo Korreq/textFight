@@ -272,12 +272,12 @@ public class SystemWalka
                                                 System.out.println("potwory zabiły bohatera " + teamini[atak]);
                                                 teamini[atak].hp = 0;
 
-                                                if (teamini[atak].klasa == "Bard") {
+                                                if (teamini[atak].klasa.equals("Bard")) {
                                                     bard--;
                                                 }
-                                                if (teamini[atak].klasa == "Łotrzyk") {
+                                                if (teamini[atak].klasa.equals("Łotrzyk")) {
                                                 }
-                                                if (teamini[atak].klasa == "Wojownik") {
+                                                if (teamini[atak].klasa.equals("Wojownik")) {
                                                 }
 
                                                 zyc++;
