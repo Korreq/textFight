@@ -7,7 +7,7 @@ public class MagiaWWalce {
     static Scanner scanner = new Scanner(System.in);
     static boolean magia = false;
     static int pkt;
-    static int hp =0;
+    static int hp = 0;
 
     public static void MagiaOgnia()
     {
@@ -40,6 +40,7 @@ public class MagiaWWalce {
                                     {
                                         System.out.println("zabiłeś potwora " + Walka.potworybitwa[i]);
                                         Walka.potworybitwa[i].hp = 0;
+                                        SystemWalka.mortem++;
                                     }
                                 }
                             }
@@ -70,6 +71,7 @@ public class MagiaWWalce {
                                     {
                                         System.out.println("zabiłeś potwora " + Walka.potworybitwa[i]);
                                         Walka.potworybitwa[i].hp = 0;
+                                        SystemWalka.mortem++;
                                     }
                                 }
                             }
@@ -84,6 +86,7 @@ public class MagiaWWalce {
                 }
                         for(int x = 0;x < Walka.potworybitwa.length;x++)
                         {
+<<<<<<< Updated upstream
                             if(Walka.potworybitwa[x].hp != 0){
                                 int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
                                 if(obr <= 0){obr = 0;}
@@ -94,6 +97,17 @@ public class MagiaWWalce {
                                     System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
                                     Walka.potworybitwa[x].hp = 0;
                                 }
+=======
+                            int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
+                            if(obr <= 0){obr = 0;}
+                            Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                            if (Walka.potworybitwa[x].hp <= 0)
+                            {
+                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                                Walka.potworybitwa[x].hp = 0;
+                                SystemWalka.mortem++;
+>>>>>>> Stashed changes
                             }
                         }
                         magia = true;
@@ -191,6 +205,7 @@ public class MagiaWWalce {
                         {
                             System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
                             Walka.potworybitwa[wyb].hp =0;
+                            SystemWalka.mortem++;
                         }
                     }
             case(2) -> {
@@ -228,6 +243,7 @@ public class MagiaWWalce {
                             {
                                 System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
                                 Walka.potworybitwa[x].hp =0;
+                                SystemWalka.mortem++;
                             }
                         }}
                         magia = true;
@@ -344,6 +360,7 @@ public class MagiaWWalce {
                         {
                             System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
                             Walka.potworybitwa[wyb].hp =0;
+                            SystemWalka.mortem++;
                         }
                         magia = true;
                     }
@@ -370,6 +387,7 @@ public class MagiaWWalce {
                                     {
                                         System.out.println("zabiłeś potwora " + Walka.potworybitwa[i]);
                                         Walka.potworybitwa[i].hp = 0;
+                                        SystemWalka.mortem++;
                                     }
                                 }
                             }
@@ -393,6 +411,7 @@ public class MagiaWWalce {
                         {
                             System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
                             Walka.potworybitwa[wyb].hp =0;
+                            SystemWalka.mortem++;
                         }
                         magia = true;
                     }
