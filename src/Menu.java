@@ -59,6 +59,40 @@ public class Menu
                 case (3) ->
                         {
                             System.out.println("Wielka encyklopedia");
+                            System.out.println("╔═══╦════════════════════════════════════╗");
+                            System.out.println("║   ║    Czego chcesz się dowiedzieć?    ║");
+                            System.out.println("║   ║ - - - - - - - - - - - - - - - - -  ║");
+                            System.out.println("║ 1 ║ Podstawy gry                       ║");
+                            System.out.println("║ 2 ║ Magia (runy)                       ║");
+                            System.out.println("║ 3 ║ Klasy                              ║");
+                            System.out.println("╚═══╩════════════════════════════════════╝");
+                            int choice2;
+                            choice2 = scanner.nextInt();
+                            switch (choice2) {
+                                case (1) -> {
+                                    System.out.print("Po wprowadzeniu w świat gry, wybierasz od jednego do sześciu bohaterów z których będzie się składała twoja drużyna.");
+                                    System.out.println("\nBohaterowie pojawiający się w karczmie są za każdym razem losowani z puli bohaterów. Walki odbywają się na polu 2x3:");
+                                    System.out.println("╔═══════════╗");
+                                    System.out.println("║ 5   4   3 ║");
+                                    System.out.println("║ 0   1   2 ║");
+                                    System.out.println("║ - - - - - ║");
+                                    System.out.println("║ 0   1   2 ║");
+                                    System.out.println("║ 3   4   5 ║");
+                                    System.out.println("╚═══════════╝");
+                                    System.out.print("Twoi bohaterowie zostają rozstawieni na dolnym polu. Położenie swoich bohaterów możesz dowolnie modyfikować.");
+                                    System.out.println("Wrodzy bohaterowie zostają rozstawieni na górnym polu.\nAby zaatakować wroga znajdującego się w danym miejscu należy wybrac cyfrę od 0-6 która reprezentuje jego położenie na polu bitwy.");
+                                    System.out.println("Podczas walki bohaterowie mogą korzystać z zwykłych ataków oraz czarów lub umiejętności zależnych od posiadanej runy.");
+                                    System.out.println("Walka dobiega końca gdy wszyscy twoi lub wrodzy bohaterowie zostaną zabici.");
+
+                                }
+                                case (2) -> {
+                                    
+                                }
+                                case (3) -> {
+
+                                }
+                                default -> System.out.println("Nie ma takiej opcji");
+                            }
                         }
                 case (4) -> System.exit(0);
                 default -> System.out.println("Nope");
