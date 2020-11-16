@@ -15,11 +15,12 @@ Podstawy systemu walki    	     [v]
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                     	Interfejs "graficzny"  	  [*]
+ Losowanie przeciwników          [v]    Interfejs "graficzny"  	  [*]
                                         Magia                     [*]   Zamiana członków drużyny
                                                                         po śmierci na polu bitwy    [x]
+                                                                        Zrobie by potwory biły
+                                                                        tylko pierwszy rząd         [x]
 									                                    Czyszczenie ekranu          [x]
-									                                    Losowanie przeciwników      [x]
                                                                         Fabuła                      [x]
 
                                         Rzeczy jak wystarczy czasu:
@@ -41,3 +42,12 @@ Podstawy systemu walki    	     [v]
 -magia
 -zrobienie zeby magia nie była nieskonczona
 (HAHA zmieniłem moją odpowiedź na twe notatki teraz nigdy się nie dowiesz co tutaj było!)
+
+
+Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
+- zrobienie zeby magia nie była nieskonczona [v]
+- dodanie magii swiatła [x]
+- zrobienie coś z runami [x]
+- dodanie do indeksu w ZarzadzanieDruzyna co robia konkretne spelle i runy [v]
+- zabezpieczenie walki przed wypierdalaniem się [x]
+- zrobienie magii krwi i MagiaWWalce [x]

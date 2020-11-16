@@ -51,47 +51,18 @@ public class SystemWalka
         //tu zaczyna się tura
         while(alive)
         {
-            /*for(int x = 0;x < Walka.potworybitwa.length;x++)
-            {
-                if(Walka.potworybitwa[x].hp <= 0){ mori++;System.out.println("mori: "+mori);}
-                if (Walka.potworybitwa.length == mori)
-                {
-                    alive = false;
-                    System.out.println("Wygrałeś bitwę");
-                    break;
-                }
-            }*/
             PoleBitwy.main();
             System.out.println("\nKolejność ataku :");
 
-<<<<<<< Updated upstream
-            for(int x = 0;x < Walka.potworybitwa.length;x++) {
-                if (Walka.potworybitwa[x].hp == 0){
-                    if(mori != Walka.potworybitwa.length){
-                        mori++;
-                    }
-                }
-            }
-            alive = true;
-=======
->>>>>>> Stashed changes
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
             for (int i = 0; i < teamini.length; i++)
             {
 
                 for(int x = 0;x < Walka.potworybitwa.length;x++) {
                     if (Walka.potworybitwa[x].hp <= 0){
-                        if(mori < Walka.potworybitwa.length){
-                            mori++;
-                            System.out.println("mortem: "+mortem+" mori: "+mori);
-                            if(mori > mortem){
-                                mori = mortem;
-                                if(mortem == Walka.potworybitwa.length){
-                                    alive = false;
-                                }
-                            }
+                        if(mortem == Walka.potworybitwa.length){
+                            alive = false;
                         }
-
                     }
                 }
                 if(!alive){break;}
