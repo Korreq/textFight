@@ -69,6 +69,7 @@ public class SystemWalka
                     }
                 }
             }
+            alive = true;
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
             for (; i <= teamini.length - 1; i++)
             {
