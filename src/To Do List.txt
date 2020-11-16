@@ -45,6 +45,5 @@ y
 
 
 Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
-- dodanie magii swiatła [x]
 - zrobienie coś z klasami [x]
 - zabezpieczenie walki przed wypierdalaniem się [x]
