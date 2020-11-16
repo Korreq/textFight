@@ -55,7 +55,8 @@ public class SystemWalka
             System.out.println("\nKolejność ataku :");
 
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
-            for (int i = 0; i < teamini.length; i++)
+            i = 0;
+            for (; i < teamini.length; i++)
             {
 
                 for(int x = 0;x < Walka.potworybitwa.length;x++) {
