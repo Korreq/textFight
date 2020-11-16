@@ -65,12 +65,21 @@ public class SystemWalka
                 if(!alive){break;}
                 if (teamini[i].hp > 0)
                 {
-                    System.out.println("\nco chcesz zrobić (jesteś teraz " + teamini[i] + ")");
-                    System.out.println("1: Atak");
-                    System.out.println("2: Zobacz Planszę");
-                    System.out.println("3: Zobacz szczegóły");
-                    System.out.println("4: Użyj Runy");
-                    System.out.println("5: Użyj Magii");
+                    System.out.println("╔═══╦════════════════════════════════════╗");
+                    System.out.println("║   ║ Co chcesz zrobić? (jesteś teraz "+ teamini[i] + ")  ║");
+                    //System.out.println("\nco chcesz zrobić (jesteś teraz " + teamini[i] + ")");
+                    System.out.println("║   ║ - - - - - - - - - - - - - - - - -  ║");
+                    System.out.println("║ 1 ║ Atak                               ║");
+                    System.out.println("║ 2 ║ Zobacz planszę                     ║");
+                    System.out.println("║ 3 ║ Zobacz szczegóły                   ║");
+                    System.out.println("║ 4 ║ Użyj runy                          ║");
+                    System.out.println("║ 5 ║ Użyj magii                         ║");
+                    System.out.println("╚═══╩════════════════════════════════════╝");
+                    //System.out.println("1: Atak");
+                   // System.out.println("2: Zobacz Planszę");
+                   // System.out.println("3: Zobacz szczegóły");
+                    //System.out.println("4: Użyj Runy");
+                    //System.out.println("5: Użyj Magii");
                     int wyb;
                         while (!scanner.hasNextInt()) {
                             System.out.println("╔══════════════╗");
