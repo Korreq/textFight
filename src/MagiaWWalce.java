@@ -7,6 +7,7 @@ public class MagiaWWalce {
     static Scanner scanner = new Scanner(System.in);
     static boolean magia = false;
     static int pkt;
+    static int wyb;
     static int hp = 0;
 
     public static void MagiaOgnia()
@@ -323,6 +324,80 @@ public class MagiaWWalce {
                 }}
             default -> System.out.println("Nie ma takiego spella");}
     }
+
+    public static void MagiaKrwi(){
+        System.out.println("Lista spelli");
+        for(int a=0;a < tablicaMagii.magiakrwi.length;a++){
+            System.out.println(a+1+" - "+tablicaMagii.magiakrwi[a]);
+        }
+        System.out.println("Którego spella chcesz użyć");
+        int go = scanner.nextInt();
+        switch (go){
+            case(1)->{if(SystemWalka.teamini[SystemWalka.i].hp < SystemWalka.teamini[SystemWalka.i].hp*0.1){
+                System.out.println("Nie masz życia by rzucić spell");
+            }
+            else
+            {System.out.println("Kogo chcesz zaatakować");
+                wyb = scanner.nextInt();
+                if(wyb >= Walka.potworybitwa.length){
+                    System.out.println("Nie ma takiego potwora");
+                }
+                SystemWalka.teamini[SystemWalka.i].hp = (int) (SystemWalka.teamini[SystemWalka.i].hp -SystemWalka.teamini[SystemWalka.i].hp*0.1);
+                Walka.potworybitwa[wyb].status="Krew";
+                Walka.potworybitwa[wyb].NRMaga = SystemWalka.teamini[SystemWalka.i].NRMaga;
+                int obr = (int) ((Math.random() * (SystemWalka.teamini[SystemWalka.i].hp*0.1 - 1)) + 1) - Walka.potworybitwa[wyb].armor;
+
+                if(obr <= 0){obr = 0;}
+                Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
+                System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
+                if (Walka.potworybitwa[wyb].hp <= 0)
+                {
+                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
+                    Walka.potworybitwa[wyb].hp =0;
+                    SystemWalka.mortem++;
+                }
+                MagiaWWalce.magia=true;}
+
+            }
+            case(2)->{
+                System.out.println("wybierz pierwszego potwora");
+                wyb = scanner.nextInt();
+                if(wyb >= Walka.potworybitwa.length){
+                    System.out.println("nie ma takiego potwora");
+                }
+                System.out.println("wybierz drugiego potwora");
+                int wyb2 = scanner.nextInt();
+                if(wyb2 >= Walka.potworybitwa.length){
+                    System.out.println("nie ma takiego potwora");
+                }
+                Walka.potworybitwa[wyb].status = "Więz krwi";
+                Walka.potworybitwa[wyb2].status = "Więz krwi";
+                System.out.println("Potwór "+Walka.potworybitwa[wyb]+" i "+Walka.potworybitwa[wyb2]+" są powiązanie więzłami krwi");
+            }
+            case(3)->{if(SystemWalka.teamini[SystemWalka.i].hp < SystemWalka.teamini[SystemWalka.i].hp/2){
+                System.out.println("Nie masz życia by rzucić spell");
+            }
+            else
+            {
+                SystemWalka.teamini[SystemWalka.i].hp = SystemWalka.teamini[SystemWalka.i].hp -SystemWalka.teamini[SystemWalka.i].hp/2;
+                for(int x = 0;x < Walka.potworybitwa.length;x++)
+                {
+                    int obr = (int) ((Math.random() * (SystemWalka.teamini[SystemWalka.i].maxhp/2 - 1)) + 1) - Walka.potworybitwa[x].armor;
+                    if(obr <= 0){obr = 0;}
+                    Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                    if (Walka.potworybitwa[x].hp <= 0)
+                    {
+                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                        Walka.potworybitwa[x].hp =0;
+                        SystemWalka.mortem++;
+                        SystemWalka.teamini[SystemWalka.i].hp = (int) (SystemWalka.teamini[SystemWalka.i].hp + SystemWalka.teamini[SystemWalka.i].hp*0.1);
+                        if(SystemWalka.teamini[SystemWalka.i].hp > SystemWalka.teamini[SystemWalka.i].maxhp){SystemWalka.teamini[SystemWalka.i].hp=SystemWalka.teamini[SystemWalka.i].maxhp;}
+                    }
+                }
+                MagiaWWalce.magia = true;}
+            }
+            default -> System.out.println("Nie ma takiego spella");}}
     //A to trzeba komuś zaaplikować
     public static void MagiaBłyskawic()
     {

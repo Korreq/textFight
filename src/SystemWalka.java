@@ -177,78 +177,7 @@ public class SystemWalka
                                             case("wind")-> MagiaWWalce.MagiaWiatru();
                                             case("earth")-> MagiaWWalce.MagiaZiemi();
                                             case("light")-> MagiaWWalce.MagiaSwiatła();
-                                            case("blood")-> {System.out.println("Lista spelli");
-                                            for(int a=0;a < tablicaMagii.magiakrwi.length;a++){
-                                                System.out.println(a+1+" - "+tablicaMagii.magiakrwi[a]);
-                                            }
-                                            System.out.println("Którego spella chcesz użyć");
-                                            int go = scanner.nextInt();
-                                            switch (go){
-                                                case(1)->{if(teamini[i].hp < teamini[i].hp*0.1){
-                                                    System.out.println("Nie masz życia by rzucić spell");
-                                                }
-                                                else
-                                                {System.out.println("Kogo chcesz zaatakować");
-                                                    wyb = scanner.nextInt();
-                                                    if(wyb >= Walka.potworybitwa.length){
-                                                        System.out.println("Nie ma takiego potwora");
-                                                    }
-                                                    teamini[i].hp = (int) (teamini[i].hp -teamini[i].hp*0.1);
-                                                    Walka.potworybitwa[wyb].status="Krew";
-                                                    Walka.potworybitwa[wyb].NRMaga = teamini[i].NRMaga;
-                                                    int obr = (int) ((Math.random() * (teamini[i].hp*0.1 - 1)) + 1) - Walka.potworybitwa[wyb].armor;
-
-                                                    if(obr <= 0){obr = 0;}
-                                                    Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
-                                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
-                                                    if (Walka.potworybitwa[wyb].hp <= 0)
-                                                    {
-                                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
-                                                        Walka.potworybitwa[wyb].hp =0;
-                                                        mortem++;
-                                                    }
-                                                    MagiaWWalce.magia=true;}
-
-                                                }
-                                                case(2)->{
-                                                    System.out.println("wybierz pierwszego potwora");
-                                                    wyb = scanner.nextInt();
-                                                    if(wyb >= Walka.potworybitwa.length){
-                                                        System.out.println("nie ma takiego potwora");
-                                                    }
-                                                    System.out.println("wybierz drugiego potwora");
-                                                    int wyb2 = scanner.nextInt();
-                                                    if(wyb2 >= Walka.potworybitwa.length){
-                                                        System.out.println("nie ma takiego potwora");
-                                                    }
-                                                    Walka.potworybitwa[wyb].status = "Więz krwi";
-                                                    Walka.potworybitwa[wyb2].status = "Więz krwi";
-                                                    System.out.println("Potwór "+Walka.potworybitwa[wyb]+" i "+Walka.potworybitwa[wyb2]+" są powiązanie więzłami krwi");
-                                                }
-                                                case(3)->{if(teamini[i].hp < teamini[i].hp/2){
-                                                    System.out.println("Nie masz życia by rzucić spell");
-                                                }
-                                                else
-                                                {
-                                                    teamini[i].hp = teamini[i].hp -teamini[i].hp/2;
-                                                    for(int x = 0;x < Walka.potworybitwa.length;x++)
-                                                {
-                                                    int obr = (int) ((Math.random() * (teamini[i].maxhp/2 - 1)) + 1) - Walka.potworybitwa[x].armor;
-                                                    if(obr <= 0){obr = 0;}
-                                                    Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
-                                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
-                                                    if (Walka.potworybitwa[x].hp <= 0)
-                                                    {
-                                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
-                                                        Walka.potworybitwa[x].hp =0;
-                                                        mortem++;
-                                                        teamini[i].hp = (int) (teamini[i].hp + teamini[i].hp*0.1);
-                                                        if(teamini[i].hp > teamini[i].maxhp){teamini[i].hp=teamini[i].maxhp;}
-                                                    }
-                                                }
-                                                    MagiaWWalce.magia = true;}
-                                                }
-                                                default -> System.out.println("Nie ma takiego spella");}}
+                                            case("blood")-> MagiaWWalce.MagiaKrwi();
                                             case("thunder")-> MagiaWWalce.MagiaBłyskawic();
                                         }
                                         if(!MagiaWWalce.magia){ i--; }
