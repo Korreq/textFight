@@ -15,11 +15,12 @@ Podstawy systemu walki    	     [v]
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-                                     	Interfejs "graficzny"  	  [*]
+ Losowanie przeciwników          [v]    Interfejs "graficzny"  	  [*]
                                         Magia                     [*]   Zamiana członków drużyny
                                                                         po śmierci na polu bitwy    [x]
+                                                                        Zrobie by potwory biły
+                                                                        tylko pierwszy rząd         [x]
 									                                    Czyszczenie ekranu          [x]
-									                                    Losowanie przeciwników      [x]
                                                                         Fabuła                      [x]
 
                                         Rzeczy jak wystarczy czasu:
