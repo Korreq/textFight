@@ -60,7 +60,7 @@ public class SystemWalka
                 }
             }
             PoleBitwy.main();
-            System.out.println("Kolejność ataku :");
+            System.out.println("\nKolejność ataku :");
 
             for(int x = 0;x < Walka.potworybitwa.length;x++) {
                 if (Walka.potworybitwa[x].hp == 0){
@@ -76,7 +76,7 @@ public class SystemWalka
                 if(!alive){break;}
                 if (teamini[i].hp > 0)
                 {
-                    System.out.println("╔═══╦════════════════════════════════════╗");
+                    System.out.println("\n╔═══╦════════════════════════════════════╗");
                     System.out.println("║   ║ Co chcesz zrobić? (jesteś teraz "+ teamini[i] + ")  ║");
                     System.out.println("║   ║ - - - - - - - - - - - - - - - - -  ║");
                     System.out.println("║ 1 ║ Atak                               ║");
@@ -162,7 +162,6 @@ public class SystemWalka
 
                                     System.out.println("\ninformacje na temat potworów: \n");
                                     for(int a=0;a<= Walka.potworybitwa.length-1;a++) { System.out.println(Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp+" status: "+Walka.potworybitwa[a].status); }
-                                    System.out.println();
                                     i--;
                                 }
                         case (4)->
