@@ -72,14 +72,16 @@ public class MagiaWWalce {
                         pkt=3;
                         for(int x = 0;x < Walka.potworybitwa.length;x++)
                         {
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[x].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
-                                Walka.potworybitwa[x].hp = 0;
+                            if(Walka.potworybitwa[x].hp != 0){
+                                int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
+                                if(obr <= 0){obr = 0;}
+                                Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                                System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                                if (Walka.potworybitwa[x].hp <= 0)
+                                {
+                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                                    Walka.potworybitwa[x].hp = 0;
+                                }
                             }
                         }
                         magia = true;
@@ -181,6 +183,7 @@ public class MagiaWWalce {
                         pkt = 3;
                         for(int x = 0;x < Walka.potworybitwa.length;x++)
                         {
+                            if(Walka.potworybitwa[x].hp != 0){
                             int obr = (int) ((Math.random() * (tablicaMagii.wind3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
                             if(obr <= 0){obr = 0;}
                             Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
@@ -190,7 +193,7 @@ public class MagiaWWalce {
                                 System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
                                 Walka.potworybitwa[x].hp =0;
                             }
-                        }
+                        }}
                         magia = true;
                     }
             default -> System.out.println("Nie ma takiego spella");}

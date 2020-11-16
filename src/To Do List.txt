@@ -45,8 +45,9 @@ Podstawy systemu walki    	     [v]
 
 
 Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
-- zrobienie zeby magia nie była nieskonczona
-- dodanie magii swiatła
-- zrobienie coś z runami
-- dodanie do indeksu w ZarzadzanieDruzyna co robia konkretne spelle i runy
-- zabezpieczenie walki przed wypierdalaniem się
+- zrobienie zeby magia nie była nieskonczona [x]
+- dodanie magii swiatła [x]
+- zrobienie coś z runami [x]
+- dodanie do indeksu w ZarzadzanieDruzyna co robia konkretne spelle i runy [v]
+- zabezpieczenie walki przed wypierdalaniem się [x]
+- zrobienie magii krwi i MagiaWWalce [x]
