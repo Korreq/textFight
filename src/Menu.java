@@ -25,7 +25,7 @@ public class Menu
             System.out.println("2 : Credits");
             System.out.println("3: Encyklopedia");
             System.out.println("4 : Wyjdz");
-            System.out.println("\nv. 0.06(Magic Fixes Redux)");
+            System.out.println("\nv. 0.07(Memento Mori)");
 
             int choice;
                 while (!scanner.hasNextInt()) {
