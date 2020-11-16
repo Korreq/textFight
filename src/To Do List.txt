@@ -36,13 +36,12 @@ Rozwinięcie systemu walki        [v]
                                                                         Lektor                      [x]
                                                                         Dzwięki/Muzyka              [x]
 
-
+y
 //jak coś to moje dopiski łukasz
 (HAHAHAHAHAHAHA USUNĄłEM TWOJE NOTATKI !!!!!!!!!!!!)
 (HAHA zmieniłem moją odpowiedź na twe notatki teraz nigdy się nie dowiesz co tutaj było!)
 
 
 Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
-- dodanie magii swiatła [x]
-- zrobienie coś z runami [x]
+- zrobienie coś z klasami [x]
 - zabezpieczenie walki przed wypierdalaniem się [x]

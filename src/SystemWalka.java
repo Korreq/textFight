@@ -155,7 +155,7 @@ public class SystemWalka
 
                             System.out.println("\ninformacje na temat potworów: \n");
                             for (int a = 0; a <= Walka.potworybitwa.length - 1; a++) {
-                                System.out.println(a+")"+Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp + " status: " + Walka.potworybitwa[a].status);
+                                System.out.println(a+") "+Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp + " status: " + Walka.potworybitwa[a].status);
                             }
                             i--;
                         }
@@ -245,14 +245,21 @@ public class SystemWalka
                             int atak = random.nextInt(Team.number);
                             if (teamini[atak].hp > 0) {
                                 if (teamini[atak].status.equals("Mgła")) {
-                                    {
+
                                         if (teamini.length == 1) {
                                             break;
                                         }
                                         i--;
-                                    }
-                                } else {
 
+                                } else {
+                                    if (teamini[atak].status.equals("Swiatło"))
+                                        {
+                                            if (teamini.length == 1) {
+                                                break;
+                                            }
+                                            i--;
+                                        }
+                                    else{
                                     //zadawanie obrażeń przez potwory
                                     int obr = (int) ((Math.random() * (Walka.potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
                                     if (obr <= 0) {
@@ -285,7 +292,7 @@ public class SystemWalka
                                         }
                                     }
                                 }
-                            } else {
+                            }}else {
                                 i--;
                             }
                         }
@@ -313,15 +320,20 @@ public class SystemWalka
                                     case ("thunder") -> MagiaWWalce.MagiaBłyskawic();
                                 }
                             }
+
                         }*/
                     }}
+
+                        }
+                    }
+
 
 
                 }}
                 if (zyc != Team.number) {
                     for (Bohaterowie bohaterowie : teamini) {
                         bohaterowie.status = "";
-                    }
+                    }}}
                     System.out.println("Koniec tury potworów czas na twoją");
                 }
 
@@ -329,4 +341,3 @@ public class SystemWalka
 
 
         }
-    }

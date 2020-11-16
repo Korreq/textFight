@@ -279,7 +279,7 @@ public class MagiaWWalce {
                         if(wyb > Walka.potworybitwa.length) { System.out.println("Nie ma takiego potwora"); }
                         else{
                             if(!Walka.potworybitwa[wyb].status.equals("")){ System.out.println("Ten potwór ma juz nałozony status"); }
-                            if(Walka.potworybitwa[wyb].hp == wyb){ System.out.println("Ten potwór nie żyje"); }
+                            if(Walka.potworybitwa[wyb].hp == 0){ System.out.println("Ten potwór nie żyje"); }
                             else {
                                 Walka.potworybitwa[wyb].status = "Oplątanie";
                                 System.out.println("Członek "+Walka.potworybitwa[wyb]+" ma status oplątanie");
@@ -311,17 +311,56 @@ public class MagiaWWalce {
                 if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
                     System.out.println("Nie masz many na spell");
                     break;
-                }}
+                }
+                System.out.println("Kogo chcesz uleczyć?");
+                int wyb = scanner.nextInt();
+                if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
+                if(SystemWalka.teamini[wyb].hp == SystemWalka.teamini[wyb].maxhp){ System.out.println("Ten członek ma maks hp"); }
+                if(SystemWalka.teamini[wyb].hp == 0){ System.out.println("Ten członek nie żyje"); }
+                else
+                {
+                    SystemWalka.teamini[wyb].hp = SystemWalka.teamini[wyb].maxhp;
+                    System.out.println("Członek "+SystemWalka.teamini[wyb]+" został uleczony");
+                    magia=true;
+                }
+            }
             case(2)->{pkt = 2;
                 if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
                     System.out.println("Nie masz many na spell");
                     break;
-                }}
+                }
+                for(int x = 0;x < Walka.potworybitwa.length;x++)
+                {
+                    if(Walka.potworybitwa[x].hp != 0){
+                        if(!Walka.potworybitwa[wyb].status.equals("")){}
+                        else{
+                        if(Walka.potworybitwa[wyb].hp == 0){}
+                        else {
+                            Walka.potworybitwa[wyb].status = "Swiatło";
+                            System.out.println("Członek " + Walka.potworybitwa[wyb] + " ma status Swiatło");
+                            magia = true;
+                        } }
+                    }
+                }
+                magia = true;
+            }
             case(3)->{pkt = 3;
                 if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
                     System.out.println("Nie masz many na spell");
                     break;
-                }}
+                }
+                System.out.println("Jakieku przeciwnikowi chcesz obniżyc armor?");
+                int wyb = scanner.nextInt();
+                if(wyb > Walka.potworybitwa.length) { System.out.println("Nie ma takiego potwora"); }
+                else{
+                    if(Walka.potworybitwa[wyb].hp == wyb){ System.out.println("Ten potwór nie żyje"); }
+                    else {
+                        Walka.potworybitwa[wyb].armor = 0;
+                        System.out.println("Potwór "+Walka.potworybitwa[wyb]+" ma zniszcony armor");
+                        magia=true;
+                    }
+                }
+            }
             default -> System.out.println("Nie ma takiego spella");}
     }
 
@@ -337,7 +376,7 @@ public class MagiaWWalce {
                 System.out.println("Nie masz życia by rzucić spell");
             }
             else
-            {System.out.println("Kogo chcesz zaatakować");
+            {System.out.println("Na kogo chcesz rzucić?");
                 wyb = scanner.nextInt();
                 if(wyb >= Walka.potworybitwa.length){
                     System.out.println("Nie ma takiego potwora");
@@ -346,6 +385,7 @@ public class MagiaWWalce {
                 Walka.potworybitwa[wyb].status="Krew";
                 Walka.potworybitwa[wyb].NRMaga = SystemWalka.teamini[SystemWalka.i].NRMaga;
                 Walka.potworybitwa[wyb].armor = 0;
+                System.out.println("Potwór "+Walka.potworybitwa[wyb]+" ma zniszcony armor");
                 MagiaWWalce.magia=true;}
 
             }
