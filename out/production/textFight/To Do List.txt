@@ -4,19 +4,19 @@ Lista rzeczy do zrobienia :
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
-Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]    Rodzaje broni              [x]
-Skopiowanie array-u teamu               Klasy bohaterów           [*]    Rozwinięcie systemu walki  [x]
-do nowej klasy                   [v]
+Podpięcie bohaterów do karczmy   [v]    Główne menu               [*]
+Skopiowanie array-u teamu               Klasy bohaterów           [*]
+do nowej klasy                   [v]    Runy                      [*]
 Przeciwnicy               	     [v]
 Podstawy systemu walki    	     [v]
-
-
+Rodzaje broni                    [v]
+Rozwinięcie systemu walki        [v]
                                         Rzeczy ważne:
 -------------------------------------------------------------------------------------------------------------
             Zrobione                    W trakcie robienia                Nie zrobione
 -------------------------------------------------------------------------------------------------------------
  Losowanie przeciwników          [v]    Interfejs "graficzny"  	  [*]
-                                        Magia                     [*]   Zamiana członków drużyny
+  Rozwinięcie systemu walki      [v]                                    Zamiana członków drużyny
                                                                         po śmierci na polu bitwy    [x]
                                                                         Zrobie by potwory biły
                                                                         tylko pierwszy rząd         [x]
@@ -36,15 +36,12 @@ Podstawy systemu walki    	     [v]
                                                                         Lektor                      [x]
                                                                         Dzwięki/Muzyka              [x]
 
-
+y
 //jak coś to moje dopiski łukasz
--system zarządzania drużyną
--magia
--zrobienie zeby magia nie była nieskonczona
+(HAHAHAHAHAHAHA USUNĄłEM TWOJE NOTATKI !!!!!!!!!!!!)
 (HAHA zmieniłem moją odpowiedź na twe notatki teraz nigdy się nie dowiesz co tutaj było!)
 
 
 Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
-- dodanie magii swiatła [x]
-- zrobienie coś z runami [x]
+- zrobienie coś z klasami [x]
 - zabezpieczenie walki przed wypierdalaniem się [x]

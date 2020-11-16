@@ -1,10 +1,7 @@
 import Bohaterowie.Bohaterowie;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
-
-
 
 public class SystemWalka
 {
@@ -25,7 +22,7 @@ public class SystemWalka
         Random random = new Random();
         int b = 0;
         System.arraycopy(Team.team, 0, teamini, 0, Team.number);
-        Arrays.sort(teamini,sortowanie);
+        Arrays.sort(teamini, sortowanie);
         for (Bohaterowie bohaterowie : teamini) {
             if (bohaterowie.klasa.equals("Bard")) {
                 bard++;
@@ -150,12 +147,12 @@ public class SystemWalka
                             PoleBitwy.main();
                             System.out.println("\ninformacje na temat bohaterów: \n");
                             for (int a = 0; a <= teamini.length - 1; a++) {
-                                System.out.println(a+") "+teamini[a].lit + " nazwa: " + teamini[a].name + " klasa: " + teamini[a].klasa + " hp: " + teamini[a].hp + "/" + teamini[a].maxhp + " pkt magii: " + teamini[a].pktmagii);
+                                System.out.println(a + ") " + teamini[a].lit + " nazwa: " + teamini[a].name + " klasa: " + teamini[a].klasa + " hp: " + teamini[a].hp + "/" + teamini[a].maxhp + " pkt magii: " + teamini[a].pktmagii);
                             }
 
                             System.out.println("\ninformacje na temat potworów: \n");
                             for (int a = 0; a <= Walka.potworybitwa.length - 1; a++) {
-                                System.out.println(a+") "+Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp + " status: " + Walka.potworybitwa[a].status);
+                                System.out.println(a + ") " + Walka.potworybitwa[a] + " hp: " + Walka.potworybitwa[a].hp + "/" + Walka.potworybitwa[a].maxhp + " status: " + Walka.potworybitwa[a].status);
                             }
                             i--;
                         }
@@ -230,89 +227,91 @@ public class SystemWalka
             System.out.println("Czas na turę potworów");
             for (int i = 0; i < Walka.potworybitwa.length; i++) {
                 if (Walka.potworybitwa[i].status.equals("Oplątanie")) {
-                Walka.potworybitwa[i].status = "";
-                }
-                else{
-                if (!alive) {
-                    break;
-                }
+                    Walka.potworybitwa[i].status = "";
+                } else {
+                    if (!alive) {
+                        break;
+                    }
 
 
-                if (Walka.potworybitwa[i].hp > 0) {
-                    int wyb = random.nextInt(2);
-                    switch (wyb) {
-                        case (0) -> {
-                            int atak = random.nextInt(Team.number);
-                            if (teamini[atak].hp > 0) {
-                                if (teamini[atak].status.equals("Mgła")) {
+                    if (Walka.potworybitwa[i].hp > 0) {
+                        int wyb = random.nextInt(2);
+                        switch (wyb) {
+                            case (0) -> {
+                                int atak = random.nextInt(Team.number);
+                                if (teamini[atak].hp > 0) {
+                                    if (teamini[atak].status.equals("Mgła")) {
 
                                         if (teamini.length == 1) {
                                             break;
                                         }
                                         i--;
 
-                                } else {
-                                    if (teamini[atak].status.equals("Swiatło"))
-                                        {
+                                    } else {
+                                        if (teamini[atak].status.equals("Swiatło")) {
                                             if (teamini.length == 1) {
                                                 break;
                                             }
                                             i--;
-                                        }
-                                    else{
-                                    //zadawanie obrażeń przez potwory
-                                    int obr = (int) ((Math.random() * (Walka.potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
-                                    if (obr <= 0) {
-                                        obr = 0;
-                                    }
-                                    if (teamini[atak].status.equals("Kokon")) {
-                                        teamini[atak].hp = teamini[atak].hp - obr / 2;
-                                    } else {
-                                        teamini[atak].hp = teamini[atak].hp - obr;
-                                    }
-                                    System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
-                                    Thread.sleep(1000);
-
-                                    //sprawdzenie czy potówr nie zabił bohatera
-                                    if (teamini[atak].hp <= 0) {
-                                        System.out.println("potwory zabiły bohatera " + teamini[atak]);
-                                        teamini[atak].hp = 0;
-
-                                        if(teamini[atak].klasa == "Bard"){bard--;}
-                                        if(teamini[atak].klasa == "Łotrzyk"){}
-                                        if(teamini[atak].klasa == "Wojownik"){}
-              
-                                        zyc++;
-
-                                        if (zyc == Team.number) {
-                                            alive = false;
-                                            System.out.println("Zostałesz pokonany");
-                                            i = Walka.potworybitwa.length - 1;
-                                            System.exit(0);
-                                        }
-                                    }
-                                }
-                            }}else {
-                                i--;
-                            }
-                        }
-                        case (1) ->     //trzeba zwiększyć ilość licz dla case(0) żeby wszystkie potwory nie uciekały przed bardami + ten case może służyć jako miejsce na specjalne efekty potworów
-                                {
-                                    if (bard > 0) {
-                                        if (Walka.potworybitwa[i].hp < 10 * bard) {
-                                            Walka.potworybitwa[i].hp = 0;
-                                            mortem++;
-                                            System.out.println("Bestia usłyszawsza katofonie wykonaną ze strony barda uciekła z pola bitwy");
                                         } else {
-                                            System.out.println("Potwór usłyszawszy katofonie ze strony barda został oszołomiony");
+                                            //zadawanie obrażeń przez potwory
+                                            int obr = (int) ((Math.random() * (Walka.potworybitwa[i].atk - 1)) + 1) - teamini[atak].armor;
+                                            if (obr <= 0) {
+                                                obr = 0;
+                                            }
+                                            if (teamini[atak].status.equals("Kokon")) {
+                                                teamini[atak].hp = teamini[atak].hp - obr / 2;
+                                            } else {
+                                                teamini[atak].hp = teamini[atak].hp - obr;
+                                            }
+                                            System.out.println("potwór zadał bohaterowi " + teamini[atak] + " " + obr + " obrażen");
+                                            Thread.sleep(1000);
+
+                                            //sprawdzenie czy potówr nie zabił bohatera
+                                            if (teamini[atak].hp <= 0) {
+                                                System.out.println("potwory zabiły bohatera " + teamini[atak]);
+                                                teamini[atak].hp = 0;
+
+                                                if (teamini[atak].klasa == "Bard") {
+                                                    bard--;
+                                                }
+                                                if (teamini[atak].klasa == "Łotrzyk") {
+                                                }
+                                                if (teamini[atak].klasa == "Wojownik") {
+                                                }
+
+                                                zyc++;
+
+                                                if (zyc == Team.number) {
+                                                    alive = false;
+                                                    System.out.println("Zostałesz pokonany");
+                                                    i = Walka.potworybitwa.length - 1;
+                                                    System.exit(0);
+                                                }
+                                            }
                                         }
-                                        Thread.sleep(1000);
-                                    } else {
-                                        i--;
                                     }
-
-
+                                } else {
+                                    i--;
                                 }
+                            }
+                            case (1) ->     //trzeba zwiększyć ilość licz dla case(0) żeby wszystkie potwory nie uciekały przed bardami + ten case może służyć jako miejsce na specjalne efekty potworów
+                                    {
+                                        if (bard > 0) {
+                                            if (Walka.potworybitwa[i].hp < 10 * bard) {
+                                                Walka.potworybitwa[i].hp = 0;
+                                                mortem++;
+                                                System.out.println("Bestia usłyszawsza katofonie wykonaną ze strony barda uciekła z pola bitwy");
+                                            } else {
+                                                System.out.println("Potwór usłyszawszy katofonie ze strony barda został oszołomiony");
+                                            }
+                                            Thread.sleep(1000);
+                                        } else {
+                                            i--;
+                                        }
+
+
+                                    }
                        /* case (2) -> {
                             if (Walka.potworybitwa[i].mage = true) {
                                 switch (Walka.potworybitwa[i].type) {
@@ -322,22 +321,24 @@ public class SystemWalka
                             }
 
                         }*/
-                    }}
-
                         }
                     }
 
-
-
-                }}
-                if (zyc != Team.number) {
-                    for (Bohaterowie bohaterowie : teamini) {
-                        bohaterowie.status = "";
-                    }}}
-                    System.out.println("Koniec tury potworów czas na twoją");
                 }
-
             }
 
 
         }
+        if (zyc != Team.number) {
+            for (Bohaterowie bohaterowie : teamini) {
+                bohaterowie.status = "";
+            }
+        }
+        System.out.println("Koniec tury potworów czas na twoją");
+    }
+                }
+
+
+
+
+
