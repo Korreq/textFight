@@ -21,10 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b71d5d2a-fd39-4ac4-9d7d-07c1d86edea8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textFight/MagiaWWalce.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/MagiaWWalce.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/textFight/SystemWalka.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/textFight/SystemWalka.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MagiaWWalce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MagiaWWalce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SystemWalka.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SystemWalka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Bohaterowie/TablicaBohaterów.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bohaterowie/TablicaBohaterów.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
