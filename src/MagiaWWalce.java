@@ -1,10 +1,12 @@
 import Magia.TablicaMagii;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class MagiaWWalce {
     static TablicaMagii tablicaMagii = new TablicaMagii();
     static Scanner scanner = new Scanner(System.in);
+    static Random random = new Random();
     static boolean magia = false;
     static int pkt;
     static int wyb;
@@ -446,6 +448,9 @@ public class MagiaWWalce {
                         System.out.println("Kogo chcesz zaatakować");
                         int wyb = scanner.nextInt();
                         if(wyb > Walka.potworybitwa.length){ System.out.println("Nie ma takiego potwora"); }
+                        else{
+                            if(Walka.potworybitwa[wyb].hp <=0){
+                                System.out.println("Ten potwór nie żyje");break;}
                         int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
                         if(obr <= 0){obr = 0;}
                         Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
@@ -457,7 +462,7 @@ public class MagiaWWalce {
                             SystemWalka.mortem++;
                         }
                         magia = true;
-                    }
+                    }}
             case(2) -> {
                         pkt = 2;
                 if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
@@ -497,6 +502,9 @@ public class MagiaWWalce {
                         System.out.println("Kogo chcesz zaatakować");
                         int wyb = scanner.nextInt();
                         if(wyb > Walka.potworybitwa.length){ System.out.println("Nie ma takiego potwora"); }
+                        else{
+                            if(Walka.potworybitwa[wyb].hp <=0){
+                                System.out.println("Ten potwór nie żyje");break;}
                         int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[wyb].armor;
                         if(obr <= 0){obr = 0;}
                         Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
@@ -508,7 +516,146 @@ public class MagiaWWalce {
                             SystemWalka.mortem++;
                         }
                         magia = true;
-                    }
+                    }}
             default -> System.out.println("Nie ma takiego spella");}
     }
-}
+
+    public static void MagiaOgniaBoss()
+    {
+
+        int go = random.nextInt(3);
+        switch (go)
+        {
+            case(0) -> {
+                int kolumna = random.nextInt(3);
+                kolumna++;
+                for (int i = kolumna-1;i<=kolumna+2;i = i+3)
+                {
+                    if (Team.team[i].hp <= 0) {}
+                    else {
+                        if (Team.team[i].hp > 0)
+                        {
+                            int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Team.team[i].armor;
+                            if (obr <= 0) { obr = 0; }
+                            Team.team[i].hp = Team.team[i].hp - obr;
+                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
+                            if (Team.team[i].hp <= 0)
+                            {
+                                System.out.println(Team.team[i]+" zginął");
+                                Team.team[i].hp = 0;
+                                SystemWalka.zyc++;
+                            }
+                            magia = true;
+                        }
+                    }
+                }
+            }
+            case(1) -> {
+                int rzad = random.nextInt(2);
+                rzad++;
+                if (rzad == 2) { rzad = 4; }
+                for (int i = rzad-1; i <= rzad + 1; i++)
+                {
+                    if (Team.team[rzad].hp <= 0) {}
+                    else {
+                        if (Team.team[rzad].hp > 0)
+                        {
+                            int obr = (int) ((Math.random() * (tablicaMagii.fire2.getObrażenia() - 1)) + 1) - Team.team[i].armor;
+                            if (obr <= 0) { obr = 0; }
+                            Team.team[i].hp = Team.team[i].hp - obr;
+                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
+                            if (Team.team[i].hp <= 0)
+                            {
+                                System.out.println(Team.team[i]+" zginął");
+                                Team.team[i].hp = 0;
+                                SystemWalka.zyc++;
+                            }
+                        magia = true;
+                        }
+                    }
+                }
+            }
+            case(2) -> {
+                for(int x = 0;x < Team.team.length;x++)
+                {
+                    if(Team.team[x].hp != 0){
+                        int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Team.team[x].armor;
+                        if(obr <= 0){obr = 0;}
+                        Team.team[x].hp = Team.team[x].hp - obr;
+                        System.out.println(Team.team[x] + " otrzymał " + obr + " obrażeń");
+                        if (Team.team[x].hp <= 0)
+                        {
+                            System.out.println(Team.team[x]+" zginął");
+                            Team.team[x].hp = 0;
+                            SystemWalka.zyc++;
+                        }
+                        magia = true;
+                    }
+                }
+            }
+        }
+    }
+    public static void MagiaBłyskawicBoss()
+    {
+
+        int go = random.nextInt(3);
+        switch (go)
+        {
+            case(0) -> {
+                int wyb = random.nextInt(6);
+                if(Team.team[wyb].hp <=0 ){}
+                else {
+                int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
+                if(obr <= 0){obr = 0;}
+                    Team.team[wyb].hp = Team.team[wyb].hp - obr;
+                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
+                if (Team.team[wyb].hp <= 0)
+                {
+                    System.out.println(Team.team[wyb]+" zginął");
+                    Team.team[wyb].hp =0;
+                    SystemWalka.zyc++;
+                }
+                magia = true;
+            }}
+            case(1) -> {
+                int kolumna = random.nextInt(3);
+                kolumna++;
+                for (int i = kolumna-1;i<=kolumna+2;i = i+3)
+                {
+                    if (Team.team[i].hp <= 0) {}
+                    else {
+                        if (Team.team[i].hp > 0)
+                        {
+                            int obr = (int) ((Math.random() * (tablicaMagii.thunder2.getObrażenia() - 1)) + 1) - Team.team[i].armor;
+                            if (obr <= 0) { obr = 0; }
+                            Team.team[i].hp = Team.team[i].hp - obr;
+                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
+                            if (Team.team[i].hp <= 0)
+                            {
+                                System.out.println(Team.team[i]+" zginął");
+                                Team.team[i].hp = 0;
+                                SystemWalka.zyc++;
+                            }
+                            magia = true;
+                        }
+                    }
+                }
+            }
+            case(2) -> {
+                int wyb = random.nextInt(6);
+                if(Team.team[wyb].hp <=0 ){}
+                else {
+                    int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
+                    if(obr <= 0){obr = 0;}
+                    Team.team[wyb].hp = Team.team[wyb].hp - obr;
+                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
+                    if (Team.team[wyb].hp <= 0)
+                    {
+                        System.out.println(Team.team[wyb]+" zginął");
+                        Team.team[wyb].hp =0;
+                        SystemWalka.zyc++;
+                    }
+                    magia = true;
+                }}
+    }
+}}

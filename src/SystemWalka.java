@@ -14,6 +14,7 @@ public class SystemWalka
     public void walka() throws InterruptedException {
         int zyc = 0;
         int bard = 0;
+        int wyb;
         mori = 0;
         mortem = 0;
         alive = true;
@@ -72,7 +73,6 @@ public class SystemWalka
                     System.out.println("║ 4 ║ Użyj runy                          ║");
                     System.out.println("╚═══╩════════════════════════════════════╝");
 
-                    int wyb;
                     while (!scanner.hasNextInt()) {
                         System.out.println("╔══════════════╗");
                         System.out.println("║ To nie numer ║");
@@ -235,7 +235,10 @@ public class SystemWalka
 
 
                     if (Walka.potworybitwa[i].hp > 0) {
-                        int wyb = random.nextInt(2);
+                        if(Walka.potworybitwa[i].name.equals("B1") || Walka.potworybitwa[i].name.equals("B2")){wyb =random.nextInt(3);}
+                        else{
+                            wyb = random.nextInt(2);
+                        }
                         switch (wyb) {
                             case (0) -> {
                                 int atak = random.nextInt(Team.number);
@@ -311,16 +314,18 @@ public class SystemWalka
                                         }
 
 
-                                    }
-                       /* case (2) -> {
+                                    }case (2) -> {
+                                System.out.print(Walka.potworybitwa[i]+" używa magii "+Walka.potworybitwa[i].type+" ");
                             if (Walka.potworybitwa[i].mage = true) {
                                 switch (Walka.potworybitwa[i].type) {
-                                    case ("fire") -> MagiaWWalce.MagiaOgnia();
-                                    case ("thunder") -> MagiaWWalce.MagiaBłyskawic();
+                                    case ("fire") -> MagiaWWalce.MagiaOgniaBoss();
+                                    case ("thunder") -> MagiaWWalce.MagiaBłyskawicBoss();
                                 }
                             }
+                            if(!MagiaWWalce.magia){i--;}
+                            else{MagiaWWalce.magia = false;}
 
-                        }*/
+                        }
                         }
                     }
 

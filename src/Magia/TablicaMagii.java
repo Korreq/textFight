@@ -28,7 +28,7 @@ public class TablicaMagii {
 
     public Magia thunder1 = new Magia("Piorun Strzelisty","thunder",1,30,"jeden przeciwnik");
     public Magia thunder2 = new Magia("Strzelista włócznia","thunder",2,35,"jedna kolumna przeciwników");
-    public Magia thunder3 = new Magia("Gniew Magnira","thunder",3,55,"jeden przeciwnik");
+    public Magia thunder3 = new Magia("Gniew Magnira","thunder",3,85,"jeden przeciwnik");
 
 
     public Magia[] magiaognia ={fire1,fire2,fire3};
