@@ -23,7 +23,8 @@ public class Menu
             System.out.println("Opcje:");
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
-            System.out.println("3 : Wyjdz");
+            System.out.println("3: Encyklopedia");
+            System.out.println("4 : Wyjdz");
             System.out.println("\nv. 0.06(Magic Fixes Redux)");
 
             int choice;
@@ -55,7 +56,11 @@ public class Menu
                             System.out.println(Color.GREEN+" ##   ##   ##  ##   ##      ##        ## ##       "+Color.RESET+"    ##  ##  #   ##     ## ##    ## ##    ##     ##                ##  ##    ##      ##       ##  ##   #   ##  ");
                             System.out.println(Color.GREEN+"  #####   ###  ##  ####      #####    ##  ##      "+Color.RESET+"   ######    ### #      ###      ###    ####     #####            ##  ##   ####      #####   ##  ##    ### #  \n");
                         }
-                case (3) -> System.exit(0);
+                case (3) ->
+                        {
+                            System.out.println("Wielka encyklopedia");
+                        }
+                case (4) -> System.exit(0);
                 default -> System.out.println("Nope");
 
             }
