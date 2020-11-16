@@ -65,19 +65,36 @@ public class SystemWalka
                 if(!alive){break;}
                 if (teamini[i].hp > 0)
                 {
-                    System.out.println("co chcesz zrobić (jesteś teraz " + teamini[i] + ")");
+                    System.out.println("\nco chcesz zrobić (jesteś teraz " + teamini[i] + ")");
                     System.out.println("1: Atak");
                     System.out.println("2: Zobacz Planszę");
                     System.out.println("3: Zobacz szczegóły");
                     System.out.println("4: Użyj Runy");
                     System.out.println("5: Użyj Magii");
-                    int wyb = scanner.nextInt();
+                    int wyb;
+                        while (!scanner.hasNextInt()) {
+                            System.out.println("╔══════════════╗");
+                            System.out.println("║ To nie numer ║");
+                            System.out.println("╚══════════════╝");
+                            scanner.next(); // this is important!
+                        }
+                        wyb = scanner.nextInt();
                     switch (wyb)
                     {
                         case (1) ->
                                 {
                                     System.out.println("Wybierz cel");
-                                    int atak = scanner.nextInt(6);
+                                    int atak;
+                                    while (!scanner.hasNextInt()) {
+                                        System.out.println("╔══════════════╗");
+                                        System.out.println("║ To nie numer ║");
+                                        System.out.println("╚══════════════╝");
+                                        scanner.next(); // this is important!
+                                    }
+                                    atak = scanner.nextInt();
+                                    if(atak < 0 || atak >= Walka.potworybitwa.length){
+                                        System.out.println("Nie ma takiego potwora");i--;break;
+                                    }
                                     if (Walka.potworybitwa[atak].hp > 0)
                                     {
                                         int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - Walka.potworybitwa[atak].armor;
@@ -164,7 +181,7 @@ public class SystemWalka
                                                 else
                                                 {System.out.println("Kogo chcesz zaatakować");
                                                     wyb = scanner.nextInt();
-                                                    if(wyb > Walka.potworybitwa.length){
+                                                    if(wyb >= Walka.potworybitwa.length){
                                                         System.out.println("Nie ma takiego potwora");
                                                     }
                                                     teamini[i].hp = (int) (teamini[i].hp -teamini[i].hp*0.1);
@@ -185,12 +202,12 @@ public class SystemWalka
                                                 case(2)->{
                                                     System.out.println("wybierz pierwszego potwora");
                                                     wyb = scanner.nextInt();
-                                                    if(wyb > Walka.potworybitwa.length){
+                                                    if(wyb >= Walka.potworybitwa.length){
                                                         System.out.println("nie ma takiego potwora");
                                                     }
                                                     System.out.println("wybierz drugiego potwora");
                                                     int wyb2 = scanner.nextInt();
-                                                    if(wyb2 > Walka.potworybitwa.length){
+                                                    if(wyb2 >= Walka.potworybitwa.length){
                                                         System.out.println("nie ma takiego potwora");
                                                     }
                                                     Walka.potworybitwa[wyb].status = "Więz krwi";

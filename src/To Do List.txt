@@ -41,3 +41,10 @@ Podstawy systemu walki    	     [v]
 -magia
 -zrobienie zeby magia nie była nieskonczona
 (HAHA zmieniłem moją odpowiedź na twe notatki teraz nigdy się nie dowiesz co tutaj było!)
+
+
+Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
+- zrobienie zeby magia nie była nieskonczona
+- dodanie magii swiatła
+- dodanie do indeksu w ZarzadzanieDruzyna co robia konkretne spelle i runy
+- zabezpieczenie walki przed wypierdalaniem się

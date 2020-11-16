@@ -41,7 +41,6 @@ public class Start {
                     System.out.println("╚═════════════════════════════════╝");
 
                     int wyb;
-                    do {
                         while (!myScanner.hasNextInt()) {
                             System.out.println("╔══════════════╗");
                             System.out.println("║ To nie numer ║");
@@ -49,8 +48,7 @@ public class Start {
                             myScanner.next(); // this is important!
                         }
                         wyb = myScanner.nextInt();
-                    } while (wyb < 0);
-                    if (wyb <= karczma.length-1) {
+                    if ( wyb >= 0 && wyb < karczma.length) {
                         if (karczma[wyb] != null)
                         {
                             dru[Team.number] = karczma[wyb];

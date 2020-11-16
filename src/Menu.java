@@ -26,8 +26,14 @@ public class Menu
             System.out.println("3 : Wyjdz");
             System.out.println("\nv. 0.06(Magic Fixes Redux)");
 
-            int choice = (scanner.nextInt());
-
+            int choice;
+                while (!scanner.hasNextInt()) {
+                    System.out.println("╔══════════════╗");
+                    System.out.println("║ To nie numer ║");
+                    System.out.println("╚══════════════╝");
+                    scanner.next(); // this is important!
+                }
+                choice = scanner.nextInt();
 
             switch (choice)
             {
