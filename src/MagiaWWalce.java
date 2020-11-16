@@ -345,17 +345,7 @@ public class MagiaWWalce {
                 SystemWalka.teamini[SystemWalka.i].hp = (int) (SystemWalka.teamini[SystemWalka.i].hp -SystemWalka.teamini[SystemWalka.i].hp*0.1);
                 Walka.potworybitwa[wyb].status="Krew";
                 Walka.potworybitwa[wyb].NRMaga = SystemWalka.teamini[SystemWalka.i].NRMaga;
-                int obr = (int) ((Math.random() * (SystemWalka.teamini[SystemWalka.i].hp*0.1 - 1)) + 1) - Walka.potworybitwa[wyb].armor;
-
-                if(obr <= 0){obr = 0;}
-                Walka.potworybitwa[wyb].hp = Walka.potworybitwa[wyb].hp - obr;
-                System.out.println("zadałeś potworowi " + Walka.potworybitwa[wyb] + " " + obr + " obrażeń");
-                if (Walka.potworybitwa[wyb].hp <= 0)
-                {
-                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[wyb]);
-                    Walka.potworybitwa[wyb].hp =0;
-                    SystemWalka.mortem++;
-                }
+                Walka.potworybitwa[wyb].armor = 0;
                 MagiaWWalce.magia=true;}
 
             }
