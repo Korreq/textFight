@@ -8,16 +8,8 @@ public class Bohaterowie extends Heroes
     {
         this.name = name;
         this.klasa = klasa;
-        if(klasa.equals("Paladyn"))
-        {
-            this.maxhp = (int) (1.2*maxhp);
-            this.hp = (int) (1.2*maxhp);
-        }
-        else
-        {
-            this.maxhp = maxhp;
-            this.hp = maxhp;
-        }
+        this.maxhp = maxhp;
+        this.hp = maxhp;
         this.dex = dex;
         this.armor= armor;
 
