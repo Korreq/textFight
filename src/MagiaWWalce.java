@@ -143,7 +143,7 @@ public class MagiaWWalce {
     public static void MagiaWiatru()
     {
         System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiawiatru.length;a++){ System.out.println(a+" - "+tablicaMagii.magiawiatru[a]); }
+        for(int a=0;a < tablicaMagii.magiawiatru.length;a++){ System.out.println(a+1+" - "+tablicaMagii.magiawiatru[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
         switch (go)
@@ -199,7 +199,7 @@ public class MagiaWWalce {
     public static void MagiaZiemi()
     {
         System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiaziemi.length;a++){ System.out.println(a+" - "+tablicaMagii.magiaziemi[a]); }
+        for(int a=0;a < tablicaMagii.magiaziemi.length;a++){ System.out.println(a+1+" - "+tablicaMagii.magiaziemi[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
         switch (go)
@@ -245,7 +245,7 @@ public class MagiaWWalce {
     //Trzeba to jeszcze dokończyć
     public static void MagiaSwiatła(){System.out.println("Lista spelli");
         for(int a=0;a < tablicaMagii.magiaswiatła.length;a++){
-            System.out.println(a+" - "+tablicaMagii.magiaswiatła[a]);
+            System.out.println(a+1+" - "+tablicaMagii.magiaswiatła[a]);
         }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
@@ -259,7 +259,7 @@ public class MagiaWWalce {
     public static void MagiaBłyskawic()
     {
         System.out.println("Lista spelli");
-        for(int a=0;a < tablicaMagii.magiabłyskawica.length;a++){ System.out.println(a+" - "+tablicaMagii.magiabłyskawica[a]); }
+        for(int a=0;a < tablicaMagii.magiabłyskawica.length;a++){ System.out.println(a+1+" - "+tablicaMagii.magiabłyskawica[a]); }
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
         switch (go)

@@ -4,8 +4,11 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
+
+
 public class SystemWalka
 {
+    static int i = 0;
     static Bohaterowie[] teamini = new Bohaterowie[Team.number];
     int mori = 0;
     boolean alive = true;
@@ -60,7 +63,7 @@ public class SystemWalka
             System.out.println("Kolejność ataku :");
 
             for (int i = 0; i <= teamini.length - 1; i++) { System.out.println(teamini[i]); }
-            for (int i = 0; i <= teamini.length - 1; i++)
+            for (; i <= teamini.length - 1; i++)
             {
                 if(!alive){break;}
                 if (teamini[i].hp > 0)
