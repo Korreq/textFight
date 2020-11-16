@@ -270,15 +270,13 @@ public class SystemWalka
                                     if (teamini[atak].hp <= 0) {
                                         System.out.println("potwory zabiły bohatera " + teamini[atak]);
                                         teamini[atak].hp = 0;
+
                                         if(teamini[atak].klasa == "Bard"){bard--;}
                                         if(teamini[atak].klasa == "Łotrzyk"){}
                                         if(teamini[atak].klasa == "Wojownik"){}
+              
+                                        zyc++;
 
-                                        for (int a = 0; a <= Team.number - 1; a++) {
-                                            if (teamini[a].hp <= 0) {
-                                                zyc++;
-                                            }
-                                        }
                                         if (zyc == Team.number) {
                                             alive = false;
                                             System.out.println("Zostałesz pokonany");
