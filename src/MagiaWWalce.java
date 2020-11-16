@@ -19,6 +19,10 @@ public class MagiaWWalce {
         {
             case(1) -> {
                         pkt=1;
+                        if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                            System.out.println("Nie masz many na spell");
+                            break;
+                        }
                         System.out.println("która kolumna");
                         int kolumna = scanner.nextInt();
                         if(kolumna < 1 || kolumna > 3) { System.out.println("To nie kolumna"); break; }
@@ -44,6 +48,10 @@ public class MagiaWWalce {
                     }
             case(2) -> {
                         pkt = 2;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("który rząd");
                         int rzad = scanner.nextInt();
                         if (rzad < 1 || rzad > 2) { System.out.println("To nie rząd"); break; }
@@ -70,16 +78,22 @@ public class MagiaWWalce {
                     }
             case(3) -> {
                         pkt=3;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         for(int x = 0;x < Walka.potworybitwa.length;x++)
                         {
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
-                            if(obr <= 0){obr = 0;}
-                            Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
-                            System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
-                            if (Walka.potworybitwa[x].hp <= 0)
-                            {
-                                System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
-                                Walka.potworybitwa[x].hp = 0;
+                            if(Walka.potworybitwa[x].hp != 0){
+                                int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
+                                if(obr <= 0){obr = 0;}
+                                Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
+                                System.out.println("zadałeś potworowi " + Walka.potworybitwa[x] + " " + obr + " obrażeń");
+                                if (Walka.potworybitwa[x].hp <= 0)
+                                {
+                                    System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
+                                    Walka.potworybitwa[x].hp = 0;
+                                }
                             }
                         }
                         magia = true;
@@ -98,6 +112,10 @@ public class MagiaWWalce {
         {
             case(1) -> {
                         pkt = 1;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz uleczyć?");
                         int wyb = scanner.nextInt();
                         if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
@@ -112,6 +130,10 @@ public class MagiaWWalce {
                     }
             case(2) -> {
                         pkt = 2;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz ochronić?");
                         int wyb = scanner.nextInt();
                         if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
@@ -127,6 +149,10 @@ public class MagiaWWalce {
                     }
             case(3) -> {
                         pkt = 3;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         for(int x=0;x<SystemWalka.teamini.length;x++) { if(SystemWalka.teamini[x].hp == SystemWalka.teamini[x].maxhp){ hp++; } }
                         if(hp == SystemWalka.teamini.length){ System.out.println("cała drużyna ma maxhp"); break;}
                         for(int x=0;x<SystemWalka.teamini.length;x++)
@@ -150,6 +176,10 @@ public class MagiaWWalce {
         {
             case(1) -> {
                         pkt = 1;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz zaatakować");
                         int wyb = scanner.nextInt();
                         if(wyb > Walka.potworybitwa.length) { System.out.println("Nie ma takiego potwora"); }
@@ -165,6 +195,10 @@ public class MagiaWWalce {
                     }
             case(2) -> {
                         pkt = 2;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz uleczyć?");
                         int wyb = scanner.nextInt();
                         if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
@@ -179,8 +213,13 @@ public class MagiaWWalce {
                     }
             case(3) -> {
                         pkt = 3;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         for(int x = 0;x < Walka.potworybitwa.length;x++)
                         {
+                            if(Walka.potworybitwa[x].hp != 0){
                             int obr = (int) ((Math.random() * (tablicaMagii.wind3.getObrażenia() - 1)) + 1) - Walka.potworybitwa[x].armor;
                             if(obr <= 0){obr = 0;}
                             Walka.potworybitwa[x].hp = Walka.potworybitwa[x].hp - obr;
@@ -190,7 +229,7 @@ public class MagiaWWalce {
                                 System.out.println("zabiłeś potwora " + Walka.potworybitwa[x]);
                                 Walka.potworybitwa[x].hp =0;
                             }
-                        }
+                        }}
                         magia = true;
                     }
             default -> System.out.println("Nie ma takiego spella");}
@@ -206,6 +245,10 @@ public class MagiaWWalce {
         {
             case(1) -> {
                         pkt = 1;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz ochronić?");
                         int wyb = scanner.nextInt();
                         if(wyb > Team.number) { System.out.println("Nie ma takiego członka"); }
@@ -221,6 +264,10 @@ public class MagiaWWalce {
                     }
             case(2) -> {
                         pkt = 2;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Na jakiego przeciwnika chcesz oplątać?");
                         int wyb = scanner.nextInt();
                         if(wyb > Walka.potworybitwa.length) { System.out.println("Nie ma takiego potwora"); }
@@ -236,6 +283,10 @@ public class MagiaWWalce {
                     }
             case(3) -> {
                         pkt = 3;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         for(int x = 0;x < SystemWalka.teamini.length;x++) { SystemWalka.teamini[x].status = "Kokon"; }
                         System.out.println("cała drużyna na status kokon");
                         magia = true;
@@ -250,9 +301,21 @@ public class MagiaWWalce {
         System.out.println("Którego spella chcesz użyć");
         int go = scanner.nextInt();
         switch (go){
-            case(1)->pkt = 1;
-            case(2)->pkt = 2;
-            case(3)->pkt = 3;
+            case(1)->{pkt = 1;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }}
+            case(2)->{pkt = 2;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }}
+            case(3)->{pkt = 3;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }}
             default -> System.out.println("Nie ma takiego spella");}
     }
     //A to trzeba komuś zaaplikować
@@ -266,6 +329,10 @@ public class MagiaWWalce {
         {
             case(1) -> {
                         pkt = 1;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz zaatakować");
                         int wyb = scanner.nextInt();
                         if(wyb > Walka.potworybitwa.length){ System.out.println("Nie ma takiego potwora"); }
@@ -282,6 +349,10 @@ public class MagiaWWalce {
                     }
             case(2) -> {
                         pkt = 2;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("która kolumna");
                         int kolumna = scanner.nextInt();
                         if (kolumna < 1 || kolumna > 3) { System.out.println("To nie kolumna"); break; }
@@ -307,6 +378,10 @@ public class MagiaWWalce {
                     }
             case(3) -> {
                         pkt = 3;
+                if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){
+                    System.out.println("Nie masz many na spell");
+                    break;
+                }
                         System.out.println("Kogo chcesz zaatakować");
                         int wyb = scanner.nextInt();
                         if(wyb > Walka.potworybitwa.length){ System.out.println("Nie ma takiego potwora"); }
