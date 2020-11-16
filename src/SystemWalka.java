@@ -239,7 +239,7 @@ public class SystemWalka
 
 
                 if (Walka.potworybitwa[i].hp > 0) {
-                    int wyb = random.nextInt(3);
+                    int wyb = random.nextInt(2);
                     switch (wyb) {
                         case (0) -> {
                             int atak = random.nextInt(Team.number);
@@ -306,14 +306,14 @@ public class SystemWalka
 
 
                                 }
-                        case (2) -> {
+                       /* case (2) -> {
                             if (Walka.potworybitwa[i].mage = true) {
                                 switch (Walka.potworybitwa[i].type) {
                                     case ("fire") -> MagiaWWalce.MagiaOgnia();
                                     case ("thunder") -> MagiaWWalce.MagiaBłyskawic();
                                 }
                             }
-                        }
+                        }*/
                     }}
 
 

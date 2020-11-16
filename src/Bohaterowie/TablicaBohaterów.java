@@ -14,21 +14,21 @@ public class TablicaBohaterów {
         public Bohaterowie p1 = new Bohaterowie("Robert","Paladyn","earth",40,0,4,10,true,"Ro","");
         public Bohaterowie p2 = new Bohaterowie("Kresul","Paladyn","steel",40,0,4,10,true,"Kr","");
         public Bohaterowie p3 = new Bohaterowie("Vintael","Paladyn","water",40,0,4,10,true,"Vi","");
-        public Bohaterowie p4 = new Bohaterowie("Zaos","Paladyn","steel",40,0,4,10,true,"Za","");
+        public Bohaterowie p4 = new Bohaterowie("Zaos","Paladyn","flint",40,0,4,10,true,"Za","");
         public Bohaterowie p5 = new Bohaterowie("Hoid","Paladyn","fire",40,0,4,10,true,"Ho","");
-        public Bohaterowie p6 = new Bohaterowie("Alsvard","Paladyn","steel",40,0,4,10,true,"Al","");
+        public Bohaterowie p6 = new Bohaterowie("Alsvard","Paladyn","thunder",40,0,4,10,true,"Al","");
         public Bohaterowie p7 = new Bohaterowie("Ingmar","Paladyn","wind",40,0,4,10,true,"In","");
 
 
         public Bohaterowie r1 = new Bohaterowie("Jacob","Łotrzyk","steel",35,20,2,12,false,"Ja","");
         public Bohaterowie r2 = new Bohaterowie("Twardo","Łotrzyk","flint",35,20,2,12,false,"Tw","");
         public Bohaterowie r3 = new Bohaterowie("???","Łotrzyk","wolf",35,20,2,12,false,"??","");
-        public Bohaterowie r4 = new Bohaterowie("Serkad","Łotrzyk","steel",35,20,2,12,false,"Se","");
+        public Bohaterowie r4 = new Bohaterowie("Serkad","Łotrzyk","wolf",35,20,2,12,false,"Se","");
         public Bohaterowie r5 = new Bohaterowie("Zydar","Łotrzyk","flint",35,20,2,12,false,"Zy","");
         public Bohaterowie r6 = new Bohaterowie("Goldlion","Łotrzyk","steel",35,20,2,12,false,"Go","");
 
 
-        public Bohaterowie b1 = new Bohaterowie("Hiacynt","Bard","wolf",35,15,2,8,false,"Hi","");
+        public Bohaterowie b1 = new Bohaterowie("Hiacynt","Bard","steel",35,15,2,8,false,"Hi","");
         public Bohaterowie b2 = new Bohaterowie("Rass","Bard","flint",35,15,2,8,false,"Ra","");
         public Bohaterowie b3 = new Bohaterowie("Ur","Bard","steel",35,15,2,8,false,"Ur","");
         public Bohaterowie b4 = new Bohaterowie("Benek","Bard","wolf",35,15,2,8,false,"Be","");
@@ -44,8 +44,8 @@ public class TablicaBohaterów {
         public Bohaterowie m8 = new Bohaterowie("Solmyr","Mag","thunder",30,10,0,6,true,"So","");
 
 
-        public Bohaterowie c1 = new Bohaterowie("N'fz","Kapłan","light",30,10,0,6,true,"Nf","");
-        public Bohaterowie c2 = new Bohaterowie("Adela","Kapłan","blood",30,10,0,6,true,"Ad","");
+        public Bohaterowie c1 = new Bohaterowie("N'fz","Kapłan","blood",30,10,0,6,true,"Nf","");
+        public Bohaterowie c2 = new Bohaterowie("Adela","Kapłan","light",30,10,0,6,true,"Ad","");
         public Bohaterowie c3 = new Bohaterowie("Ezekiel","Kapłan","light",30,10,0,6,true,"Ez","");
         public Bohaterowie c4 = new Bohaterowie("Rion","Kapłan","blood",30,10,0,6,true,"Ri","");
 

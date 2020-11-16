@@ -23,7 +23,7 @@ public class Menu
             System.out.println("Opcje:");
             System.out.println("1 : Nowa gra");
             System.out.println("2 : Credits");
-            System.out.println("3: Encyklopedia");
+            System.out.println("3 : Encyklopedia");
             System.out.println("4 : Wyjdz");
             System.out.println("\nv. 0.09(Bugs of the Dead)");
 

@@ -2,9 +2,10 @@ package Potwory;
 
 import Klasy.Heroes;
 
-public class Potwory extends Heroes {
-
-    public Potwory(String name,int maxhp,int atk,int dex,int armor,boolean mage,String status){
+public class Potwory extends Heroes
+{
+    public Potwory(String name,int maxhp,int atk,int dex,int armor,boolean mage,String status)
+    {
         this.name = name;
         this.maxhp = maxhp;
         this.hp = maxhp;
@@ -14,9 +15,6 @@ public class Potwory extends Heroes {
         this.mage = mage;
         this.status = status;
         this.NRMaga = NRMaga;
-
     }
     public String toString() { return name;}
-
-
 }
