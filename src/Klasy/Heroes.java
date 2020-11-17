@@ -1,21 +1,9 @@
 package Klasy;
 
-
-public class Heroes{
-    public String name;
-    public String klasa;
-    public int maxhp;
-    public int hp = maxhp;
-    public int dex;
-    public int armor;
-
-    public int atk;
+public class Heroes
+{
+    public String name,klasa,type,lit,status;
+    public int maxhp,dex,armor,atk,pktmagii,NRMaga,hp=maxhp;
     public boolean mage;
-    public String lit;
-    public String type;
-    public int pktmagii;
-    public String status;
-    public int NRMaga;
-
 }
 
