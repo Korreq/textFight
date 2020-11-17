@@ -10,7 +10,7 @@ public class Walka
         Random random = new Random();
         SystemWalka systemWalka = new SystemWalka();
         //losowanie przeciwników
-        for (int i = 0; i <= potworybitwa.length - 1; i++)
+       /* for (int i = 0; i <= potworybitwa.length - 1; i++)
         {
             int go = random.nextInt(3);
             potworybitwa[i] = new TablicaPotworow().getPotwory()[go];
@@ -30,7 +30,7 @@ public class Walka
             potworybitwa[i] = new TablicaPotworow().getPotwory()[go+6];
         }
         systemWalka.walka();
-
+        */
         Potwory[] boss = new Potwory[3];
         potworybitwa = boss;
         System.out.println("Czas na Bossa");

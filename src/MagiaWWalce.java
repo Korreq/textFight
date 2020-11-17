@@ -47,6 +47,7 @@ public class MagiaWWalce {
                                     }
                                 }
                             }
+                            if(Walka.potworybitwa.length < 4){break;}
                         }
                         magia = true;
                     }
@@ -59,7 +60,7 @@ public class MagiaWWalce {
                         System.out.println("który rząd");
                         int rzad = scanner.nextInt();
                         if (rzad < 1 || rzad > 2) { System.out.println("To nie rząd"); break; }
-                        if (rzad == 2) { rzad = 4; }
+                        if (rzad == 2) { rzad = 4; if(Walka.potworybitwa.length < 4){System.out.println("Takiego rzędu nie ma"); break;} }
                         for (int i = rzad-1; i <= rzad + 1; i++)
                         {
                             if (Walka.potworybitwa[rzad].hp <= 0) { System.out.println("W tym rzędzie nikogo nie ma"); }
@@ -489,6 +490,7 @@ public class MagiaWWalce {
                                     }
                                 }
                             }
+                            if(Walka.potworybitwa.length < 4){break;}
                         }
                         magia = true;
                     }
@@ -545,14 +547,17 @@ public class MagiaWWalce {
                                 SystemWalka.zyc++;
                             }
                             magia = true;
+                            if(Team.team.length < 4){break;}
                         }
                     }
+
                 }
             }
             case(1) -> {
                 int rzad = random.nextInt(2);
                 rzad++;
                 if (rzad == 2) { rzad = 4; }
+                if (Team.team.length < 4){rzad = 1;}
                 for (int i = rzad-1; i <= rzad + 1; i++)
                 {
                     if (Team.team[rzad].hp <= 0) {}
@@ -601,7 +606,7 @@ public class MagiaWWalce {
         switch (go)
         {
             case(0) -> {
-                int wyb = random.nextInt(6);
+                int wyb = random.nextInt(Team.team.length-1);
                 if(Team.team[wyb].hp <=0 ){}
                 else {
                 int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
@@ -638,10 +643,11 @@ public class MagiaWWalce {
                             magia = true;
                         }
                     }
+                   if(Team.team.length < 3){break;}
                 }
             }
             case(2) -> {
-                int wyb = random.nextInt(6);
+                int wyb = random.nextInt(Team.team.length-1);
                 if(Team.team[wyb].hp <=0 ){}
                 else {
                     int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
