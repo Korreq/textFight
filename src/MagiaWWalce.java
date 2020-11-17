@@ -536,6 +536,7 @@ public class MagiaWWalce {
                             if (obr <= 0) { obr = 0; }
                             Team.team[i].hp = Team.team[i].hp - obr;
                             System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
+                            Thread.sleep(1000);
                             if (Team.team[i].hp <= 0)
                             {
                                 System.out.println(Team.team[i]+" zginął");
@@ -557,6 +558,7 @@ public class MagiaWWalce {
                         if(obr <= 0){obr = 0;}
                         Team.team[x].hp = Team.team[x].hp - obr;
                         System.out.println(Team.team[x] + " otrzymał " + obr + " obrażeń");
+                        Thread.sleep(1000);
                         if (Team.team[x].hp <= 0)
                         {
                             System.out.println(Team.team[x]+" zginął");
@@ -570,8 +572,7 @@ public class MagiaWWalce {
             }
         }
     }
-    public static void MagiaBłyskawicBoss()
-    {
+    public static void MagiaBłyskawicBoss() throws InterruptedException {
 
         int go = random.nextInt(2);
         switch (go)
@@ -585,6 +586,7 @@ public class MagiaWWalce {
                 if(obr <= 0){obr = 0;}
                     Team.team[wyb].hp = Team.team[wyb].hp - obr;
                     System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
+                    Thread.sleep(1000);
                 if (Team.team[wyb].hp <= 0)
                 {
                     System.out.println(Team.team[wyb]+" zginął");
@@ -603,6 +605,7 @@ public class MagiaWWalce {
                     if(obr <= 0){obr = 0;}
                     Team.team[wyb].hp = Team.team[wyb].hp - obr;
                     System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
+                    Thread.sleep(1000);
                     if (Team.team[wyb].hp <= 0)
                     {
                         System.out.println(Team.team[wyb]+" zginął");
