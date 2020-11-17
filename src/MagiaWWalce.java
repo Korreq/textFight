@@ -301,7 +301,6 @@ public class MagiaWWalce {
                     }
             default -> System.out.println("Nie ma takiego spella");}
     }
-    //Trzeba to jeszcze dokończyć
     public static void MagiaSwiatła(){System.out.println("Lista spelli");
         for(int a=0;a < tablicaMagii.magiaswiatła.length;a++){
             System.out.println(a+1+" - "+tablicaMagii.magiaswiatła[a]);
@@ -430,7 +429,7 @@ public class MagiaWWalce {
                 MagiaWWalce.magia = true;}
             }
             default -> System.out.println("Nie ma takiego spella");}}
-    //A to trzeba komuś zaaplikować
+
     public static void MagiaBłyskawic()
     {
         System.out.println("Lista spelli");

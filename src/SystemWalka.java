@@ -10,9 +10,11 @@ public class SystemWalka
     int mori = 0;
     static int mortem = 0;
     boolean alive = true;
+    static int zyc = 0;
 
     public void walka() throws InterruptedException {
-        int zyc = 0;
+        //int zyc = 0;
+        zyc = 0;
         int bard = 0;
         int wyb;
         mori = 0;
