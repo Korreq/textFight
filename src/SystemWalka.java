@@ -13,7 +13,6 @@ public class SystemWalka
     static int zyc = 0;
 
     public void walka() throws InterruptedException {
-        //int zyc = 0;
         zyc = 0;
         int bard = 0;
         int wyb;
@@ -317,7 +316,6 @@ public class SystemWalka
 
 
                                     }case (2) -> {
-                                System.out.print(Walka.potworybitwa[i]+" używa magii "+Walka.potworybitwa[i].type+" ");
                             if (Walka.potworybitwa[i].mage = true) {
                                 switch (Walka.potworybitwa[i].type) {
                                     case ("fire") -> MagiaWWalce.MagiaOgniaBoss();

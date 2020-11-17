@@ -36,11 +36,11 @@ public class Walka
         System.out.println("Czas na Bossa");
         for (int i = 0; i <= potworybitwa.length - 1; i++)
         {
-            int go = random.nextInt(9);
-            potworybitwa[i] = new TablicaPotworow().getPotwory()[go];
+            int go = random.nextInt(2);
+            potworybitwa[i] = new TablicaPotworow().getPotwory()[go+9];
         }
-        int go = random.nextInt(2);
-        potworybitwa[1] = new TablicaPotworow().getPotwory()[go+9];
+     /*   int go = random.nextInt(2);
+        potworybitwa[1] = new TablicaPotworow().getPotwory()[go+9];*/
         systemWalka.walka();
         System.out.println("Gratuluję ukonczenia gry");
     }

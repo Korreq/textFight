@@ -524,74 +524,44 @@ public class MagiaWWalce {
     public static void MagiaOgniaBoss()
     {
 
-        int go = random.nextInt(3);
+        int go = random.nextInt(2);
         switch (go)
         {
             case(0) -> {
-                int kolumna = random.nextInt(3);
-                kolumna++;
-                for (int i = kolumna-1;i<=kolumna+2;i = i+3)
-                {
-                    if (Team.team[i].hp <= 0) {}
-                    else {
-                        if (Team.team[i].hp > 0)
+                int i = random.nextInt(SystemWalka.teamini.length);
+                        if (Team.team[i].hp != 0)
                         {
+                            System.out.print("Boss używa magii ognia ");
                             int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Team.team[i].armor;
                             if (obr <= 0) { obr = 0; }
                             Team.team[i].hp = Team.team[i].hp - obr;
-                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
+                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń1");
                             if (Team.team[i].hp <= 0)
                             {
                                 System.out.println(Team.team[i]+" zginął");
                                 Team.team[i].hp = 0;
                                 SystemWalka.zyc++;
+                                System.out.println(SystemWalka.zyc);
                             }
                             magia = true;
-                            if(Team.team.length < 4){break;}
                         }
                     }
-
-                }
-            }
             case(1) -> {
-                int rzad = random.nextInt(2);
-                rzad++;
-                if (rzad == 2) { rzad = 4; }
-                if (Team.team.length < 4){rzad = 1;}
-                for (int i = rzad-1; i <= rzad + 1; i++)
+                System.out.print("Boss używa magii ognia ");
+                for(int x = 0;x < SystemWalka.teamini.length;x++)
                 {
-                    if (Team.team[rzad].hp <= 0) {}
-                    else {
-                        if (Team.team[rzad].hp > 0)
-                        {
-                            int obr = (int) ((Math.random() * (tablicaMagii.fire2.getObrażenia() - 1)) + 1) - Team.team[i].armor;
-                            if (obr <= 0) { obr = 0; }
-                            Team.team[i].hp = Team.team[i].hp - obr;
-                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
-                            if (Team.team[i].hp <= 0)
-                            {
-                                System.out.println(Team.team[i]+" zginął");
-                                Team.team[i].hp = 0;
-                                SystemWalka.zyc++;
-                            }
-                        magia = true;
-                        }
-                    }
-                }
-            }
-            case(2) -> {
-                for(int x = 0;x < Team.team.length;x++)
-                {
+
                     if(Team.team[x].hp != 0){
                         int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Team.team[x].armor;
                         if(obr <= 0){obr = 0;}
                         Team.team[x].hp = Team.team[x].hp - obr;
-                        System.out.println(Team.team[x] + " otrzymał " + obr + " obrażeń");
+                        System.out.println(Team.team[x] + " otrzymał " + obr + " obrażeń2");
                         if (Team.team[x].hp <= 0)
                         {
                             System.out.println(Team.team[x]+" zginął");
                             Team.team[x].hp = 0;
                             SystemWalka.zyc++;
+                            System.out.println(SystemWalka.zyc);
                         }
                         magia = true;
                     }
@@ -602,63 +572,42 @@ public class MagiaWWalce {
     public static void MagiaBłyskawicBoss()
     {
 
-        int go = random.nextInt(3);
+        int go = random.nextInt(2);
         switch (go)
         {
             case(0) -> {
-                int wyb = random.nextInt(Team.team.length-1);
-                if(Team.team[wyb].hp <=0 ){}
-                else {
+                int wyb = random.nextInt(SystemWalka.teamini.length);
+                if (Team.team[wyb].hp > 0)
+                {
+                    System.out.print("Boss używa magii błyskawic ");
                 int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
                 if(obr <= 0){obr = 0;}
                     Team.team[wyb].hp = Team.team[wyb].hp - obr;
-                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
+                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń1");
                 if (Team.team[wyb].hp <= 0)
                 {
                     System.out.println(Team.team[wyb]+" zginął");
                     Team.team[wyb].hp =0;
                     SystemWalka.zyc++;
+                    System.out.println(SystemWalka.zyc);
                 }
                 magia = true;
             }}
             case(1) -> {
-                int kolumna = random.nextInt(3);
-                kolumna++;
-                for (int i = kolumna-1;i<=kolumna+2;i = i+3)
+                int wyb = random.nextInt(SystemWalka.teamini.length);
+                if (Team.team[wyb].hp > 0)
                 {
-                    if (Team.team[i].hp <= 0) {}
-                    else {
-                        if (Team.team[i].hp > 0)
-                        {
-                            int obr = (int) ((Math.random() * (tablicaMagii.thunder2.getObrażenia() - 1)) + 1) - Team.team[i].armor;
-                            if (obr <= 0) { obr = 0; }
-                            Team.team[i].hp = Team.team[i].hp - obr;
-                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
-                            if (Team.team[i].hp <= 0)
-                            {
-                                System.out.println(Team.team[i]+" zginął");
-                                Team.team[i].hp = 0;
-                                SystemWalka.zyc++;
-                            }
-                            magia = true;
-                        }
-                    }
-                   if(Team.team.length < 3){break;}
-                }
-            }
-            case(2) -> {
-                int wyb = random.nextInt(Team.team.length-1);
-                if(Team.team[wyb].hp <=0 ){}
-                else {
+                    System.out.print("Boss używa magii błyskawic ");
                     int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
                     if(obr <= 0){obr = 0;}
                     Team.team[wyb].hp = Team.team[wyb].hp - obr;
-                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
+                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń2");
                     if (Team.team[wyb].hp <= 0)
                     {
                         System.out.println(Team.team[wyb]+" zginął");
                         Team.team[wyb].hp =0;
                         SystemWalka.zyc++;
+                        System.out.println(SystemWalka.zyc);
                     }
                     magia = true;
                 }}
