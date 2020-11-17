@@ -13,7 +13,6 @@ public class SystemWalka
     static int zyc = 0;
 
     public void walka() throws InterruptedException {
-        //int zyc = 0;
         zyc = 0;
         int bard = 0;
         int wyb;
@@ -84,6 +83,64 @@ public class SystemWalka
                     wyb = scanner.nextInt();
                     switch (wyb) {
                         case (1) -> {
+                            if(teamini[i].type.equals("wolf")){
+                                System.out.println("Wybierz cel");
+                                int atak;
+                                while (!scanner.hasNextInt()) {
+                                    System.out.println("╔══════════════╗");
+                                    System.out.println("║ To nie numer ║");
+                                    System.out.println("╚══════════════╝");
+                                    scanner.next(); // this is important!
+                                }
+                                atak = scanner.nextInt();
+                                if (atak < 0 || atak >= Walka.potworybitwa.length) {
+                                    System.out.println("Nie ma takiego potwora");
+                                    i--;
+                                    break;
+                                }
+                                if (Walka.potworybitwa[atak].hp > 0) {
+                                    int obr = (int) ((Math.random() * (teamini[i].atk - 1)) + 1) - Walka.potworybitwa[atak].armor;
+                                    if (obr <= 0) {
+                                        obr = 0;
+                                    }
+                                    Walka.potworybitwa[atak].hp = Walka.potworybitwa[atak].hp - obr;
+                                    System.out.println("zadałeś potworowi " + Walka.potworybitwa[atak] + " " + obr + " obrażeń");
+                                    if (Walka.potworybitwa[atak].hp <= 0) {
+                                        System.out.println("zabiłeś potwora " + Walka.potworybitwa[atak]);
+                                        Walka.potworybitwa[atak].hp = 0;
+                                        mortem++;
+                                    }
+                                    for (int x = 0; x < Walka.potworybitwa.length; x++) {
+                                        if (Walka.potworybitwa[x].hp <= 0) {
+                                            if (Walka.potworybitwa[x].status.equals("Krew")) {
+                                                Walka.potworybitwa[x].status = "";
+                                                for (Bohaterowie bohaterowie : teamini) {
+                                                    if (Walka.potworybitwa[x].NRMaga == bohaterowie.NRMaga) {
+                                                        bohaterowie.hp = (int) (bohaterowie.hp + bohaterowie.hp * 0.1);
+                                                        System.out.println("Przez to ze potwór" + Walka.potworybitwa[x] + " miał status Krew to bohater" + teamini[i] + " odzyskuje cześć zdrowia");
+                                                    }
+                                                }
+                                            }
+                                            if (Walka.potworybitwa[x].status.equals("Więz krwi")) {
+                                                for (int a = 0; a < Walka.potworybitwa.length; a++) {
+                                                    if (Walka.potworybitwa[x].status.equals(Walka.potworybitwa[a].status)) {
+                                                        Walka.potworybitwa[a].hp = 0;
+                                                        mortem++;
+                                                        Walka.potworybitwa[i].status = "";
+                                                        Walka.potworybitwa[a].status = "";
+                                                        System.out.println("Przez to że potwór " + Walka.potworybitwa[i] + " i " + Walka.potworybitwa[a] + " są powiązanie więzłami krwi" + Walka.potworybitwa[a] + " też umiera");
+                                                    }
+                                                }
+                                            }
+
+
+                                        }
+                                    }
+                                } else {
+                                    System.out.println("ten potwór nie żyję wybierz jeszcze raz");
+                                    i--;
+                                }
+                            }
                             System.out.println("Wybierz cel");
                             int atak;
                             while (!scanner.hasNextInt()) {
