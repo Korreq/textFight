@@ -1,8 +1,7 @@
 public class PoleBitwy {
 
-
-    public static void main() {
-
+    public static void main()
+    {
         System.out.println("╔═════════╦═════════╦═════════╗");
         if(Walka.potworybitwa.length > 3){System.out.println("║    " + Walka.potworybitwa[3] + "   ║    " + Walka.potworybitwa[4] + "   ║    " + Walka.potworybitwa[5] + "   ║");}
         System.out.println("║    " + Walka.potworybitwa[0] + "   ║    " + Walka.potworybitwa[1] + "   ║    " + Walka.potworybitwa[2] + "   ║");
@@ -25,5 +24,4 @@ public class PoleBitwy {
         System.out.println();
         System.out.println("╚═════════╩═════════╩═════════╝");
     }
-
 }

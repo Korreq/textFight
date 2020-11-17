@@ -1,5 +1,4 @@
 import Bohaterowie.Bohaterowie;
-
 import java.util.Comparator;
 
 public class Sortowanie implements Comparator<Bohaterowie>
