@@ -66,6 +66,7 @@ public class SystemWalka
                     break;
                 }
                 if (teamini[i].hp > 0) {
+                    rek = 2;
                     System.out.println("\n╔═══╦════════════════════════════════════╗");
                     System.out.println("║   ║ Co chcesz zrobić? (jesteś teraz " + teamini[i] + ")  ║");
                     System.out.println("║   ║ - - - - - - - - - - - - - - - - -  ║");
@@ -295,7 +296,7 @@ public class SystemWalka
 
                                                 zyc++;
 
-                                                if (zyc == Team.number) {
+                                                if (zyc == teamini.length) {
                                                     alive = false;
                                                     System.out.println("Zostałesz pokonany");
                                                     i = Walka.potworybitwa.length - 1;
@@ -333,7 +334,12 @@ public class SystemWalka
                             }
                             if(!MagiaWWalce.magia){i--;}
                             else{MagiaWWalce.magia = false;}
-
+                                if (zyc == teamini.length) {
+                                    alive = false;
+                                    System.out.println("Zostałesz pokonany");
+                                    i = Walka.potworybitwa.length - 1;
+                                    System.exit(0);
+                                }
                         }
                         }
                     }

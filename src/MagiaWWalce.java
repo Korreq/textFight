@@ -521,8 +521,7 @@ public class MagiaWWalce {
             default -> System.out.println("Nie ma takiego spella");}
     }
 
-    public static void MagiaOgniaBoss()
-    {
+    public static void MagiaOgniaBoss() throws InterruptedException {
 
         int go = random.nextInt(2);
         switch (go)
@@ -532,10 +531,11 @@ public class MagiaWWalce {
                         if (Team.team[i].hp != 0)
                         {
                             System.out.print("Boss używa magii ognia ");
+                            if(SystemWalka.zyc == SystemWalka.teamini.length){break;}
                             int obr = (int) ((Math.random() * (tablicaMagii.fire1.getObrażenia() - 1)) + 1) - Team.team[i].armor;
                             if (obr <= 0) { obr = 0; }
                             Team.team[i].hp = Team.team[i].hp - obr;
-                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń1");
+                            System.out.println(Team.team[i] + " otrzymał " + obr + " obrażeń");
                             if (Team.team[i].hp <= 0)
                             {
                                 System.out.println(Team.team[i]+" zginął");
@@ -548,6 +548,7 @@ public class MagiaWWalce {
                     }
             case(1) -> {
                 System.out.print("Boss używa magii ognia ");
+                if(SystemWalka.zyc == SystemWalka.teamini.length){break;}
                 for(int x = 0;x < SystemWalka.teamini.length;x++)
                 {
 
@@ -555,7 +556,7 @@ public class MagiaWWalce {
                         int obr = (int) ((Math.random() * (tablicaMagii.fire3.getObrażenia() - 1)) + 1) - Team.team[x].armor;
                         if(obr <= 0){obr = 0;}
                         Team.team[x].hp = Team.team[x].hp - obr;
-                        System.out.println(Team.team[x] + " otrzymał " + obr + " obrażeń2");
+                        System.out.println(Team.team[x] + " otrzymał " + obr + " obrażeń");
                         if (Team.team[x].hp <= 0)
                         {
                             System.out.println(Team.team[x]+" zginął");
@@ -583,7 +584,7 @@ public class MagiaWWalce {
                 int obr = (int) ((Math.random() * (tablicaMagii.thunder1.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
                 if(obr <= 0){obr = 0;}
                     Team.team[wyb].hp = Team.team[wyb].hp - obr;
-                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń1");
+                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
                 if (Team.team[wyb].hp <= 0)
                 {
                     System.out.println(Team.team[wyb]+" zginął");
@@ -601,7 +602,7 @@ public class MagiaWWalce {
                     int obr = (int) ((Math.random() * (tablicaMagii.thunder3.getObrażenia() - 1)) + 1) - Team.team[wyb].armor;
                     if(obr <= 0){obr = 0;}
                     Team.team[wyb].hp = Team.team[wyb].hp - obr;
-                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń2");
+                    System.out.println(Team.team[wyb] + " otrzymał " + obr + " obrażeń");
                     if (Team.team[wyb].hp <= 0)
                     {
                         System.out.println(Team.team[wyb]+" zginął");
