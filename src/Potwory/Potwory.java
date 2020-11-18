@@ -13,13 +13,10 @@ public class Potwory extends Heroes
         this.dex = dex;
         this.armor= armor;
         this.mage = mage;
-        if(mage){
-            if(name.equals("B1")){
-                type = "fire";
-            }
-            else{
-                type = "thunder";
-            }
+        if(mage)
+        {
+            if(name.equals("B1")){ type = "fire"; }
+            else{ type = "thunder"; }
         }
         this.status = status;
     }

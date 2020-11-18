@@ -8,6 +8,7 @@ public class Bohaterowie extends Heroes
     {
         this.name = name;
         this.klasa = klasa;
+        this.type = type;
         this.maxhp = maxhp;
         this.hp = maxhp;
         this.dex = dex;
@@ -17,16 +18,14 @@ public class Bohaterowie extends Heroes
         else{ this.atk = atk; }
         this.mage = mage;
         this.lit = lit;
-        this.type = type;
+        this.status = status;
+        this.NRMaga = NRMaga;
         if(mage)
         {
             if(klasa.equals("Paladyn")) { this.pktmagii = 6; }
             else { this.pktmagii = 9; }
         }
         else {this.pktmagii = 0;}
-
-        this.status = status;
-        this.NRMaga = NRMaga;
     }
     public int getDex() { return dex; }
     public String toString() { return name+" "+klasa;}
