@@ -1,7 +1,7 @@
 package Magia;
 
-public class TablicaMagii {
-
+public class TablicaMagii
+{
     public Magia fire1 = new Magia("Ognista włócznia","fire",1,20,"jedna kolumna przeciwników");
     public Magia fire2 = new Magia("Sciana ognia","fire",2,30,"jeden rząd przeciwników");
     public Magia fire3 = new Magia("Deszcz ognia","fire",3,40,"wszyscy przeciwnicy");
@@ -30,7 +30,6 @@ public class TablicaMagii {
     public Magia thunder2 = new Magia("Strzelista włócznia","thunder",2,35,"jedna kolumna przeciwników");
     public Magia thunder3 = new Magia("Gniew Magnira","thunder",3,85,"jeden przeciwnik");
 
-
     public Magia[] magiaognia ={fire1,fire2,fire3};
     public Magia[] magiawody ={water1,water2,water3};
     public Magia[] magiawiatru ={wind1,wind2,wind3};
@@ -38,5 +37,4 @@ public class TablicaMagii {
     public Magia[] magiaswiatła ={light1,light2,light3};
     public Magia[] magiakrwi ={blood1,blood2,blood3};
     public Magia[] magiabłyskawica ={thunder1,thunder2,thunder3};
-
 }

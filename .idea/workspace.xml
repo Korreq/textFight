@@ -20,11 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b71d5d2a-fd39-4ac4-9d7d-07c1d86edea8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Bohaterowie/Bohaterowie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Bohaterowie/Bohaterowie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Magia/Magia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Magia/Magia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MagiaWWalce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MagiaWWalce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Potwory/Potwory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Potwory/Potwory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Magia/TablicaMagii.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Magia/TablicaMagii.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Potwory/TablicaPotworow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Potwory/TablicaPotworow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Start.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Start.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

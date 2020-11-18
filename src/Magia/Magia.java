@@ -1,14 +1,12 @@
 package Magia;
 
-public class Magia {
-
-
+public class Magia
+{
     private String nazwa;
     private String typ;
     private int pktmagii;
     private int obrażenia;
     private String cele;
-
 
     public Magia(String nazwa,String typ,int pktmagii,int obrażenia,String cele)
     {
@@ -21,7 +19,5 @@ public class Magia {
 
     public String toString() { return nazwa+" koszt:"+pktmagii+" cele: "+cele;}
 
-    public int getObrażenia() {
-        return obrażenia;
-    }
+    public int getObrażenia() { return obrażenia; }
 }
