@@ -133,7 +133,7 @@ public class Menu
                                         }
                                         case (4) -> {
                                             System.out.println("╔═══════════════════════════════════════════════════════════════════════════════════════════════╗");
-                                            System.out.println("║                                          Magia Ziemi                                          ║);
+                                            System.out.println("║                                          Magia Ziemi                                          ║");
                                             System.out.println("╠═══════════════════════════════════════════════════════════════════════════════════════════════╣");
                                             System.out.println("║ Zaklęcia defensywne.                                                                          ║");
                                             System.out.println("║ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - ║");
