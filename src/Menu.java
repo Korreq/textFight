@@ -24,7 +24,7 @@ public class Menu
             System.out.println("2 : Credits");
             System.out.println("3 : Encyklopedia");
             System.out.println("4 : Wyjdz");
-            System.out.println("\nv. 0.99(Final Stop )");
+            System.out.println("\nv. 1.0(Adventure Time )");
             int choice;
             while (!scanner.hasNextInt())
             {
