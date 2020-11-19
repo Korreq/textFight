@@ -149,8 +149,8 @@ public class Menu
                                             System.out.println("║ Zaklęcia kontrolne.                                                                            ║");
                                             System.out.println("║ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ║");
                                             System.out.println("║ 1. Boska pomoc - ulecz wskazanego sojusznika.                                                  ║");
-                                            System.out.println("║ 2. Boski promień - oślep wskazanego przeciwnika przez co nie będzie mógł wykonać żadnej akcji. ║");
-                                            System.out.println("║ 3. Oświecenie - oślep wszystkich przeciwników.                                                 ║");
+                                            System.out.println("║ 2. Boski promień - oślep wszystkich przeciwników                                               ║");
+                                            System.out.println("║ 3. Oświecenie - zniszcz pancerz jednego wroga.                                                 ║");
                                             System.out.println("╚════════════════════════════════════════════════════════════════════════════════════════════════╝");
                                         }
                                         case (6) -> {
@@ -160,7 +160,7 @@ public class Menu
                                             System.out.println("║ Zaklęcia ofensywne kosztujące życie.                                                                                                               ║");
                                             System.out.println("║ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  ║");
                                             System.out.println("║ 1. Krwawy akt - wskazanemu wrogowi zostaje zniszczony pancerz.                                                                                     ║");
-                                            System.out.println("║ 2. Krwawa więź - powiąż więzami krwi dwóch wskazanych wrógów. Zadanie obrażeń jednemu z tych wrogów sprawi że ten drugi również otrzyma obrażenia. ║");
+                                            System.out.println("║ 2. Krwawa więź - powiąż więzami krwi dwóch wskazanych wrógów. Zabicie jednego z powiązanych wrogów sprawi że drugi również umrze.                  ║");
                                             System.out.println("║ 3. Krwawy rytuał - wszyscy wrogowie otrzymują średnią ilość obrażeń.                                                                               ║");
                                             System.out.println("╚════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝");
                                         }
