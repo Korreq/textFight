@@ -117,7 +117,7 @@ public class SystemWalka
                                             {
                                                 for (int a = 0; a < Walka.potworybitwa.length; a++)
                                                 {
-                                                    if (Walka.potworybitwa[x].status.equals(Walka.potworybitwa[a].status))
+                                                    if (Walka.potworybitwa[x].status.equals("Więz krwi") && Walka.potworybitwa[a].status.equals("Więz krwi"))
                                                     {
                                                         Walka.potworybitwa[a].hp = 0;
                                                         mortem++;
