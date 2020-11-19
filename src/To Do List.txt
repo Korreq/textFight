@@ -43,5 +43,4 @@ Rozwinięcie systemu walki        [v]
 
 
 Rzeczy żeby zrobić z tego wersje 0.1 (pre Łukasz dubbing)
-- zrobienie coś z klasami [x]
 - zabezpieczenie walki przed wypierdalaniem się [x]
