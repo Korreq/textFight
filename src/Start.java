@@ -74,11 +74,11 @@ public class Start
                 case ('b') -> {
                             if (Team.number == 0) System.out.println("Musisz mieć przynajmiej jednego członka w drużynie");
                             else {
-                                System.out.println("╔══════════════════╗");
-                                System.out.println("║ Twoja drużyna    ║");
-                                System.out.println("╠══════════════════╣");
+                                System.out.println("╔═══════════════════════════╗");
+                                System.out.println("║        Twoja drużyna      ║");
+                                System.out.println("╠═══════════════════════════╣");
                                 for (int i = 0; i < Team.number; i++) { int p1=i+1;System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║"); }
-                                System.out.println("╚══════════════════╝");
+                                System.out.println("╚═══════════════════════════╝");
                             }
                 }
                 case ('c') -> {
@@ -92,11 +92,11 @@ public class Start
                 }
             }
         }while (!dosc);
-        System.out.println("╔══════════════════╗");
-        System.out.println("║ Twoja drużyna    ║");
-        System.out.println("╠══════════════════╣");
+        System.out.println("╔═══════════════════════════╗");
+        System.out.println("║        Twoja drużyna      ║");
+        System.out.println("╠═══════════════════════════╣");
         for (int i = 0; i < Team.number; i++) { int p1=i+1;System.out.println("║ [" + p1 + "] • " + dru[i]+"   ║"); }
-        System.out.println("╚══════════════════╝");
+        System.out.println("╚═══════════════════════════╝");
     }
 }
 

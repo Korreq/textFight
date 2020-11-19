@@ -22,19 +22,19 @@ public class ZarzadzanieDruzyna
             switch (choice2)
             {
                 case('a') -> {
-                            System.out.println("╔══════════════════╗");
-                            System.out.println("║ Twoja drużyna    ║");
-                            System.out.println("╠══════════════════╣");
-                            for (int i = 0; i < Team.number; i++) { int p1=i+1;System.out.println("║ [" + p1 + "] • " + Team.team[i]+"   ║"); }
-                            System.out.println("╚══════════════════╝\n");
+                    System.out.println("╔═══════════════════════════╗");
+                    System.out.println("║        Twoja drużyna      ║");
+                    System.out.println("╠═══════════════════════════╣");
+                    for (int i = 0; i < Team.number; i++) { int p1=i+1;System.out.println("║ [" + p1 + "] • " + Team.team[i]+"   ║"); }
+                    System.out.println("╚═══════════════════════════╝");
                 }
                 case('b')->{
                             if(Team.number == 1){ System.out.println("Masz tylko 1 członka");break; }
-                            System.out.println("╔══════════════════╗");
-                            System.out.println("║ Twoja drużyna    ║");
-                            System.out.println("╠══════════════════╣");
-                            for (int i = 0; i < Team.number; i++) { int p1=i+1;System.out.println("║ [" + p1 + "] • " + Team.team[i]+"   ║"); }
-                            System.out.println("╚══════════════════╝\n");
+                    System.out.println("╔═══════════════════════════╗");
+                    System.out.println("║        Twoja drużyna      ║");
+                    System.out.println("╠═══════════════════════════╣");
+                    for (int i = 0; i < Team.number; i++) { int p1=i+1;System.out.println("║ [" + p1 + "] • " + Team.team[i]+"   ║"); }
+                    System.out.println("╚═══════════════════════════╝");
                             System.out.println("Kogo chcesz wymienić:");
                             int wyb;
                             while (!scanner.hasNextInt())

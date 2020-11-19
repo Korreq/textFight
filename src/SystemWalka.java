@@ -48,14 +48,14 @@ public class SystemWalka
                 if (teamini[i].hp > 0)
                 {
                     rek = 2;
-                    System.out.println("\n╔═══╦════════════════════════════════════╗");
+                    System.out.println("\n╔═══╦═════════════════════════════════════════════════════╗");
                     System.out.println("║   ║ Co chcesz zrobić? (jesteś teraz " + teamini[i] + ")  ║");
-                    System.out.println("║   ║ - - - - - - - - - - - - - - - - -  ║");
-                    System.out.println("║ 1 ║ Atak                               ║");
-                    System.out.println("║ 2 ║ Zobacz planszę                     ║");
-                    System.out.println("║ 3 ║ Zobacz szczegóły                   ║");
-                    System.out.println("║ 4 ║ Użyj runy                          ║");
-                    System.out.println("╚═══╩════════════════════════════════════╝");
+                    System.out.println("║   ║ - - - - - - - - - - - - - - - - - - - - - - - - -   ║");
+                    System.out.println("║ 1 ║ Atak                                                ║");
+                    System.out.println("║ 2 ║ Zobacz planszę                                      ║");
+                    System.out.println("║ 3 ║ Zobacz szczegóły                                    ║");
+                    System.out.println("║ 4 ║ Użyj runy                                           ║");
+                    System.out.println("╚═══╩═════════════════════════════════════════════════════╝");
                     while (!scanner.hasNextInt()) {
                         System.out.println("╔══════════════╗");
                         System.out.println("║ To nie numer ║");
