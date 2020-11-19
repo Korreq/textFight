@@ -185,7 +185,6 @@ public class MagiaWWalce {
                             magia = true;
                         }
                     }
-
             case (3) -> {
                         pkt = 3;
                         if (SystemWalka.teamini[SystemWalka.i].pktmagii < pkt) { System.out.println("Nie masz many na spell");break; }
@@ -361,6 +360,7 @@ public class MagiaWWalce {
                     }
             default -> System.out.println("Nie ma takiego spella");}
     }
+
     public static void MagiaSwiatła()
     {
         System.out.println("Lista spelli");
@@ -411,7 +411,7 @@ public class MagiaWWalce {
                     }
                 }
             }
-            case(3) -> {
+            case (3) -> {
                 pkt = 3;
                 if(SystemWalka.teamini[SystemWalka.i].pktmagii < pkt){ System.out.println("Nie masz many na spell");break; }
                 System.out.println("Jakieku przeciwnikowi chcesz obniżyc armor?");
@@ -679,6 +679,7 @@ public class MagiaWWalce {
             }
         }
     }
+
     public static void MagiaBłyskawicBoss() throws InterruptedException
     {
         int go = random.nextInt(2);
