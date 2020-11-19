@@ -29,17 +29,17 @@ public class Start
             switch (choice2)
             {
                 case ('a') -> {
-                            System.out.println("╔═════════════════════════════════╗");
-                            System.out.println("║ Osoby znajdujące się w tawernie ║");
+                            System.out.println("╔═══════════════════════════════════════╗");
+                            System.out.println("║      Osoby znajdujące się w tawernie  ║");
                             for (int i = 0; i < karczma.length; i++)
                             {
                                 if(karczma[i] != null)
                                 {
-                                    System.out.println("╠═════════════════════════════════╣");
-                                    System.out.println("║ [" + i + "] " + karczma[i] + "                    ║");
+                                    System.out.println("╠═══════════════════════════════════════╣");
+                                    System.out.println("║ [" + i + "] " + karczma[i] + "                    ");
                                 }
                             }
-                            System.out.println("╚═════════════════════════════════╝");
+                            System.out.println("╚═══════════════════════════════════════╝");
                             int wyb;
                             while (!myScanner.hasNextInt())
                             {
